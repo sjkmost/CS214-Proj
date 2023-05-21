@@ -37,3 +37,7 @@ reset_run synth_1
 launch_runs synth_1 -jobs 6
 [Sun May 21 20:58:41 2023] Launched synth_1...
 Run output will be captured here: D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Sun May 21 21:03:02 2023] Launched synth_1...
+Run output will be captured here: D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.runs/synth_1/runme.log
