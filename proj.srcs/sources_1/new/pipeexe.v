@@ -29,7 +29,7 @@ module pipeexe (ealuc, ealuimm, ea, eb, eimm, eshift, ern0, epc4, ejal, ern, eal
     wire [31:0] alua, alub, sa, ealu0, epc8;
     wire z;
     assign sa = {eimm[5:0], eimm[31:6]};
-    cla32 ret_addr (epc4, 32'h4, 1'b0, epc8);
+    assign epc8 = epc4 + 32'h4;
     mux2x32 alu_ina (ea, sa, eshift, alua);
     mux2x32 alu_inb (eb, eimm, ealuimm, alub);
     mux2x32 save_pc8 (ealu0, epc8, ejal, ealu);

@@ -41,6 +41,8 @@ module pipelinedcpu(clock, memclock, resetn, pc, inst, ealu, malu, walu);
                     bpc, jpc, pcsource, wpcir, dwreg, dm2reg, dwmem,
                     daluc, daluimm, da, db, dimm, drn, dshift, djal);
     pipedereg de_reg(dwreg, dm2reg, dwmem, daluc, daluimm, da, db, dimm,
+                    drn, dshift, djal, dpc4, clock, resetn,
+                    ewreg, em2reg, ewmem, ealuc, ealuimm, ea, eb, eimm,
                     ern0, eshift, ejal, epc4);
     pipeexe exe_stage(ealuc, ealuimm, ea, eb, eimm, eshift, ern0, epc4,
                     ejal, ern, ealu);

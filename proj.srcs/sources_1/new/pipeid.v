@@ -43,7 +43,7 @@ module pipeid (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst, wrn,
     assign rs = inst[25:21];
     assign rt = inst[20:16];
     assign rd = inst[15:11];
-    assign jpc = {dpc[31:28], inst[25:0], 2'b00};
+    assign jpc = {dpc4[31:28], inst[25:0], 2'b00};
     pipeidcu cu(mwreg, mrn, ern, ewreg, em2reg, mm2reg, rsrtequ, func,
                 op, rs, rt, wreg, m2reg, wmem, aluc, regrt, aluimm,
                 fwda, fwdb, nostall, sext, pcsource, shift, jal);
@@ -56,6 +56,6 @@ module pipeid (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst, wrn,
     assign ext16 = {16{e}};
     assign imm = {ext16, inst[15:0]};
     assign br_offset = {imm[29:0], 2'b00};
-    cla32 br_addr (dpc4, br_offset, 1'b0, bpc);
+    assign bpc = dpc4 + br_offset;
 
 endmodule

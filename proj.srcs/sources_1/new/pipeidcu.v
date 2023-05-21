@@ -58,7 +58,7 @@ module pipeidcu(mwreg, mrn, ern, ewreg, em2reg, mm2reg, rsrtequ, func, op, rs, r
                 i_andi| i_ori | i_xori| i_lw | i_sw  | i_beq| i_bne;
     wire i_rt = i_add | i_sub | i_and | i_or | i_xor | i_sll| i_srl  |
                 i_sra | i_sw  | i_beq | i_bne;
-    assign nostall = ~(ewreg & me2reg & (ern != 0) & (i_rs & (ern == rs) | i_rt & (ern == rt) ) );
+    assign nostall = ~(ewreg & em2reg & (ern != 0) & (i_rs & (ern == rs) | i_rt & (ern == rt) ) );
     
     always @(ewreg or mwreg or ern or mrn or em2reg or mm2reg or rs or rt) begin
         fwda = 2'b00; // default: no hazards
@@ -95,6 +95,7 @@ module pipeidcu(mwreg, mrn, ern, ewreg, em2reg, mm2reg, rsrtequ, func, op, rs, r
     assign m2reg   =  i_lw;
     assign shift   =  i_sll | i_srl | i_sra;
     assign aluimm  =  i_addi| i_andi| i_ori | i_xori| i_lw  | i_lui | i_sw;
+    assign sext    =  i_addi| i_lw  | i_sw  | i_beq | i_bne;
     assign aluc[3] =  i_sra;
     assign aluc[2] =  i_sub | i_or  | i_srl | i_sra | i_ori | i_lui;
     assign aluc[1] =  i_xor | i_sll | i_srl | i_sra | i_xori| i_beq |
