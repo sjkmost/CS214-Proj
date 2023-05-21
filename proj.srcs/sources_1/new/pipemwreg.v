@@ -27,7 +27,7 @@ module pipemwreg (mwreg, mm2reg, mmo, malu, mrn, clk, clrn,
     input clk, clrn;
     output [31:0] wmo, walu;
     output [4:0] wrn;
-    output wwreg, wm2reg
+    output wwreg, wm2reg;
     reg [31:0] wmo, walu;
     reg [4:0] wrn;
     reg wwreg, wm2reg;
@@ -37,7 +37,7 @@ module pipemwreg (mwreg, mm2reg, mmo, malu, mrn, clk, clrn,
             walu <= 0; wrn <= 0;
         end else begin
             wwreg <= mwreg; wm2reg <= mm2reg; wmo <= mmo;
-            walu <= ealu; wrn <= mrn;
+            walu <= malu; wrn <= mrn;
         end
     end
     
