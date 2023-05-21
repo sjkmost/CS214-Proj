@@ -19,9 +19,14 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module pipeimem(a, inst);
+module pipeimem(clk, a, inst);
+    input clk;
     input [31:0] a;
     output [31:0] inst;
     //TODO having a rom
-
+    ROM instmem(
+        .clka(clk),
+        .addra(a[15:2]),
+        .douta(inst)
+    );
 endmodule

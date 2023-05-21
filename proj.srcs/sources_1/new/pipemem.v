@@ -19,12 +19,18 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module pipemem(we, addr, datain, clk, inclk, outclk, dataout);
+module pipemem(we, addr, datain, clk, memclk, dataout);
     input [31:0] addr, datain;
-    input clk, we, inclk, outclk;
+    input clk, we, memclk;
     output [31:0] dataout;
 
     wire write_enable = we & ~clk;
     //TODO having a rom
-    
+    RAM ram(
+        .clka(memclk),
+        .wea(write_enable),
+        .addra(addr[15:2]),
+        .dina(datain),
+        .douta(dataout)
+    );
 endmodule

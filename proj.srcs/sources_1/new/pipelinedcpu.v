@@ -34,7 +34,7 @@ module pipelinedcpu(clock, memclock, resetn, pc, inst, ealu, malu, walu);
     wire mwreg, mm2reg, mwmem;
     wire wwreg, wm2reg;
     pipepc prog_cnt (npc, wpcir, clock, resetn, pc);
-    pipeif if_stage (pcsource, pc, bpc, da, jpc, npc, pc4, ins);
+    pipeif if_stage (memclock, pcsource, pc, bpc, da, jpc, npc, pc4, ins);
     pipeir inst_reg (pc4, ins, wpcir, clock, resetn, dpc4, inst);
     pipeid id_stage (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst,
                     wrn, wdi, ealu, malu, mmo, wwreg, clock, resetn,
@@ -48,7 +48,7 @@ module pipelinedcpu(clock, memclock, resetn, pc, inst, ealu, malu, walu);
                     ejal, ern, ealu);
     pipeemreg em_reg(ewreg, em2reg, ewmem, ealu, eb, ern, clock, resetn,
                     mwreg, mm2reg, mwmem, malu, mb, mrn);
-    pipemem mem_stage(mwmem, malu, mb, clock, memclock, memclock, mmo);
+    pipemem mem_stage(mwmem, malu, mb, clock, memclock, mmo);
     pipemwreg mw_reg(mwreg, mm2reg, mmo, malu, mrn, clock, resetn,
                     wwreg, wm2reg, wmo, walu, wrn);
     mux2x32 wb_stage(walu, wmo, wm2reg, wdi);
