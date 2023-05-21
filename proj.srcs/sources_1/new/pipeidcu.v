@@ -18,7 +18,7 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-
+//done
 module pipeidcu(mwreg, mrn, ern, ewreg, em2reg, mm2reg, rsrtequ, func, op, rs, rt,
                 wreg, m2reg, wmem, aluc, regrt, aluimm, fwda, fwdb, nostall, sext,
                 pcsource, shift, jal);
