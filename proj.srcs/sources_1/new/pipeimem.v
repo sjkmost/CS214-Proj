@@ -22,6 +22,6 @@
 module pipeimem(a, inst);
     input [31:0] a;
     output [31:0] inst;
-    //TODO
+    //TODO having a rom
 
 endmodule

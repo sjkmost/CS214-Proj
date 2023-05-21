@@ -25,6 +25,6 @@ module pipemem(we, addr, datain, clk, inclk, outclk, dataout);
     output [31:0] dataout;
 
     wire write_enable = we & ~clk;
-    //TODO
+    //TODO having a rom
     
 endmodule

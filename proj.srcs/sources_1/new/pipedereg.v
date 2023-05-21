@@ -25,7 +25,7 @@ module pipedereg(dwreg, dm2reg, dwmem, daluc, daluimm, da, db, dimm, drn,
     input [31:0] da, db, dimm, dpc4;
     input [4:0] drn;
     input [3:0] daluc;
-    input dwreg, dm2reg, dwmemm daluimm, dshift, djal;
+    input dwreg, dm2reg, dwmem, daluimm, dshift, djal;
     input clk, clrn;
     output [31:0] ea, eb, eimm, epc4;
     output [4:0] ern;
