@@ -5,7 +5,7 @@
 // 
 // Create Date: 2023/05/20 20:34:52
 // Design Name: 
-// Module Name: pipeliendcpu
+// Module Name: pipelinedcpu
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module pipeliendcpu(clock, memclock, resetn, pc, inst, ealu, malu, walu);
+module pipelinedcpu(clock, memclock, resetn, pc, inst, ealu, malu, walu);
     input clock, memclock, resetn;
     output [31:0] pc, inst, ealu, malu, walu;
     wire [31:0] bpc, jpc, npc, pc4, ins, dpc4, inst, da, db, dimm, ea, eb, eimm;
