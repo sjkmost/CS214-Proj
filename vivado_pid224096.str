@@ -1,0 +1,141 @@
+/*
+
+Xilinx Vivado v2017.4 (64-bit) [Major: 2017, Minor: 4]
+SW Build: 2086221 on Fri Dec 15 20:55:39 MST 2017
+IP Build: 2085800 on Fri Dec 15 22:25:07 MST 2017
+
+Process ID: 224096
+License: Customer
+
+Current time: 	Mon May 22 17:22:24 CST 2023
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1536x864
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 39 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	D:/vivado/Vivado/2017.4/tps/win64/jre
+JVM executable location: 	D:/vivado/Vivado/2017.4/tps/win64/jre/bin/java.exe
+
+User name: 	86182
+User home directory: C:/Users/86182
+User working directory: D:/workshops/sundry workshop/CO/project/CS214-Proj
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/vivado/Vivado
+HDI_APPROOT: D:/vivado/Vivado/2017.4
+RDI_DATADIR: D:/vivado/Vivado/2017.4/data
+RDI_BINDIR: D:/vivado/Vivado/2017.4/bin
+
+Vivado preferences file location: C:/Users/86182/AppData/Roaming/Xilinx/Vivado/2017.4/vivado.xml
+Vivado preferences directory: C:/Users/86182/AppData/Roaming/Xilinx/Vivado/2017.4/
+Vivado layouts directory: C:/Users/86182/AppData/Roaming/Xilinx/Vivado/2017.4/layouts
+PlanAhead jar file location: 	D:/vivado/Vivado/2017.4/lib/classes/planAhead.jar
+Vivado log file location: 	D:/workshops/sundry workshop/CO/project/CS214-Proj/vivado.log
+Vivado journal file location: 	D:/workshops/sundry workshop/CO/project/CS214-Proj/vivado.jou
+Engine tmp dir: 	D:/workshops/sundry workshop/CO/project/CS214-Proj/.Xil/Vivado-224096-LAPTOP-cunlidaniang
+
+GUI allocated memory:	187 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 606 MB
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// Opening Vivado Project: D:\workshops\sundry workshop\CO\project\CS214-Proj\proj.xpr. Version: Vivado v2017.4 
+// bs (cj):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 59 MB (+59845kb) [00:00:04]
+// [Engine Memory]: 551 MB (+426007kb) [00:00:04]
+// [GUI Memory]: 69 MB (+6812kb) [00:00:05]
+// [Engine Memory]: 587 MB (+9225kb) [00:00:05]
+// [GUI Memory]: 74 MB (+2097kb) [00:00:06]
+// Tcl Message: open_project {D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/vivado/Vivado/2017.4/data/ip'. 
+// Project name: proj; location: D:/workshops/sundry workshop/CO/project/CS214-Proj; part: xc7a100tfgg484-1
+dismissDialog("Open Project"); // bs (cj)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// HMemoryUtils.trashcanNow. Engine heap size: 610 MB. GUI used memory: 39 MB. Current time: 5/22/23 5:22:26 PM CST
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pipelinedcpu (pipelinedcpu.v)]", 1); // B (D, cj)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pipelinedcpu (pipelinedcpu.v)]", 1); // B (D, cj)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 3); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files, dmem32.coe]", 4, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files, prgmip32.coe]", 5, false); // B (D, cj)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 3); // B (D, cj)
+// Run Command: PAResourceCommand.PACommandNames_FIND_IN_FILES
+// Find in Files: addNotify
+// Elapsed time: 28 seconds
+selectComboBox("pa.FindAndReplaceAllDialog_FIND_COMBO_BOX", "Coefficient Files", -1); // JComboBox (r, q)
+selectButton(PAResourceEtoH.FindAndReplaceAllDialog_FIND, "Find"); // v (q)
+// bs (cj):  Find in Files : addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 610 MB. GUI used memory: 48 MB. Current time: 5/22/23 5:23:13 PM CST
+// 'f' command handler elapsed time: 9 seconds
+selectButton("PAResourceEtoH.FindAndReplaceAllDialog_NO_OCCURRENCES_FOUND_IN_FILES_OK", "OK"); // JButton (A, G)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pipelinedcpu (pipelinedcpu.v)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FSM (FSM.v)]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pipelinedcpu (pipelinedcpu.v)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FSM (FSM.v)]", 2, false); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FSM (FSM.v)]", 2, false, false, false, false, false, true); // B (D, cj) - Double Click
+// [GUI Memory]: 78 MB (+321kb) [00:01:39]
+// Elapsed time: 31 seconds
+selectCodeEditor("FSM.v", 255, 95); // cd (w, cj)
+selectCodeEditor("FSM.v", 374, 103); // cd (w, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 3); // B (D, cj)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Coefficient Files]", 3); // B (D, cj)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pipelinedcpu (pipelinedcpu.v)]", 1); // B (D, cj)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pipelinedcpu (pipelinedcpu.v)]", 1); // B (D, cj)
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 1); // B (D, cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 3); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 1, true); // B (D, cj) - Node
+// [GUI Memory]: 84 MB (+2037kb) [00:02:02]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (O, cj)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bs (cj):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// [GUI Memory]: 89 MB (+111kb) [00:02:03]
+// f (cj): Launch Runs: addNotify
+// 'k' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (cj)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // B (D, cj)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pipelinedcpu (pipelinedcpu.v)]", 1, true); // B (D, cj) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, FSM (FSM.v)]", 2, false); // B (D, cj)
+// [Engine Memory]: 650 MB (+35364kb) [00:02:37]
+// HMemoryUtils.trashcanNow. Engine heap size: 650 MB. GUI used memory: 42 MB. Current time: 5/22/23 5:24:56 PM CST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 93 MB (+116kb) [00:25:59]
