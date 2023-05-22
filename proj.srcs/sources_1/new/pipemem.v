@@ -25,7 +25,7 @@ module pipemem(we, addr, datain, clk, memclk, dataout);
     output [31:0] dataout;
 
     wire write_enable = we & ~clk;
-    //TODO having a rom
+    
     RAM ram(
         .clka(memclk),
         .wea(write_enable),

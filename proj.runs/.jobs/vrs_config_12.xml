@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="RAM_synth_1" LaunchDir="D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.runs/RAM_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="ROM_synth_1" LaunchDir="D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.runs/ROM_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="RAM_synth_1"/>
+		<Parent Id="ROM_synth_1"/>
+	</Run>
+</Runs>
+

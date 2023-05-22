@@ -21,12 +21,16 @@ create_project -in_memory -part xc7a100tfgg484-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
+set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir {D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.cache/wt} [current_project]
 set_property parent.project_path {D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.xpr} [current_project]
+set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo {d:/workshops/sundry workshop/CO/project/CS214-Proj/proj.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
+add_files {{D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/ip/RAM/dmem32.coe}}
+add_files {{D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/ip/ROM/prgmip32.coe}}
 read_verilog -library xil_defaultlib {
   {D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/alu.v}
   {D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/dffe32.v}
@@ -48,6 +52,12 @@ read_verilog -library xil_defaultlib {
   {D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/shift.v}
   {D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v}
 }
+read_ip -quiet {{D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/ip/RAM/RAM.xci}}
+set_property used_in_implementation false [get_files -all {{d:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/ip/RAM/RAM_ooc.xdc}}]
+
+read_ip -quiet {{D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/ip/ROM/ROM.xci}}
+set_property used_in_implementation false [get_files -all {{d:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/ip/ROM/ROM_ooc.xdc}}]
+
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -57,7 +67,7 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 
-synth_design -top pipelinedcpu -part xc7a100tfgg484-1
+synth_design -top pipelinedcpu -part xc7a100tfgg484-1 -flatten_hierarchy none
 
 
 # disable binary constraint mode for synth run checkpoints

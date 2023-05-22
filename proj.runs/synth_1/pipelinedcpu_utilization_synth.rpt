@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sun May 21 21:03:24 2023
+| Date         : Mon May 22 14:38:06 2023
 | Host         : LAPTOP-cunlidaniang running 64-bit major release  (build 9200)
 | Command      : report_utilization -file pipelinedcpu_utilization_synth.rpt -pb pipelinedcpu_utilization_synth.pb
 | Design       : pipelinedcpu
@@ -30,13 +30,13 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 1299 |     0 |     63400 |  2.05 |
-|   LUT as Logic          | 1299 |     0 |     63400 |  2.05 |
+| Slice LUTs*             | 1237 |     0 |     63400 |  1.95 |
+|   LUT as Logic          | 1237 |     0 |     63400 |  1.95 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         | 1301 |     0 |    126800 |  1.03 |
-|   Register as Flip Flop | 1301 |     0 |    126800 |  1.03 |
+| Slice Registers         | 1359 |     0 |    126800 |  1.07 |
+|   Register as Flip Flop | 1359 |     0 |    126800 |  1.07 |
 |   Register as Latch     |    0 |     0 |    126800 |  0.00 |
-| F7 Muxes                |  148 |     0 |     31700 |  0.47 |
+| F7 Muxes                |  145 |     0 |     31700 |  0.46 |
 | F8 Muxes                |   64 |     0 |     15850 |  0.40 |
 +-------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -55,7 +55,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 1301  |          Yes |           - |        Reset |
+| 1359  |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |  162 |     0 |       285 | 56.84 |
+| Bonded IOB                  |  163 |     0 |       285 | 57.19 |
 | Bonded IPADs                |    0 |     0 |        14 |  0.00 |
 | Bonded OPADs                |    0 |     0 |         8 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         6 |  0.00 |
@@ -149,18 +149,18 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     | 1301 |        Flop & Latch |
-| LUT6     |  957 |                 LUT |
-| LUT5     |  202 |                 LUT |
+| FDCE     | 1359 |        Flop & Latch |
+| LUT6     |  873 |                 LUT |
+| LUT3     |  250 |                 LUT |
 | OBUF     |  160 |                  IO |
-| MUXF7    |  148 |               MuxFx |
-| LUT2     |   80 |                 LUT |
-| LUT3     |   76 |                 LUT |
+| MUXF7    |  145 |               MuxFx |
+| LUT5     |  118 |                 LUT |
 | MUXF8    |   64 |               MuxFx |
-| LUT4     |   51 |                 LUT |
+| LUT2     |   48 |                 LUT |
+| LUT4     |   43 |                 LUT |
 | CARRY4   |   32 |          CarryLogic |
-| LUT1     |    5 |                 LUT |
-| IBUF     |    2 |                  IO |
+| LUT1     |   19 |                 LUT |
+| IBUF     |    3 |                  IO |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
@@ -171,7 +171,8 @@ Table of Contents
 +----------+------+
 | Ref Name | Used |
 +----------+------+
-| pipeimem |    1 |
+| ROM      |    1 |
+| RAM      |    1 |
 +----------+------+
 
 

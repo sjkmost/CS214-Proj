@@ -18,7 +18,7 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-//TODO need to figure out the meaning of this module
+
 module pipeid (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst, wrn,
                 wdi, ealu, malu, mmo, wwreg, clk, clrn, bpc, jpc, pcsource,
                 nostall, wreg, m2reg, wmem, aluc, aluimm, a, b, imm, rn,
