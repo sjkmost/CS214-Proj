@@ -3,18 +3,13 @@ in_x: .space 1 # x[2:0]
 in_sw_a: .space 1 # sw[7:0] a
 in_sw_b: .space 1 # sw[7:0] b
 out_led: .space 1 # A bit, 1 for error
-out_seg: .word # An integer denoting the result
-out_seg_2: .word # remainder
-stack_info: .space 10 # each byte is an element
+out_seg: .word 1 # An integer denoting the result
+out_seg_2: .word 1 # remainder
+stack_info: .space 256 # each byte is an element
 .text
-#test
-li $s1,-127
-sb $s1,in_sw_a
-li $s1,126
-sb $s1,in_sw_b
-li $s1,5
-sb $s1,in_x
-#
+sb $zero,out_led
+sw $zero,out_seg
+sw $zero,out_seg_2
 lb $s0,in_x
 lb $s1,in_sw_a
 lb $s2,in_sw_b
@@ -50,24 +45,21 @@ j end
 positive:
 j end
 if_1: #3'b001
-andi $s1,$s1,255
-la $s3,stack_info
-move $a0,$s1
+andi $a0,$s1,255
+or $s3,$zero,$zero
 jal sum_0
 sw $v0,out_seg
 sw $s3,out_seg_2
 j end
 if_2: # 3'b010
-andi $s1,$s1,255
+andi $a0,$s1,255
 la $s3,stack_info
-move $a0,$s1
 jal sum_1
 sw $v0,out_seg
 j end
 if_3: # 3'b011
-andi $s1,$s1,255
+andi $a0,$s1,255
 la $s3,stack_info
-move $a0,$s1
 jal sum_2
 sw $v0,out_seg
 j end
@@ -113,7 +105,7 @@ sw $a0,($sp)
 addi $s3,$s3,2
 slti $t0,$a0,1
 beq $t0,$zero,L0
-addi $v0,$zero,1
+or $v0,$zero,$zero
 addi $sp,$sp,8
 addi $s3,$s3,2
 jr $ra
@@ -134,7 +126,7 @@ sb $a0,($s3)
 addi $s3,$s3,1
 slti $t0,$a0,1
 beq $t0,$zero,L1
-addi $v0,$zero,1
+or $v0,$zero,$zero
 addi $sp,$sp,8
 jr $ra
 L1:
@@ -151,7 +143,7 @@ sw $ra,4($sp)
 sw $a0,($sp)
 slti $t0,$a0,1
 beq $t0,$zero,L2
-addi $v0,$zero,1
+or $v0,$zero,$zero
 addi $sp,$sp,8
 sb $a0,($s3)
 addi $s3,$s3,1
