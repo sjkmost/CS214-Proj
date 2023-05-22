@@ -87,7 +87,7 @@ module seg_display(
             default:bit_sel_reg=8'b1111_1111;
         endcase
     end
-    always@(scan_cnt,out1)
+    always@(scan_cnt,out1,out2,out3)
     begin
         case(scan_cnt)
             0: Y_reg<=out1[15:12];

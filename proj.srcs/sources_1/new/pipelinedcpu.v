@@ -51,5 +51,10 @@ module pipelinedcpu(clock, memclock, resetn, pc, inst, ealu, malu, walu);
     pipemwreg mw_reg(mwreg, mm2reg, mmo, malu, mrn, clock, resetn,
                     wwreg, wm2reg, wmo, walu, wrn);
     mux2x32 wb_stage(walu, wmo, wm2reg, wdi);
-
+    wire wren;
+    wire [15:0] out1;
+    wire [7:0] out2,out3;
+    wire [7:0] seg_en,seg_out;
+    seg_display sd(clock,wren,out1,out2,out3,seg_en,seg_out);
+    // TODO: realize a FSM, change the controller
 endmodule
