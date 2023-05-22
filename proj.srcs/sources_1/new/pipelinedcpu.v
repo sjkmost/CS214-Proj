@@ -18,8 +18,7 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-//done
-
+//TODO add IO change
 module pipelinedcpu(clock, memclock, resetn, pc, inst, ealu, malu, walu);
     input clock, memclock, resetn;
     output [31:0] pc, inst, ealu, malu, walu;
