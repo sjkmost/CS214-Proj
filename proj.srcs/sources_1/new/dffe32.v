@@ -27,7 +27,7 @@ module dffe32(d, clk, clrn, e, q);
     always @(negedge clrn or posedge clk) begin
         if (clrn == 0) begin
             q <= 0;
-        end else begin
+        end else if (e) begin
             q <= d;
         end
     end
