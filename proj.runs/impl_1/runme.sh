@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1'
+HD_PWD='D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,8 @@ EAStep()
      fi
 }
 
-EAStep vivado -log seg_display.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source seg_display.tcl
+# pre-commands:
+/bin/touch .init_design.begin.rst
+EAStep vivado -log seg_display.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source seg_display.tcl -notrace
+
+

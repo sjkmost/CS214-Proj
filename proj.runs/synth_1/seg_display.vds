@@ -1,13 +1,14 @@
-
-*** Running vivado
-    with args -log seg_display.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source seg_display.tcl
-
-
-****** Vivado v2017.4 (64-bit)
-  **** SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
-  **** IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-    ** Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon May 22 17:34:25 2023
+# Process ID: 19988
+# Current directory: D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1
+# Command line: vivado.exe -log seg_display.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source seg_display.tcl
+# Log file: D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/seg_display.vds
+# Journal file: D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
 source seg_display.tcl -notrace
 Command: synth_design -top seg_display -part xc7a100tfgg484-1
 Starting synth_design
