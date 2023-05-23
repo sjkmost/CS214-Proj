@@ -19,14 +19,17 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 //TODO add IO change
-module pipelinedcpu(clock, memclock, resetn, button, io_r1, io_r2, io_w_led, io_w_seg1, io_w_seg2, io_w_seg3, pc, inst, ealu, malu, walu);
-    input clock, memclock, resetn, button;
+module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out);
+    input clk, reset, button;
     input [2:0] io_r1;
     input [7:0] io_r2;
     output io_w_led;
-    output [15:0] io_w_seg1;
-    output [7:0] io_w_seg2, io_w_seg3;
-    output [31:0] pc, inst, ealu, malu, walu;
+    output [7:0] seg_en,seg_out;
+    wire clock,memclock;
+    cpuclk cpuclk1(clk,clock);
+    memclk memclk1(clk,memclock);
+    wire resetn;
+    assign resetn=~reset;
     wire [7:0] state;
     wire [31:0] bpc, jpc, npc, pc4, ins, dpc4, inst, da, db, dimm, ea, eb, eimm;
     wire [31:0] epc4, mb, mmo, wmo, wdi;
@@ -38,7 +41,9 @@ module pipelinedcpu(clock, memclock, resetn, button, io_r1, io_r2, io_w_led, io_
     wire ewreg, em2reg, ewmem, ealuimm, eshift, ejal;
     wire mwreg, mm2reg, mwmem;
     wire wwreg, wm2reg;
-    FSM2 fsm(clock, resetn, button, state);
+    wire [31:0] pc,ealu,malu,walu;
+    wire [15:0] io_w_seg1,io_w_seg2,io_w_seg3;
+    FSM2 fsm(reset, button, state);
     pipepc prog_cnt (npc, wpcir, clock, resetn, pc);
     pipeif if_stage (memclock, pcsource, pc, bpc, da, jpc, npc, pc4, ins);
     pipeir inst_reg (pc4, ins, wpcir, clock, resetn, dpc4, inst);
@@ -58,10 +63,5 @@ module pipelinedcpu(clock, memclock, resetn, button, io_r1, io_r2, io_w_led, io_
     pipemwreg mw_reg(mwreg, mm2reg, mmo, malu, mrn, clock, resetn,
                     wwreg, wm2reg, wmo, walu, wrn);
     mux2x32 wb_stage(walu, wmo, wm2reg, wdi);
-    wire wren;
-    wire [15:0] out1;
-    wire [7:0] out2,out3;
-    wire [7:0] seg_en,seg_out;
-    seg_display sd(clock,wren,out1,out2,out3,seg_en,seg_out);
-    // TODO: realize a FSM, change the controller
+    seg_display sd(clk,1,io_w_seg1,io_w_seg2,io_w_seg3,seg_en,seg_out);
 endmodule

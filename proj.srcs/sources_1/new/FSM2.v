@@ -20,40 +20,18 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module FSM2(clk,rst_n, button, state);
-    input clk,rst_n,button;
+module FSM2(rst, button, state);
+    input rst,button;
     output reg[7:0] state;
-    reg button_en;
-    reg [31:0] cnt_50Hz;
-    reg clk_50Hz;
-    parameter period_50Hz=2000000;
-    always @(posedge clk or negedge rst_n) begin
-        if (!rst_n) begin
-            cnt_50Hz<=0;
-            clk_50Hz<=0;
-        end
-        else begin
-            if (cnt_50Hz==((period_50Hz>>1)-1)) begin
-                cnt_50Hz<=0;
-                clk_50Hz<=~clk_50Hz;
-            end
-            else cnt_50Hz<=cnt_50Hz+1;
-        end
-    end
-    always @(posedge clk_50Hz or negedge rst_n) begin
-        if (!rst_n) begin
+    always @(posedge button or posedge rst) begin
+        if (rst) begin
             state<=0; // ready
-            button_en=1;
         end
         else if (button) begin
-            if (button_en) begin
-                state<=state+1; // change state
-                button_en=0;
-            end
+            state<=state+1; // change state
         end
         else begin
-            state<=state; // default
-            button_en=1;
+            state<=state;
         end
     end
 endmodule

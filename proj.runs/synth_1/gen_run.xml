@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1684748063">
-  <File Type="PA-TCL" Name="seg_display.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="seg_display_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="seg_display_reports.tcl"/>
-  <File Type="RDS-RDS" Name="seg_display.vds"/>
-  <File Type="RDS-UTIL" Name="seg_display_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="seg_display_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="seg_display.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="seg_display_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="seg_display_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1684852346">
+  <File Type="PA-TCL" Name="pipelinedcpu.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="pipelinedcpu_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="pipelinedcpu_reports.tcl"/>
+  <File Type="RDS-RDS" Name="pipelinedcpu.vds"/>
+  <File Type="RDS-UTIL" Name="pipelinedcpu_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="pipelinedcpu_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="pipelinedcpu.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="pipelinedcpu_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="pipelinedcpu_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/seg_display.v">
+    <File Path="$PSRCDIR/sources_1/new/MemOrIO.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -20,7 +20,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/alu.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -28,7 +27,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/dffe32.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -36,7 +34,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/mux2x32.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -44,7 +41,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/mux2x5.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -52,7 +48,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/mux4x32.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -60,7 +55,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/pipedereg.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -68,7 +62,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/pipeemreg.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -76,7 +69,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/pipeexe.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -84,7 +76,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/pipeid.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -92,7 +83,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/pipeidcu.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -100,7 +90,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/pipeif.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -108,7 +97,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/pipeimem.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -116,7 +104,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/pipeir.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -124,7 +111,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/pipemem.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -132,7 +118,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/pipemwreg.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -140,7 +125,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/pipepc.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -148,7 +132,13 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/regfile.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/seg_display.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -156,7 +146,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/shift.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -164,7 +153,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/pipelinedcpu.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -182,9 +170,16 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/FSM2.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="seg_display"/>
+      <Option Name="TopModule" Val="pipelinedcpu"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -201,6 +196,12 @@
   </FileSet>
   <Strategy Version="1" Minor="2">
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-    <Step Id="synth_design"/>
+    <Step Id="synth_design">
+      <Option Id="FlattenHierarchy">1</Option>
+    </Step>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="RAM"/>
+  <BlockFileSet Type="BlockSrcs" Name="ROM"/>
+  <BlockFileSet Type="BlockSrcs" Name="cpuclk"/>
+  <BlockFileSet Type="BlockSrcs" Name="memclk"/>
 </GenRun>
