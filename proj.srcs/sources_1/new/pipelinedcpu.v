@@ -19,9 +19,15 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 //TODO add IO change
-module pipelinedcpu(clock, memclock, resetn, pc, inst, ealu, malu, walu);
-    input clock, memclock, resetn;
+module pipelinedcpu(clock, memclock, resetn, button, io_r1, io_r2, io_w_led, io_w_seg1, io_w_seg2, io_w_seg3, pc, inst, ealu, malu, walu);
+    input clock, memclock, resetn, button;
+    input [2:0] io_r1;
+    input [7:0] io_r2;
+    output io_w_led;
+    output [15:0] io_w_seg1;
+    output [7:0] io_w_seg2, io_w_seg3;
     output [31:0] pc, inst, ealu, malu, walu;
+    wire [7:0] state;
     wire [31:0] bpc, jpc, npc, pc4, ins, dpc4, inst, da, db, dimm, ea, eb, eimm;
     wire [31:0] epc4, mb, mmo, wmo, wdi;
     wire [4:0] drn, ern0, ern, mrn, wrn;
@@ -32,6 +38,7 @@ module pipelinedcpu(clock, memclock, resetn, pc, inst, ealu, malu, walu);
     wire ewreg, em2reg, ewmem, ealuimm, eshift, ejal;
     wire mwreg, mm2reg, mwmem;
     wire wwreg, wm2reg;
+    FSM2 fsm(clock, resetn, button, state);
     pipepc prog_cnt (npc, wpcir, clock, resetn, pc);
     pipeif if_stage (memclock, pcsource, pc, bpc, da, jpc, npc, pc4, ins);
     pipeir inst_reg (pc4, ins, wpcir, clock, resetn, dpc4, inst);
@@ -47,7 +54,7 @@ module pipelinedcpu(clock, memclock, resetn, pc, inst, ealu, malu, walu);
                     ejal, ern, ealu);
     pipeemreg em_reg(ewreg, em2reg, ewmem, ealu, eb, ern, clock, resetn,
                     mwreg, mm2reg, mwmem, malu, mb, mrn);
-    pipemem mem_stage(mwmem, malu, mb, clock, memclock, mmo);
+    pipemem mem_stage(state, mwmem, malu, mb, clock, memclock, io_r1, io_r2, io_w_led, io_w_seg1, io_w_seg2, io_w_seg3, mmo);
     pipemwreg mw_reg(mwreg, mm2reg, mmo, malu, mrn, clock, resetn,
                     wwreg, wm2reg, wmo, walu, wrn);
     mux2x32 wb_stage(walu, wmo, wm2reg, wdi);
