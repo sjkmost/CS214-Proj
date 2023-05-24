@@ -38,7 +38,7 @@ module pipemem(state, we, addr, datain, clk, memclk, io_r1, io_r2, io_w_led, io_
     RAM ram(
         .clka(memclk),
         .wea(write_enable),
-        .addra(addr[15:2]),
+        .addra(memaddr[15:2]),
         .dina(memin),
         .douta(memout)
     );
