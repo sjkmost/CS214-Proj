@@ -1,7 +1,7 @@
 set_property IOSTANDARD LVCMOS33 [get_ports clk]
 set_property PACKAGE_PIN Y18 [get_ports clk]
-set_property IOSTANDARD LVCMOS33 [get_ports rst]
-set_property PACKAGE_PIN P20 [get_ports rst]
+set_property IOSTANDARD LVCMOS33 [get_ports reset]
+set_property PACKAGE_PIN P20 [get_ports reset]
 set_property IOSTANDARD LVCMOS33 [get_ports button]
 set_property PACKAGE_PIN P4 [get_ports button]
 
@@ -30,7 +30,7 @@ set_property PACKAGE_PIN R4 [get_ports {io_r2[1]}]
 set_property PACKAGE_PIN W4 [get_ports {io_r2[0]}]
 
 set_property IOSTANDARD LVCMOS33 [get_ports io_w_led]
-set_property PACKAGE_PIN GLD0 [get_ports io_w_led]
+set_property PACKAGE_PIN A21 [get_ports io_w_led]
 
 set_property IOSTANDARD LVCMOS33 [get_ports {seg_en[7]}]
 set_property IOSTANDARD LVCMOS33 [get_ports {seg_en[6]}]
@@ -66,5 +66,5 @@ set_property PACKAGE_PIN C14 [get_ports {seg_out[2]}]
 set_property PACKAGE_PIN C15 [get_ports {seg_out[1]}]
 set_property PACKAGE_PIN E13 [get_ports {seg_out[0]}]
 
-set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {rst_IBUF}]
+set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {reset_IBUF}]
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {button_IBUF}]

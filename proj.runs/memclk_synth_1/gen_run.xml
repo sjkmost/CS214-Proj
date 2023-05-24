@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="memclk_synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1684851578">
+<GenRun Id="memclk_synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1684936876">
   <File Type="PA-TCL" Name="memclk.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="memclk_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="memclk_reports.tcl"/>
   <File Type="RDS-RDS" Name="memclk.vds"/>
   <File Type="RDS-UTIL" Name="memclk_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="memclk_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="memclk.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="memclk_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="memclk_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/memclk">
     <File Path="$PSRCDIR/sources_1/ip/memclk/memclk.xci">
       <FileInfo>

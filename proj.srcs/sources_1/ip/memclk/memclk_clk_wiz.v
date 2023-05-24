@@ -76,7 +76,7 @@ module memclk_clk_wiz
   //------------------------------------
 wire clk_in1_memclk;
 wire clk_in2_memclk;
-  IBUF clkin1_ibufg
+  BUFG clkin1_bufg
    (.O (clk_in1_memclk),
     .I (clk_in1));
 

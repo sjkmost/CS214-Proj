@@ -1,16 +1,16 @@
 .data
-in_x: .space 1 # x[2:0]
-in_sw_a: .space 1 # sw[7:0] a
-in_sw_b: .space 1 # sw[7:0] b
-out_led: .space 1 # A bit, 1 for led on, 0 for led off
+in_x: .word 1 # x[2:0]
+in_sw_a: .word 1 # sw[7:0] a
+in_sw_b: .word 1 # sw[7:0] b
+out_led: .word 1 # A bit, 1 for led on, 0 for led off
+out_seg_c: .word 1 # An integer denoting the result
 out_seg_a: .word 1 # An integer denoting a
 out_seg_b: .word 1 # An integer denoting b
-out_seg_c: .word 1 # An integer denoting the result
 .text
 start:
-lb $s0,in_x($zero)
-lb $s1,in_sw_a($zero)
-lb $s2,in_sw_b($zero)
+lw $s0,in_x($zero)
+lw $s1,in_sw_a($zero)
+lw $s2,in_sw_b($zero)
 beq $s0,$zero,if_0
 addi $s3,$s0,-1
 beq $s3,$zero,if_1
@@ -51,7 +51,7 @@ srl $s1,$s1,1
 xor $s4,$s4,$s3
 andi $s3,$s1,1 # bit6
 xor $s4,$s4,$s3
-sb $s4,out_led($zero)
+sw $s4,out_led($zero)
 j end
 if_1: #3'b001
 sw $s1,out_seg_a($zero)
@@ -80,7 +80,7 @@ srl $s1,$s1,1
 xor $s4,$s4,$s3
 andi $s3,$s1,1 # bit7
 xor $s4,$s4,$s3
-sb $s4,out_led($zero)
+sw $s4,out_led($zero)
 j end
 if_2: # 3'b010
 nor $s3,$s1,$s2
@@ -96,10 +96,10 @@ sw $s3,out_seg_c($zero)
 j end
 if_5: # 3'b101
 sltu $s3,$s1,$s2
-sb $s3,out_led($zero)
+sw $s3,out_led($zero)
 j end
 if_6: # 3'b110
 slt $s3,$s1,$s2
-sb $s3,out_led($zero)
+sw $s3,out_led($zero)
 end:
 j end
