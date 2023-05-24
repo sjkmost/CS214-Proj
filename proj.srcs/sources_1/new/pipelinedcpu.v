@@ -26,8 +26,14 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out);
     output io_w_led;
     output [7:0] seg_en,seg_out;
     wire clock,memclock;
-    cpuclk cpuclk1(clk,clock);
-    memclk memclk1(clk,memclock);
+    cpuclk cpuclk1(
+        .clk_in1(clk),
+        .clk_out1(clock)
+    );
+    memclk memclk1(
+        .clk_in1(clk),
+        .clk_out1(memclock)
+    );
     wire resetn;
     assign resetn=~reset;
     wire [7:0] state;
