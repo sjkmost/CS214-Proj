@@ -1,0 +1,46 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 2ad26fb1860d4997ac6fed37f78d08be --incr --debug typical --relax --mt 2 -L blk_mem_gen_v8_4_1 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot cpu_test_behav xil_defaultlib.cpu_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 32 differs from formal bit length 1 for port wr_en [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:83]
+WARNING: [VRFC 10-1783] select index 62 into current_contents is out of bounds [/wrk/2017.4/nightly/2017_12_15_2086221/packages/customer/vivado/data/ip/xilinx/blk_mem_gen_v8_4/simulation/blk_mem_gen_v8_4.v:2420]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.FSM2
+Compiling module xil_defaultlib.dffe32
+Compiling module xil_defaultlib.pipepc
+Compiling module xil_defaultlib.mux4x32
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.ROM
+Compiling module xil_defaultlib.pipeimem
+Compiling module xil_defaultlib.pipeif
+Compiling module xil_defaultlib.pipeir
+Compiling module xil_defaultlib.pipeidcu
+Compiling module xil_defaultlib.regfile
+Compiling module xil_defaultlib.mux2x5
+Compiling module xil_defaultlib.pipeid
+Compiling module xil_defaultlib.pipedereg
+Compiling module xil_defaultlib.mux2x32
+Compiling module xil_defaultlib.shift
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.pipeexe
+Compiling module xil_defaultlib.pipeemreg
+Compiling module xil_defaultlib.MemOrIO
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_output_stage(...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_1.blk_mem_gen_v8_4_1(C_FAMILY="art...
+Compiling module xil_defaultlib.RAM
+Compiling module xil_defaultlib.pipemem
+Compiling module xil_defaultlib.pipemwreg
+Compiling module xil_defaultlib.seg_enc
+Compiling module xil_defaultlib.seg_display
+Compiling module xil_defaultlib.pipelinedcpu
+Compiling module xil_defaultlib.cpu_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot cpu_test_behav

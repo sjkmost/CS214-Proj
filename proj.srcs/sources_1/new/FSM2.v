@@ -25,7 +25,7 @@ module FSM2(rst, button, state);
     output reg[7:0] state;
     always @(posedge button or posedge rst) begin
         if (rst) begin
-            state<=0; // ready
+            state<=8'b0000_0000; // ready
         end
         else if (button) begin
             state<=state+1; // change state

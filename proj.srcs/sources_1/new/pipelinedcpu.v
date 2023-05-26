@@ -19,21 +19,25 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 //TODO add IO change
-module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out);
-    input clk, reset, button;
+module pipelinedcpu(clk, mclk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,io_w_seg1,io_w_seg2,io_w_seg3,test_pc,test_state,test_addr,test_memaddr,test_ins, test_alua, test_alub);
+    input clk, mclk, reset, button;
     input [2:0] io_r1;
     input [7:0] io_r2;
     output io_w_led;
     output [7:0] seg_en,seg_out;
+    output [31:0] test_memaddr,test_addr;
+    output [31:0] test_alua, test_alub;
     wire clock,memclock;
-    cpuclk cpuclk1(
-        .clk_in1(clk),
-        .clk_out1(clock)
-    );
-    memclk memclk1(
-        .clk_in1(clk),
-        .clk_out1(memclock)
-    );
+        assign clock=clk;
+        assign memclock=mclk;
+//    cpuclk cpuclk1(
+//        .clk_in1(clk),
+//        .clk_out1(clock)
+//    );
+//    memclk memclk1(
+//        .clk_in1(clk),
+//        .clk_out1(memclock)
+//    );
     wire resetn;
     assign resetn=~reset;
     wire [7:0] state;
@@ -48,7 +52,14 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out);
     wire mwreg, mm2reg, mwmem;
     wire wwreg, wm2reg;
     wire [31:0] pc,ealu,malu,walu;
-    wire [15:0] io_w_seg1,io_w_seg2,io_w_seg3;
+    output [31:0] test_pc;
+    assign test_pc=pc;
+    output [7:0] test_state;
+    assign test_state=state;
+    output [31:0] test_ins;
+    assign test_ins=ins;
+    output [15:0] io_w_seg1;
+    output [7:0] io_w_seg2,io_w_seg3;
     FSM2 fsm(reset, button, state);
     pipepc prog_cnt (npc, wpcir, clock, resetn, pc);
     pipeif if_stage (memclock, pcsource, pc, bpc, da, jpc, npc, pc4, ins);
@@ -56,16 +67,16 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out);
     pipeid id_stage (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst,
                     wrn, wdi, ealu, malu, mmo, wwreg, clock, resetn,
                     bpc, jpc, pcsource, wpcir, dwreg, dm2reg, dwmem,
-                    daluc, daluimm, da, db, dimm, drn, dshift, djal);
+                    daluc, daluimm, da, db, dimm, drn, dshift, djal, state);
     pipedereg de_reg(dwreg, dm2reg, dwmem, daluc, daluimm, da, db, dimm,
                     drn, dshift, djal, dpc4, clock, resetn,
                     ewreg, em2reg, ewmem, ealuc, ealuimm, ea, eb, eimm,
                     ern0, eshift, ejal, epc4);
     pipeexe exe_stage(ealuc, ealuimm, ea, eb, eimm, eshift, ern0, epc4,
-                    ejal, ern, ealu);
+                    ejal, ern, ealu, test_alua, test_alub);
     pipeemreg em_reg(ewreg, em2reg, ewmem, ealu, eb, ern, clock, resetn,
                     mwreg, mm2reg, mwmem, malu, mb, mrn);
-    pipemem mem_stage(state, mwmem, malu, mb, clock, memclock, io_r1, io_r2, io_w_led, io_w_seg1, io_w_seg2, io_w_seg3, mmo);
+    pipemem mem_stage(state, mwmem, malu, mb, clock, memclock, io_r1, io_r2, io_w_led, io_w_seg1, io_w_seg2, io_w_seg3, mmo,test_addr, test_memaddr);
     pipemwreg mw_reg(mwreg, mm2reg, mmo, malu, mrn, clock, resetn,
                     wwreg, wm2reg, wmo, walu, wrn);
     mux2x32 wb_stage(walu, wmo, wm2reg, wdi);

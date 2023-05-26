@@ -24,7 +24,6 @@ module pipeimem(clk, a, inst);
     input [31:0] a;
     output [31:0] inst;
     
-    
     ROM instmem(
         .clka(clk),
         .addra(a[15:2]),

@@ -1,11 +1,11 @@
 .data
-in_x: .word 1 # x[2:0]
-in_sw_a: .word 1 # sw[7:0] a
-in_sw_b: .word 1 # sw[7:0] b
-out_led: .word 1 # A bit, 1 for led on, 0 for led off
-out_seg_c: .word 1 # An integer denoting the result
-out_seg_a: .word 1 # An integer denoting a
-out_seg_b: .word 1 # An integer denoting b
+in_x: .word # x[2:0]
+in_sw_a: .word # sw[7:0] a
+in_sw_b: .word # sw[7:0] b
+out_led: .word # A bit, 1 for led on, 0 for led off
+out_seg_c: .word # An integer denoting the result
+out_seg_a: .word # An integer denoting a
+out_seg_b: .word # An integer denoting b
 .text
 start:
 lw $s0,in_x($zero)

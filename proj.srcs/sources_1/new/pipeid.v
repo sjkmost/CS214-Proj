@@ -22,11 +22,12 @@
 module pipeid (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst, wrn,
                 wdi, ealu, malu, mmo, wwreg, clk, clrn, bpc, jpc, pcsource,
                 nostall, wreg, m2reg, wmem, aluc, aluimm, a, b, imm, rn,
-                shift, jal);
+                shift, jal, state);
     input [31:0] dpc4, inst, wdi, ealu, malu, mmo;
     input [4:0] ern, mrn, wrn;
     input mwreg, ewreg, em2reg, mm2reg, wwreg;
     input clk, clrn;
+    input [7:0] state;
     output [31:0] bpc, jpc, a, b, imm;
     output [4:0] rn;
     output [3:0] aluc;
@@ -46,7 +47,7 @@ module pipeid (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst, wrn,
     assign jpc = {dpc4[31:28], inst[25:0], 2'b00};
     pipeidcu cu(mwreg, mrn, ern, ewreg, em2reg, mm2reg, rsrtequ, func,
                 op, rs, rt, wreg, m2reg, wmem, aluc, regrt, aluimm,
-                fwda, fwdb, nostall, sext, pcsource, shift, jal);
+                fwda, fwdb, nostall, sext, pcsource, shift, jal, state);
     regfile rf(rs, rt, wdi, wrn, wwreg, ~clk, clrn, qa, qb);
     mux2x5 des_reg_no(rd, rt, regrt, rn);
     mux4x32 alu_a (qa, ealu, malu, mmo, fwda, a);

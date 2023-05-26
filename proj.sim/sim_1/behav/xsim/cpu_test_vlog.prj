@@ -1,0 +1,37 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../proj.srcs/sources_1/ip/cpuclk" --include "../../../../proj.srcs/sources_1/ip/memclk" \
+"../../../../proj.srcs/sources_1/ip/RAM/sim/RAM.v" \
+"../../../../proj.srcs/sources_1/ip/ROM/sim/ROM.v" \
+"../../../../proj.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" \
+"../../../../proj.srcs/sources_1/ip/cpuclk/cpuclk.v" \
+"../../../../proj.srcs/sources_1/ip/memclk/memclk_clk_wiz.v" \
+"../../../../proj.srcs/sources_1/ip/memclk/memclk.v" \
+"../../../../proj.srcs/sources_1/new/MemOrIO.v" \
+"../../../../proj.srcs/sources_1/new/alu.v" \
+"../../../../proj.srcs/sources_1/new/dffe32.v" \
+"../../../../proj.srcs/sources_1/new/mux2x32.v" \
+"../../../../proj.srcs/sources_1/new/mux2x5.v" \
+"../../../../proj.srcs/sources_1/new/mux4x32.v" \
+"../../../../proj.srcs/sources_1/new/pipedereg.v" \
+"../../../../proj.srcs/sources_1/new/pipeemreg.v" \
+"../../../../proj.srcs/sources_1/new/pipeexe.v" \
+"../../../../proj.srcs/sources_1/new/pipeid.v" \
+"../../../../proj.srcs/sources_1/new/pipeidcu.v" \
+"../../../../proj.srcs/sources_1/new/pipeif.v" \
+"../../../../proj.srcs/sources_1/new/pipeimem.v" \
+"../../../../proj.srcs/sources_1/new/pipeir.v" \
+"../../../../proj.srcs/sources_1/new/pipemem.v" \
+"../../../../proj.srcs/sources_1/new/pipemwreg.v" \
+"../../../../proj.srcs/sources_1/new/pipepc.v" \
+"../../../../proj.srcs/sources_1/new/regfile.v" \
+"../../../../proj.srcs/sources_1/new/seg_display.v" \
+"../../../../proj.srcs/sources_1/new/shift.v" \
+"../../../../proj.srcs/sources_1/new/pipelinedcpu.v" \
+"../../../../proj.srcs/sources_1/new/FSM2.v" \
+"../../../../proj.srcs/sim_1/new/cpu_test.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
