@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1684939590">
+  <File Type="PWROPT-DCP" Name="pipelinedcpu_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="pipelinedcpu_power_routed.rpt"/>
   <File Type="PA-TCL" Name="pipelinedcpu.tcl"/>
-  <File Type="PWROPT-DCP" Name="pipelinedcpu_pwropt.dcp"/>
   <File Type="ROUTE-PWR-SUM" Name="pipelinedcpu_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="pipelinedcpu_reports.tcl"/>
   <File Type="BG-DRC" Name="pipelinedcpu.drc"/>
-  <File Type="OPT-HWDEF" Name="pipelinedcpu.hwdef"/>
   <File Type="OPT-DCP" Name="pipelinedcpu_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="pipelinedcpu.hwdef"/>
   <File Type="OPT-DRC" Name="pipelinedcpu_drc_opted.rpt"/>
   <File Type="PLACE-DCP" Name="pipelinedcpu_placed.dcp"/>
   <File Type="PLACE-IO" Name="pipelinedcpu_io_placed.rpt"/>
@@ -23,22 +23,22 @@
   <File Type="ROUTE-BLACKBOX-DCP" Name="pipelinedcpu_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="pipelinedcpu_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="pipelinedcpu_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="pipelinedcpu_drc_routed.rpx"/>
   <File Type="BITSTR-MSK" Name="pipelinedcpu.msk"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="pipelinedcpu_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-RPX" Name="pipelinedcpu_drc_routed.rpx"/>
   <File Type="BG-BGN" Name="pipelinedcpu.bgn"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="pipelinedcpu_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="pipelinedcpu_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-RBT" Name="pipelinedcpu.rbt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="pipelinedcpu_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="pipelinedcpu_methodology_drc_routed.rpx"/>
   <File Type="BG-BIN" Name="pipelinedcpu.bin"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="pipelinedcpu_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="pipelinedcpu_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="pipelinedcpu_route_status.rpt"/>
   <File Type="ROUTE-STATUS-PB" Name="pipelinedcpu_route_status.pb"/>
   <File Type="ROUTE-TIMINGSUMMARY" Name="pipelinedcpu_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="pipelinedcpu_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="pipelinedcpu_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-CLK" Name="pipelinedcpu_clock_utilization_routed.rpt"/>
   <File Type="RDI-RDI" Name="pipelinedcpu.vdi"/>
+  <File Type="ROUTE-CLK" Name="pipelinedcpu_clock_utilization_routed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="pipelinedcpu_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="pipelinedcpu_postroute_physopt_bb.dcp"/>
   <File Type="BITSTR-NKY" Name="pipelinedcpu.nky"/>

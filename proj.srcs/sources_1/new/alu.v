@@ -35,7 +35,7 @@ module alu(a, b, aluc, r, z);
     output [31: 0] r;
 //    output z, v;
     output z;
-    wire [31:0] r_addsub = aluc[2] ? a + b : a - b;
+    wire [31:0] r_addsub = aluc[2] ? a - b : a + b;
     wire [31:0] r_and = a & b;
     wire [31:0] r_or = a | b;
     wire [31:0] r_andor = aluc[2] ? r_or : r_and;

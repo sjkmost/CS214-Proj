@@ -30,7 +30,7 @@ module pipemem(state, we, addr, datain, clk, memclk, io_r1, io_r2, io_w_led, io_
     output [7:0] io_w_seg2, io_w_seg3;
     output [31:0] dataout;
     wire [31:0] memin, memout, memaddr;
-    wire write_enable = we & ~clk;
+    wire write_enable = (we & ~clk) | ( (state < 4) & (state > 0) );
     output [31:0] test_memaddr;
     output [31:0] test_addr;
     assign test_memaddr=memaddr;
