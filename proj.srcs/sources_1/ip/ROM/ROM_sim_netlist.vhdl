@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
 -- Date        : Fri May 26 16:27:24 2023
 -- Host        : LAPTOP-L3QUOT52 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/ROM/ROM_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top ROM -prefix
+--               ROM_ ROM_sim_netlist.vhdl
 -- Design      : ROM
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,8 +19,6 @@ entity ROM_bindec is
     ena_array : out STD_LOGIC_VECTOR ( 1 downto 0 );
     addra : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ROM_bindec : entity is "bindec";
 end ROM_bindec;
 
 architecture STRUCTURE of ROM_bindec is
@@ -78,8 +76,6 @@ entity ROM_blk_mem_gen_mux is
     \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_19\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_20\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ROM_blk_mem_gen_mux : entity is "blk_mem_gen_mux";
 end ROM_blk_mem_gen_mux;
 
 architecture STRUCTURE of ROM_blk_mem_gen_mux is
@@ -469,8 +465,6 @@ entity ROM_blk_mem_gen_prim_wrapper_init is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 13 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ROM_blk_mem_gen_prim_wrapper_init : entity is "blk_mem_gen_prim_wrapper_init";
 end ROM_blk_mem_gen_prim_wrapper_init;
 
 architecture STRUCTURE of ROM_blk_mem_gen_prim_wrapper_init is
@@ -4093,8 +4087,6 @@ entity ROM_blk_mem_gen_prim_width is
     clka : in STD_LOGIC;
     addra : in STD_LOGIC_VECTOR ( 13 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ROM_blk_mem_gen_prim_width : entity is "blk_mem_gen_prim_width";
 end ROM_blk_mem_gen_prim_width;
 
 architecture STRUCTURE of ROM_blk_mem_gen_prim_width is
@@ -4486,8 +4478,6 @@ entity ROM_blk_mem_gen_generic_cstr is
     addra : in STD_LOGIC_VECTOR ( 13 downto 0 );
     clka : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ROM_blk_mem_gen_generic_cstr : entity is "blk_mem_gen_generic_cstr";
 end ROM_blk_mem_gen_generic_cstr;
 
 architecture STRUCTURE of ROM_blk_mem_gen_generic_cstr is
@@ -4932,8 +4922,6 @@ entity ROM_blk_mem_gen_top is
     addra : in STD_LOGIC_VECTOR ( 13 downto 0 );
     clka : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ROM_blk_mem_gen_top : entity is "blk_mem_gen_top";
 end ROM_blk_mem_gen_top;
 
 architecture STRUCTURE of ROM_blk_mem_gen_top is
@@ -4955,8 +4943,6 @@ entity ROM_blk_mem_gen_v8_4_1_synth is
     addra : in STD_LOGIC_VECTOR ( 13 downto 0 );
     clka : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ROM_blk_mem_gen_v8_4_1_synth : entity is "blk_mem_gen_v8_4_1_synth";
 end ROM_blk_mem_gen_v8_4_1_synth;
 
 architecture STRUCTURE of ROM_blk_mem_gen_v8_4_1_synth is
@@ -5184,8 +5170,6 @@ entity ROM_blk_mem_gen_v8_4_1 is
   attribute C_WRITE_WIDTH_B of ROM_blk_mem_gen_v8_4_1 : entity is 32;
   attribute C_XDEVICEFAMILY : string;
   attribute C_XDEVICEFAMILY of ROM_blk_mem_gen_v8_4_1 : entity is "artix7";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of ROM_blk_mem_gen_v8_4_1 : entity is "blk_mem_gen_v8_4_1";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of ROM_blk_mem_gen_v8_4_1 : entity is "yes";
 end ROM_blk_mem_gen_v8_4_1;

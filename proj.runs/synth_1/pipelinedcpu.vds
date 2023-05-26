@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Wed May 24 22:46:31 2023
-# Process ID: 7980
+# Start of session at: Fri May 26 21:11:11 2023
+# Process ID: 23372
 # Current directory: D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1
 # Command line: vivado.exe -log pipelinedcpu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pipelinedcpu.tcl
 # Log file: D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/pipelinedcpu.vds
@@ -12,80 +12,71 @@
 source pipelinedcpu.tcl -notrace
 Command: synth_design -top pipelinedcpu -part xc7a100tfgg484-1 -flatten_hierarchy none
 Starting synth_design
-WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
-D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM/RAM.xci
-D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/ROM/ROM.xci
-
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2664 
+INFO: Helper process launched with PID 2208 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 345.059 ; gain = 103.691
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 344.328 ; gain = 102.246
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'pipelinedcpu' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:22]
-INFO: [Synth 8-638] synthesizing module 'cpuclk' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/realtime/cpuclk_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'cpuclk' (1#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/realtime/cpuclk_stub.v:5]
-INFO: [Synth 8-638] synthesizing module 'memclk' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/realtime/memclk_stub.v:5]
-INFO: [Synth 8-256] done synthesizing module 'memclk' (2#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/realtime/memclk_stub.v:5]
+	Parameter period bound to: 10000 - type: integer 
+	Parameter period2 bound to: 2000 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'FSM2' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/FSM2.v:23]
-INFO: [Synth 8-256] done synthesizing module 'FSM2' (3#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/FSM2.v:23]
+INFO: [Synth 8-256] done synthesizing module 'FSM2' (1#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/FSM2.v:23]
 INFO: [Synth 8-638] synthesizing module 'pipepc' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipepc.v:22]
 INFO: [Synth 8-638] synthesizing module 'dffe32' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/dffe32.v:23]
-INFO: [Synth 8-256] done synthesizing module 'dffe32' (4#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/dffe32.v:23]
-INFO: [Synth 8-256] done synthesizing module 'pipepc' (5#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipepc.v:22]
+INFO: [Synth 8-256] done synthesizing module 'dffe32' (2#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/dffe32.v:23]
+INFO: [Synth 8-256] done synthesizing module 'pipepc' (3#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipepc.v:22]
 INFO: [Synth 8-638] synthesizing module 'pipeif' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeif.v:22]
 INFO: [Synth 8-638] synthesizing module 'mux4x32' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux4x32.v:23]
-INFO: [Synth 8-256] done synthesizing module 'mux4x32' (6#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux4x32.v:23]
+INFO: [Synth 8-256] done synthesizing module 'mux4x32' (4#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux4x32.v:23]
 INFO: [Synth 8-638] synthesizing module 'pipeimem' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeimem.v:22]
-INFO: [Synth 8-638] synthesizing module 'ROM' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/realtime/ROM_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'ROM' (7#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/realtime/ROM_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'pipeimem' (8#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeimem.v:22]
-INFO: [Synth 8-256] done synthesizing module 'pipeif' (9#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeif.v:22]
+INFO: [Synth 8-638] synthesizing module 'ROM' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-23372-LAPTOP-L3QUOT52/realtime/ROM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (5#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-23372-LAPTOP-L3QUOT52/realtime/ROM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'pipeimem' (6#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeimem.v:22]
+INFO: [Synth 8-256] done synthesizing module 'pipeif' (7#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeif.v:22]
 INFO: [Synth 8-638] synthesizing module 'pipeir' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeir.v:22]
-INFO: [Synth 8-256] done synthesizing module 'pipeir' (10#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeir.v:22]
+INFO: [Synth 8-256] done synthesizing module 'pipeir' (8#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeir.v:22]
 INFO: [Synth 8-638] synthesizing module 'pipeid' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeid.v:22]
 INFO: [Synth 8-638] synthesizing module 'pipeidcu' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeidcu.v:22]
-INFO: [Synth 8-256] done synthesizing module 'pipeidcu' (11#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeidcu.v:22]
+INFO: [Synth 8-256] done synthesizing module 'pipeidcu' (9#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeidcu.v:22]
 INFO: [Synth 8-638] synthesizing module 'regfile' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/regfile.v:23]
-INFO: [Synth 8-256] done synthesizing module 'regfile' (12#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/regfile.v:23]
+INFO: [Synth 8-256] done synthesizing module 'regfile' (10#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/regfile.v:23]
 INFO: [Synth 8-638] synthesizing module 'mux2x5' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux2x5.v:23]
-INFO: [Synth 8-256] done synthesizing module 'mux2x5' (13#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux2x5.v:23]
-INFO: [Synth 8-256] done synthesizing module 'pipeid' (14#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeid.v:22]
+INFO: [Synth 8-256] done synthesizing module 'mux2x5' (11#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux2x5.v:23]
+INFO: [Synth 8-256] done synthesizing module 'pipeid' (12#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeid.v:22]
 INFO: [Synth 8-638] synthesizing module 'pipedereg' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipedereg.v:22]
-INFO: [Synth 8-256] done synthesizing module 'pipedereg' (15#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipedereg.v:22]
+INFO: [Synth 8-256] done synthesizing module 'pipedereg' (13#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipedereg.v:22]
 INFO: [Synth 8-638] synthesizing module 'pipeexe' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeexe.v:22]
 INFO: [Synth 8-638] synthesizing module 'mux2x32' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux2x32.v:23]
-INFO: [Synth 8-256] done synthesizing module 'mux2x32' (16#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux2x32.v:23]
+INFO: [Synth 8-256] done synthesizing module 'mux2x32' (14#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux2x32.v:23]
 INFO: [Synth 8-638] synthesizing module 'alu' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/alu.v:32]
 INFO: [Synth 8-638] synthesizing module 'shift' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/shift.v:23]
-INFO: [Synth 8-256] done synthesizing module 'shift' (17#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/shift.v:23]
-INFO: [Synth 8-256] done synthesizing module 'alu' (18#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/alu.v:32]
-INFO: [Synth 8-256] done synthesizing module 'pipeexe' (19#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeexe.v:22]
+INFO: [Synth 8-256] done synthesizing module 'shift' (15#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/shift.v:23]
+INFO: [Synth 8-256] done synthesizing module 'alu' (16#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/alu.v:32]
+INFO: [Synth 8-256] done synthesizing module 'pipeexe' (17#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeexe.v:22]
 INFO: [Synth 8-638] synthesizing module 'pipeemreg' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeemreg.v:22]
-INFO: [Synth 8-256] done synthesizing module 'pipeemreg' (20#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeemreg.v:22]
+INFO: [Synth 8-256] done synthesizing module 'pipeemreg' (18#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeemreg.v:22]
 INFO: [Synth 8-638] synthesizing module 'pipemem' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipemem.v:22]
 INFO: [Synth 8-638] synthesizing module 'MemOrIO' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v:23]
-WARNING: [Synth 8-567] referenced signal 'io_rdata1' should be on the sensitivity list [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v:41]
-WARNING: [Synth 8-567] referenced signal 'io_rdata2' should be on the sensitivity list [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v:41]
-INFO: [Synth 8-256] done synthesizing module 'MemOrIO' (21#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v:23]
-INFO: [Synth 8-638] synthesizing module 'RAM' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/realtime/RAM_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'RAM' (22#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/realtime/RAM_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'pipemem' (23#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipemem.v:22]
-WARNING: [Synth 8-689] width (16) of port connection 'io_w_seg2' does not match port width (8) of module 'pipemem' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:68]
-WARNING: [Synth 8-689] width (16) of port connection 'io_w_seg3' does not match port width (8) of module 'pipemem' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:68]
+INFO: [Synth 8-256] done synthesizing module 'MemOrIO' (19#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v:23]
+INFO: [Synth 8-638] synthesizing module 'RAM' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-23372-LAPTOP-L3QUOT52/realtime/RAM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (20#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-23372-LAPTOP-L3QUOT52/realtime/RAM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'pipemem' (21#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipemem.v:22]
+WARNING: [Synth 8-350] instance 'mem_stage' of module 'pipemem' requires 13 connections, but only 12 given [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:87]
 INFO: [Synth 8-638] synthesizing module 'pipemwreg' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipemwreg.v:22]
-INFO: [Synth 8-256] done synthesizing module 'pipemwreg' (24#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipemwreg.v:22]
+INFO: [Synth 8-256] done synthesizing module 'pipemwreg' (22#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipemwreg.v:22]
 INFO: [Synth 8-638] synthesizing module 'seg_display' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/seg_display.v:51]
 	Parameter period bound to: 2000 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'seg_enc' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/seg_display.v:22]
 INFO: [Synth 8-226] default block is never used [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/seg_display.v:29]
-INFO: [Synth 8-256] done synthesizing module 'seg_enc' (25#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/seg_display.v:22]
+INFO: [Synth 8-256] done synthesizing module 'seg_enc' (23#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/seg_display.v:22]
 INFO: [Synth 8-226] default block is never used [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/seg_display.v:78]
 INFO: [Synth 8-226] default block is never used [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/seg_display.v:92]
-INFO: [Synth 8-256] done synthesizing module 'seg_display' (26#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/seg_display.v:51]
-WARNING: [Synth 8-689] width (16) of port connection 'out2' does not match port width (8) of module 'seg_display' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:72]
-INFO: [Synth 8-256] done synthesizing module 'pipelinedcpu' (27#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:22]
+INFO: [Synth 8-256] done synthesizing module 'seg_display' (24#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/seg_display.v:51]
+WARNING: [Synth 8-3848] Net mmo in module/entity pipelinedcpu does not have driver. [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:59]
+INFO: [Synth 8-256] done synthesizing module 'pipelinedcpu' (25#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:22]
 WARNING: [Synth 8-3331] design MemOrIO has unconnected port mRead
 WARNING: [Synth 8-3331] design MemOrIO has unconnected port mWrite
 WARNING: [Synth 8-3331] design pipeimem has unconnected port a[31]
@@ -107,7 +98,7 @@ WARNING: [Synth 8-3331] design pipeimem has unconnected port a[16]
 WARNING: [Synth 8-3331] design pipeimem has unconnected port a[1]
 WARNING: [Synth 8-3331] design pipeimem has unconnected port a[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 397.766 ; gain = 156.398
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 396.723 ; gain = 154.641
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -116,22 +107,82 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[31] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[30] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[29] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[28] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[27] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[26] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[25] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[24] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[23] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[22] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[21] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[20] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[19] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[18] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[17] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[16] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[15] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[14] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[13] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[12] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[11] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[10] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[9] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[8] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[7] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[6] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[5] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[4] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[3] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[2] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[1] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin id_stage:mmo[0] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:75]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[31] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[30] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[29] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[28] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[27] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[26] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[25] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[24] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[23] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[22] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[21] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[20] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[19] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[18] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[17] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[16] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[15] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[14] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[13] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[12] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[11] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[10] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[9] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[8] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[7] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[6] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[5] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[4] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[3] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[2] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[1] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
+WARNING: [Synth 8-3295] tying undriven pin mw_reg:mmo[0] to constant 0 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:88]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 397.766 ; gain = 156.398
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 396.723 ; gain = 154.641
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/dcp4/RAM_in_context.xdc] for cell 'mem_stage/ram'
-Finished Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/dcp4/RAM_in_context.xdc] for cell 'mem_stage/ram'
-Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/dcp5/ROM_in_context.xdc] for cell 'if_stage/ist_mem/instmem'
-Finished Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/dcp5/ROM_in_context.xdc] for cell 'if_stage/ist_mem/instmem'
-Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/dcp6/cpuclk_in_context.xdc] for cell 'cpuclk1'
-Finished Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/dcp6/cpuclk_in_context.xdc] for cell 'cpuclk1'
-Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/dcp7/memclk_in_context.xdc] for cell 'memclk1'
-Finished Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-7980-LAPTOP-L3QUOT52/dcp7/memclk_in_context.xdc] for cell 'memclk1'
+Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-23372-LAPTOP-L3QUOT52/dcp5/RAM_in_context.xdc] for cell 'mem_stage/ram'
+Finished Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-23372-LAPTOP-L3QUOT52/dcp5/RAM_in_context.xdc] for cell 'mem_stage/ram'
+Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-23372-LAPTOP-L3QUOT52/dcp6/ROM_in_context.xdc] for cell 'if_stage/ist_mem/instmem'
+Finished Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-23372-LAPTOP-L3QUOT52/dcp6/ROM_in_context.xdc] for cell 'if_stage/ist_mem/instmem'
 Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/constrs_1/new/src_xdc.xdc]
 WARNING: [Vivado 12-507] No nets matched 'reset_IBUF'. [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/constrs_1/new/src_xdc.xdc:69]
 WARNING: [Vivado 12-507] No nets matched 'button_IBUF'. [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/constrs_1/new/src_xdc.xdc:70]
@@ -139,31 +190,31 @@ Finished Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Pr
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/constrs_1/new/src_xdc.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/pipelinedcpu_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/constrs_1/new/src_xdc.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/pipelinedcpu_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/pipelinedcpu_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 758.586 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 749.699 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 758.586 ; gain = 517.219
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 749.699 ; gain = 507.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 758.586 ; gain = 517.219
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 749.699 ; gain = 507.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for cpuclk1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for if_stage/ist_mem/instmem. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mem_stage/ram. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for memclk1. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 758.586 ; gain = 517.219
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 749.699 ; gain = 507.617
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/FSM2.v:28]
 INFO: [Synth 8-5546] ROM "register_reg[1]" won't be mapped to RAM because it is too sparse
@@ -198,18 +249,22 @@ INFO: [Synth 8-5546] ROM "register_reg[29]" won't be mapped to RAM because it is
 INFO: [Synth 8-5546] ROM "register_reg[30]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "register_reg[31]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/alu.v:38]
-INFO: [Synth 8-5546] ROM "iwled" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "out1" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "out2" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "out3" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "iwled" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-327] inferring latch for variable 'iwled_reg' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v:62]
-WARNING: [Synth 8-327] inferring latch for variable 'out1_reg' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v:65]
-WARNING: [Synth 8-327] inferring latch for variable 'out2_reg' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v:66]
-WARNING: [Synth 8-327] inferring latch for variable 'out3_reg' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v:67]
+INFO: [Synth 8-5545] ROM "clock" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memclock" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+WARNING: [Synth 8-327] inferring latch for variable 'iwled_reg' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v:43]
+WARNING: [Synth 8-327] inferring latch for variable 'out1_reg' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v:46]
+WARNING: [Synth 8-327] inferring latch for variable 'out2_reg' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v:47]
+WARNING: [Synth 8-327] inferring latch for variable 'out3_reg' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v:48]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 758.586 ; gain = 517.219
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:16 . Memory (MB): peak = 749.699 ; gain = 507.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -222,30 +277,31 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 5     
+	   2 Input     32 Bit       Adders := 8     
 	   3 Input     32 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 2     
 +---Registers : 
-	               32 Bit    Registers := 43    
+	               32 Bit    Registers := 45    
 	                8 Bit    Registers := 1     
 	                5 Bit    Registers := 3     
 	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 1     
-	                1 Bit    Registers := 12    
+	                1 Bit    Registers := 14    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 26    
-	   5 Input     32 Bit        Muxes := 1     
-	   4 Input     32 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 30    
+	   2 Input     16 Bit        Muxes := 1     
+	  10 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
+	  10 Input      8 Bit        Muxes := 2     
 	   8 Input      8 Bit        Muxes := 1     
 	   2 Input      5 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 4     
-	   2 Input      1 Bit        Muxes := 35    
-	   8 Input      1 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 39    
+	  10 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -253,6 +309,16 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
+Module pipelinedcpu 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     32 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
 Module FSM2 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -328,13 +394,15 @@ Detailed RTL Component Info :
 Module MemOrIO 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 2     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 2     
-	   5 Input     32 Bit        Muxes := 1     
-	   4 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 3     
-	   8 Input      1 Bit        Muxes := 3     
+	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     16 Bit        Muxes := 1     
+	  10 Input     16 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 2     
+	  10 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 5     
+	  10 Input      1 Bit        Muxes := 5     
 Module pipemwreg 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -375,6 +443,10 @@ WARNING: [Synth 8-6014] Unused sequential element state_reg was removed.  [D:/lh
 INFO: [Synth 8-5544] ROM "p_2_out0" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "clkout" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "clock" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "cnt2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "memclock" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 WARNING: [Synth 8-3331] design MemOrIO has unconnected port mRead
 WARNING: [Synth 8-3331] design MemOrIO has unconnected port mWrite
 WARNING: [Synth 8-3331] design pipeimem has unconnected port a[31]
@@ -395,6 +467,38 @@ WARNING: [Synth 8-3331] design pipeimem has unconnected port a[17]
 WARNING: [Synth 8-3331] design pipeimem has unconnected port a[16]
 WARNING: [Synth 8-3331] design pipeimem has unconnected port a[1]
 WARNING: [Synth 8-3331] design pipeimem has unconnected port a[0]
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[0]' (FDC) to 'mw_reg/wmo_reg[1]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[1]' (FDC) to 'mw_reg/wmo_reg[2]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[2]' (FDC) to 'mw_reg/wmo_reg[3]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[3]' (FDC) to 'mw_reg/wmo_reg[4]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[4]' (FDC) to 'mw_reg/wmo_reg[5]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[5]' (FDC) to 'mw_reg/wmo_reg[6]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[6]' (FDC) to 'mw_reg/wmo_reg[7]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[7]' (FDC) to 'mw_reg/wmo_reg[8]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[8]' (FDC) to 'mw_reg/wmo_reg[9]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[9]' (FDC) to 'mw_reg/wmo_reg[10]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[10]' (FDC) to 'mw_reg/wmo_reg[11]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[11]' (FDC) to 'mw_reg/wmo_reg[12]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[12]' (FDC) to 'mw_reg/wmo_reg[13]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[13]' (FDC) to 'mw_reg/wmo_reg[14]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[14]' (FDC) to 'mw_reg/wmo_reg[15]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[15]' (FDC) to 'mw_reg/wmo_reg[16]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[16]' (FDC) to 'mw_reg/wmo_reg[17]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[17]' (FDC) to 'mw_reg/wmo_reg[18]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[18]' (FDC) to 'mw_reg/wmo_reg[19]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[19]' (FDC) to 'mw_reg/wmo_reg[20]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[20]' (FDC) to 'mw_reg/wmo_reg[21]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[21]' (FDC) to 'mw_reg/wmo_reg[22]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[22]' (FDC) to 'mw_reg/wmo_reg[23]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[23]' (FDC) to 'mw_reg/wmo_reg[24]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[24]' (FDC) to 'mw_reg/wmo_reg[25]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[25]' (FDC) to 'mw_reg/wmo_reg[26]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[26]' (FDC) to 'mw_reg/wmo_reg[27]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[27]' (FDC) to 'mw_reg/wmo_reg[28]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[28]' (FDC) to 'mw_reg/wmo_reg[29]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[29]' (FDC) to 'mw_reg/wmo_reg[30]'
+INFO: [Synth 8-3886] merging instance 'mw_reg/wmo_reg[30]' (FDC) to 'mw_reg/wmo_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (mw_reg/\wmo_reg[31] )
 INFO: [Synth 8-3886] merging instance 'de_reg/eimm_reg[16]' (FDC) to 'de_reg/eimm_reg[17]'
 INFO: [Synth 8-3886] merging instance 'de_reg/eimm_reg[17]' (FDC) to 'de_reg/eimm_reg[18]'
 INFO: [Synth 8-3886] merging instance 'de_reg/eimm_reg[18]' (FDC) to 'de_reg/eimm_reg[19]'
@@ -410,16 +514,9 @@ INFO: [Synth 8-3886] merging instance 'de_reg/eimm_reg[27]' (FDC) to 'de_reg/eim
 INFO: [Synth 8-3886] merging instance 'de_reg/eimm_reg[28]' (FDC) to 'de_reg/eimm_reg[29]'
 INFO: [Synth 8-3886] merging instance 'de_reg/eimm_reg[29]' (FDC) to 'de_reg/eimm_reg[30]'
 INFO: [Synth 8-3886] merging instance 'de_reg/eimm_reg[30]' (FDC) to 'de_reg/eimm_reg[31]'
-WARNING: [Synth 8-3332] Sequential element (out3_reg[7]) is unused and will be removed from module MemOrIO.
-WARNING: [Synth 8-3332] Sequential element (out3_reg[6]) is unused and will be removed from module MemOrIO.
-WARNING: [Synth 8-3332] Sequential element (out3_reg[5]) is unused and will be removed from module MemOrIO.
-WARNING: [Synth 8-3332] Sequential element (out3_reg[4]) is unused and will be removed from module MemOrIO.
-WARNING: [Synth 8-3332] Sequential element (out3_reg[3]) is unused and will be removed from module MemOrIO.
-WARNING: [Synth 8-3332] Sequential element (out3_reg[2]) is unused and will be removed from module MemOrIO.
-WARNING: [Synth 8-3332] Sequential element (out3_reg[1]) is unused and will be removed from module MemOrIO.
-WARNING: [Synth 8-3332] Sequential element (out3_reg[0]) is unused and will be removed from module MemOrIO.
+WARNING: [Synth 8-3332] Sequential element (wmo_reg[31]) is unused and will be removed from module pipemwreg.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 758.586 ; gain = 517.219
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 749.699 ; gain = 507.617
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -430,17 +527,14 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5578] Moved timing constraint from pin 'cpuclk1/clk_out1' to pin 'cpuclk1/bbstub_clk_out1/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'memclk1/clk_out1' to pin 'memclk1/bbstub_clk_out1/O'
-INFO: [Synth 8-5819] Moved 2 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 758.586 ; gain = 517.219
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 755.367 ; gain = 513.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:29 . Memory (MB): peak = 758.586 ; gain = 517.219
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 759.340 ; gain = 517.258
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -452,7 +546,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:30 . Memory (MB): peak = 783.480 ; gain = 542.113
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 784.367 ; gain = 542.285
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -470,7 +564,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 783.480 ; gain = 542.113
+Finished IO Insertion : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 784.367 ; gain = 542.285
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -483,7 +577,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 783.480 ; gain = 542.113
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 784.367 ; gain = 542.285
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -495,7 +589,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 783.480 ; gain = 542.113
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 784.367 ; gain = 542.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -507,8 +601,6 @@ Report BlackBoxes:
 +------+--------------+----------+
 |1     |ROM           |         1|
 |2     |RAM           |         1|
-|3     |cpuclk        |         1|
-|4     |memclk        |         1|
 +------+--------------+----------+
 
 Report Cell Usage: 
@@ -517,30 +609,28 @@ Report Cell Usage:
 +------+-------+------+
 |1     |RAM    |     1|
 |2     |ROM    |     1|
-|3     |cpuclk |     1|
-|4     |memclk |     1|
-|5     |BUFG   |     2|
-|6     |CARRY4 |    40|
-|7     |LUT1   |    23|
-|8     |LUT2   |    52|
-|9     |LUT3   |   261|
-|10    |LUT4   |    84|
-|11    |LUT5   |   134|
-|12    |LUT6   |   901|
-|13    |MUXF7  |   149|
-|14    |MUXF8  |    64|
-|15    |FDCE   |  1367|
-|16    |FDRE   |    36|
-|17    |LD     |    25|
-|18    |IBUF   |    14|
-|19    |OBUF   |    17|
+|3     |BUFG   |     2|
+|4     |CARRY4 |    56|
+|5     |LUT1   |    24|
+|6     |LUT2   |   135|
+|7     |LUT3   |   232|
+|8     |LUT4   |    77|
+|9     |LUT5   |   219|
+|10    |LUT6   |   831|
+|11    |MUXF7  |   149|
+|12    |MUXF8  |    64|
+|13    |FDCE   |  1335|
+|14    |FDRE   |   102|
+|15    |LD     |    33|
+|16    |IBUF   |    14|
+|17    |OBUF   |    17|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+--------------------+------------+------+
 |      |Instance            |Module      |Cells |
 +------+--------------------+------------+------+
-|1     |top                 |            |  3235|
+|1     |top                 |            |  3354|
 |2     |  fsm               |FSM2        |    17|
 |3     |  prog_cnt          |pipepc      |    33|
 |4     |    program_counter |dffe32__1   |    33|
@@ -550,48 +640,48 @@ Report Instance Areas:
 |8     |  inst_reg          |pipeir      |    66|
 |9     |    pc_plus4        |dffe32__2   |    33|
 |10    |    instruction     |dffe32      |    33|
-|11    |  id_stage          |pipeid      |  2056|
-|12    |    cu              |pipeidcu    |    55|
+|11    |  id_stage          |pipeid      |  2059|
+|12    |    cu              |pipeidcu    |    58|
 |13    |    rf              |regfile     |  1873|
 |14    |    des_reg_no      |mux2x5      |     5|
 |15    |    alu_a           |mux4x32__2  |    32|
 |16    |    alu_b           |mux4x32__3  |    32|
 |17    |  de_reg            |pipedereg   |   129|
-|18    |  exe_stage         |pipeexe     |   449|
+|18    |  exe_stage         |pipeexe     |   448|
 |19    |    alu_ina         |mux2x32__1  |    32|
 |20    |    alu_inb         |mux2x32__2  |    32|
 |21    |    save_pc8        |mux2x32__3  |    32|
-|22    |    al_unit         |alu         |   339|
+|22    |    al_unit         |alu         |   338|
 |23    |      shifter       |shift       |   202|
 |24    |      selector      |mux4x32     |    32|
 |25    |  em_reg            |pipeemreg   |    73|
-|26    |  mem_stage         |pipemem     |   114|
-|27    |    io_processor    |MemOrIO     |    81|
-|28    |  mw_reg            |pipemwreg   |    72|
+|26    |  mem_stage         |pipemem     |   161|
+|27    |    io_processor    |MemOrIO     |   127|
+|28    |  mw_reg            |pipemwreg   |    40|
 |29    |  wb_stage          |mux2x32     |    32|
 |30    |  sd                |seg_display |    85|
 |31    |    seg_enc0        |seg_enc     |     7|
 +------+--------------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 783.480 ; gain = 542.113
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 784.367 ; gain = 542.285
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 34 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:25 . Memory (MB): peak = 783.480 ; gain = 181.293
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 783.480 ; gain = 542.113
+Synthesis finished with 0 errors, 0 critical warnings and 27 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:25 . Memory (MB): peak = 784.367 ; gain = 189.309
+Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 784.367 ; gain = 542.285
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 292 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 316 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 25 instances were transformed.
-  LD => LDCE: 25 instances
+  A total of 33 instances were transformed.
+  LD => LDCE: 33 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-128 Infos, 63 Warnings, 0 Critical Warnings and 0 Errors encountered.
+161 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:34 . Memory (MB): peak = 783.480 ; gain = 553.008
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:34 . Memory (MB): peak = 784.367 ; gain = 553.762
 INFO: [Common 17-1381] The checkpoint 'D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/pipelinedcpu.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file pipelinedcpu_utilization_synth.rpt -pb pipelinedcpu_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 783.480 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed May 24 22:47:09 2023...
+report_utilization: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.038 . Memory (MB): peak = 784.367 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Fri May 26 21:11:49 2023...

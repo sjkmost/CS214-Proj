@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
 -- Date        : Wed May 24 22:01:46 2023
 -- Host        : LAPTOP-L3QUOT52 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/memclk/memclk_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top memclk -prefix
+--               memclk_ memclk_sim_netlist.vhdl
 -- Design      : memclk
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -19,8 +19,6 @@ entity memclk_memclk_clk_wiz is
     clk_out1 : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of memclk_memclk_clk_wiz : entity is "memclk_clk_wiz";
 end memclk_memclk_clk_wiz;
 
 architecture STRUCTURE of memclk_memclk_clk_wiz is

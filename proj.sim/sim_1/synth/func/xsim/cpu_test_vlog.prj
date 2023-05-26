@@ -1,0 +1,7 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../../proj.srcs/sources_1/ip/memclk" --include "../../../../../proj.srcs/sources_1/ip/cpuclk" \
+"cpu_test_func_synth.v" \
+"../../../../../proj.srcs/sim_1/new/cpu_test.v" \
+
+# Do not sort compile order
+nosort

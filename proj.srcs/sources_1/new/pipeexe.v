@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 //done
-module pipeexe (ealuc, ealuimm, ea, eb, eimm, eshift, ern0, epc4, ejal, ern, ealu, test_alua, test_alub);
+module pipeexe (ealuc, ealuimm, ea, eb, eimm, eshift, ern0, epc4, ejal, ern, ealu);
     input [31:0] ea, eb, eimm, epc4;
     input [4:0] ern0;
     input [3:0] ealuc;
@@ -27,9 +27,6 @@ module pipeexe (ealuc, ealuimm, ea, eb, eimm, eshift, ern0, epc4, ejal, ern, eal
     output [31:0] ealu;
     output [4:0] ern;
     wire [31:0] alua, alub, sa, ealu0, epc8;
-    output [31:0] test_alua, test_alub;
-    assign test_alua = ealu0;
-    assign test_alub = ealuc;
     wire z;
     assign sa = {eimm[5:0], eimm[31:6]};
     assign epc8 = epc4 + 32'h4;

@@ -1,0 +1,9 @@
+Vivado Simulator 2017.4
+Copyright 1986-1999, 2001-2016 Xilinx, Inc. All Rights Reserved.
+Running: D:/Xilinx/Vivado/2017.4/bin/unwrapped/win64.o/xelab.exe -wto 2ad26fb1860d4997ac6fed37f78d08be --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L secureip --snapshot cpu_test_func_synth xil_defaultlib.cpu_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-278] actual bit length 1 differs from formal bit length 3 for port io_r1 [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sim_1/new/cpu_test.v:40]
+ERROR: [VRFC 10-529] concurrent assignment to a non-net io_r2 is not permitted [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sim_1/new/cpu_test.v:40]
+ERROR: [VRFC 10-29] pipelinedcpu expects 8 arguments [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sim_1/new/cpu_test.v:40]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
