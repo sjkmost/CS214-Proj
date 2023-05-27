@@ -74,8 +74,8 @@ set rc [catch {
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_MEMORY [current_project]
   add_files -quiet D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/pipelinedcpu.dcp
-  read_ip -quiet D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM/RAM.xci
-  read_ip -quiet D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/ROM/ROM.xci
+  read_ip -quiet d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM/RAM.xci
+  read_ip -quiet d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/ROM/ROM.xci
   read_xdc D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/constrs_1/new/src_xdc.xdc
   link_design -top pipelinedcpu -part xc7a100tfgg484-1
   close_msg_db -file init_design.pb

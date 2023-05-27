@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date             : Sat May 27 16:19:22 2023
+| Date             : Sat May 27 19:40:35 2023
 | Host             : LAPTOP-L3QUOT52 running 64-bit major release  (build 9200)
 | Command          : report_power -file pipelinedcpu_power_routed.rpt -pb pipelinedcpu_power_summary_routed.pb -rpx pipelinedcpu_power_routed.rpx
 | Design           : pipelinedcpu
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 62.420 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 97.611 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 61.606                           |
+| Dynamic (W)              | 96.796                           |
 | Device Static (W)        | 0.815                            |
 | Effective TJA (C/W)      | 2.7                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,18 +52,19 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     7.078 |     3427 |       --- |             --- |
-|   LUT as Logic |     6.583 |     1402 |     63400 |            2.21 |
-|   Register     |     0.223 |     1508 |    126800 |            1.19 |
-|   CARRY4       |     0.210 |       56 |     15850 |            0.35 |
-|   F7/F8 Muxes  |     0.039 |      213 |     63400 |            0.34 |
+| Slice Logic    |    22.690 |     4845 |       --- |             --- |
+|   LUT as Logic |    19.959 |     2509 |     63400 |            3.96 |
+|   CARRY4       |     2.433 |      348 |     15850 |            2.20 |
+|   Register     |     0.232 |     1506 |    126800 |            1.19 |
+|   F7/F8 Muxes  |     0.042 |      213 |     63400 |            0.34 |
 |   BUFG         |     0.023 |        4 |        32 |           12.50 |
-|   Others       |     0.000 |       92 |       --- |             --- |
-| Signals        |    12.701 |     3113 |       --- |             --- |
-| Block RAM      |     1.321 |       29 |       135 |           21.48 |
+|   Others       |     0.000 |       95 |       --- |             --- |
+| Signals        |    29.338 |     4532 |       --- |             --- |
+| Block RAM      |     1.325 |       29 |       135 |           21.48 |
+| DSPs           |     2.938 |        3 |       240 |            1.25 |
 | I/O            |    40.505 |       39 |       285 |           13.68 |
 | Static Power   |     0.815 |          |           |                 |
-| Total          |    62.420 |          |           |                 |
+| Total          |    97.611 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,7 +74,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |    21.613 |      21.042 |      0.572 |
+| Vccint    |       1.000 |    56.804 |      56.232 |      0.572 |
 | Vccaux    |       1.800 |     1.575 |       1.482 |      0.093 |
 | Vcco33    |       3.300 |    11.454 |      11.450 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -140,111 +141,111 @@ Table of Contents
 +--------------------------------------------------+-----------+
 | Name                                             | Power (W) |
 +--------------------------------------------------+-----------+
-| pipelinedcpu                                     |    61.606 |
-|   de_reg                                         |     0.329 |
-|   em_reg                                         |     0.439 |
-|   exe_stage                                      |     7.883 |
-|     al_unit                                      |     5.695 |
-|       selector                                   |     0.582 |
-|       shifter                                    |     4.144 |
-|     alu_ina                                      |     0.978 |
-|     alu_inb                                      |     0.531 |
-|     save_pc8                                     |     0.561 |
-|   fsm                                            |     0.444 |
-|   id_stage                                       |     1.422 |
-|     alu_a                                        |     0.603 |
-|     alu_b                                        |     0.391 |
-|     cu                                           |     0.048 |
-|     des_reg_no                                   |    <0.001 |
-|     rf                                           |     0.073 |
-|   if_stage                                       |     1.328 |
-|     ist_mem                                      |     0.979 |
-|       instmem                                    |     0.979 |
-|         U0                                       |     0.979 |
-|           inst_blk_mem_gen                       |     0.979 |
-|             gnbram.gnativebmg.native_blk_mem_gen |     0.979 |
-|               valid.cstr                         |     0.979 |
+| pipelinedcpu                                     |    96.796 |
+|   de_reg                                         |     0.356 |
+|   em_reg                                         |     0.519 |
+|   exe_stage                                      |    42.178 |
+|     al_unit                                      |    37.263 |
+|       selector                                   |     0.652 |
+|       shifter                                    |     4.753 |
+|     alu_ina                                      |     1.524 |
+|     alu_inb                                      |     2.772 |
+|     save_pc8                                     |     0.569 |
+|   fsm                                            |     0.563 |
+|   id_stage                                       |     1.728 |
+|     alu_a                                        |     0.696 |
+|     alu_b                                        |     0.433 |
+|     cu                                           |     0.067 |
+|     des_reg_no                                   |     0.002 |
+|     rf                                           |     0.144 |
+|   if_stage                                       |     1.322 |
+|     ist_mem                                      |     0.957 |
+|       instmem                                    |     0.957 |
+|         U0                                       |     0.957 |
+|           inst_blk_mem_gen                       |     0.957 |
+|             gnbram.gnativebmg.native_blk_mem_gen |     0.957 |
+|               valid.cstr                         |     0.957 |
 |                 bindec_a.bindec_inst_a           |    <0.001 |
-|                 has_mux_a.A                      |     0.192 |
+|                 has_mux_a.A                      |     0.138 |
 |                 ramloop[0].ram.r                 |     0.064 |
 |                   prim_init.ram                  |     0.064 |
-|                 ramloop[10].ram.r                |     0.036 |
-|                   prim_init.ram                  |     0.036 |
-|                 ramloop[11].ram.r                |     0.053 |
-|                   prim_init.ram                  |     0.053 |
-|                 ramloop[12].ram.r                |     0.044 |
-|                   prim_init.ram                  |     0.044 |
-|                 ramloop[13].ram.r                |     0.043 |
-|                   prim_init.ram                  |     0.043 |
-|                 ramloop[14].ram.r                |     0.036 |
-|                   prim_init.ram                  |     0.036 |
+|                 ramloop[10].ram.r                |     0.045 |
+|                   prim_init.ram                  |     0.045 |
+|                 ramloop[11].ram.r                |     0.041 |
+|                   prim_init.ram                  |     0.041 |
+|                 ramloop[12].ram.r                |     0.046 |
+|                   prim_init.ram                  |     0.046 |
+|                 ramloop[13].ram.r                |     0.051 |
+|                   prim_init.ram                  |     0.051 |
+|                 ramloop[14].ram.r                |     0.042 |
+|                   prim_init.ram                  |     0.042 |
 |                 ramloop[1].ram.r                 |     0.132 |
 |                   prim_init.ram                  |     0.132 |
-|                 ramloop[2].ram.r                 |     0.137 |
-|                   prim_init.ram                  |     0.137 |
-|                 ramloop[3].ram.r                 |     0.043 |
-|                   prim_init.ram                  |     0.043 |
-|                 ramloop[4].ram.r                 |     0.032 |
-|                   prim_init.ram                  |     0.032 |
-|                 ramloop[5].ram.r                 |     0.034 |
+|                 ramloop[2].ram.r                 |     0.145 |
+|                   prim_init.ram                  |     0.145 |
+|                 ramloop[3].ram.r                 |     0.045 |
+|                   prim_init.ram                  |     0.045 |
+|                 ramloop[4].ram.r                 |     0.034 |
 |                   prim_init.ram                  |     0.034 |
-|                 ramloop[6].ram.r                 |     0.030 |
-|                   prim_init.ram                  |     0.030 |
-|                 ramloop[7].ram.r                 |     0.036 |
-|                   prim_init.ram                  |     0.036 |
-|                 ramloop[8].ram.r                 |     0.032 |
+|                 ramloop[5].ram.r                 |     0.031 |
+|                   prim_init.ram                  |     0.031 |
+|                 ramloop[6].ram.r                 |     0.044 |
+|                   prim_init.ram                  |     0.044 |
+|                 ramloop[7].ram.r                 |     0.032 |
 |                   prim_init.ram                  |     0.032 |
-|                 ramloop[9].ram.r                 |     0.035 |
-|                   prim_init.ram                  |     0.035 |
-|     next_pc                                      |     0.230 |
-|   inst_reg                                       |     0.015 |
-|     instruction                                  |     0.014 |
+|                 ramloop[8].ram.r                 |     0.031 |
+|                   prim_init.ram                  |     0.031 |
+|                 ramloop[9].ram.r                 |     0.034 |
+|                   prim_init.ram                  |     0.034 |
+|     next_pc                                      |     0.207 |
+|   inst_reg                                       |     0.013 |
+|     instruction                                  |     0.012 |
 |     pc_plus4                                     |     0.001 |
-|   mem_stage                                      |     3.271 |
-|     io_processor                                 |     1.256 |
-|     ram                                          |     1.995 |
-|       U0                                         |     1.995 |
-|         inst_blk_mem_gen                         |     1.995 |
-|           gnbram.gnativebmg.native_blk_mem_gen   |     1.995 |
-|             valid.cstr                           |     1.995 |
-|               bindec_a.bindec_inst_a             |     0.004 |
-|               has_mux_a.A                        |     0.854 |
-|               ramloop[0].ram.r                   |     0.105 |
-|                 prim_init.ram                    |     0.105 |
+|   mem_stage                                      |     3.326 |
+|     io_processor                                 |     1.410 |
+|     ram                                          |     1.886 |
+|       U0                                         |     1.886 |
+|         inst_blk_mem_gen                         |     1.886 |
+|           gnbram.gnativebmg.native_blk_mem_gen   |     1.886 |
+|             valid.cstr                           |     1.886 |
+|               bindec_a.bindec_inst_a             |     0.003 |
+|               has_mux_a.A                        |     0.804 |
+|               ramloop[0].ram.r                   |     0.104 |
+|                 prim_init.ram                    |     0.104 |
 |               ramloop[10].ram.r                  |    <0.001 |
 |                 prim_init.ram                    |    <0.001 |
-|               ramloop[11].ram.r                  |     0.199 |
-|                 prim_init.ram                    |     0.199 |
-|               ramloop[12].ram.r                  |     0.001 |
-|                 prim_init.ram                    |     0.001 |
-|               ramloop[13].ram.r                  |     0.001 |
-|                 prim_init.ram                    |     0.001 |
+|               ramloop[11].ram.r                  |     0.175 |
+|                 prim_init.ram                    |     0.175 |
+|               ramloop[12].ram.r                  |    <0.001 |
+|                 prim_init.ram                    |    <0.001 |
+|               ramloop[13].ram.r                  |    <0.001 |
+|                 prim_init.ram                    |    <0.001 |
 |               ramloop[14].ram.r                  |    <0.001 |
 |                 prim_init.ram                    |    <0.001 |
-|               ramloop[1].ram.r                   |     0.206 |
-|                 prim_init.ram                    |     0.206 |
-|               ramloop[2].ram.r                   |     0.210 |
-|                 prim_init.ram                    |     0.210 |
-|               ramloop[3].ram.r                   |     0.198 |
-|                 prim_init.ram                    |     0.198 |
-|               ramloop[4].ram.r                   |     0.003 |
-|                 prim_init.ram                    |     0.003 |
+|               ramloop[1].ram.r                   |     0.188 |
+|                 prim_init.ram                    |     0.188 |
+|               ramloop[2].ram.r                   |     0.183 |
+|                 prim_init.ram                    |     0.183 |
+|               ramloop[3].ram.r                   |     0.204 |
+|                 prim_init.ram                    |     0.204 |
+|               ramloop[4].ram.r                   |     0.002 |
+|                 prim_init.ram                    |     0.002 |
 |               ramloop[5].ram.r                   |     0.003 |
 |                 prim_init.ram                    |     0.003 |
 |               ramloop[6].ram.r                   |    <0.001 |
 |                 prim_init.ram                    |    <0.001 |
-|               ramloop[7].ram.r                   |     0.209 |
-|                 prim_init.ram                    |     0.209 |
-|               ramloop[8].ram.r                   |     0.001 |
-|                 prim_init.ram                    |     0.001 |
-|               ramloop[9].ram.r                   |     0.001 |
-|                 prim_init.ram                    |     0.001 |
-|   mw_reg                                         |     0.305 |
-|   prog_cnt                                       |     0.004 |
-|     program_counter                              |     0.004 |
-|   sd                                             |     1.340 |
-|     seg_enc0                                     |     0.548 |
-|   wb_stage                                       |     3.760 |
+|               ramloop[7].ram.r                   |     0.218 |
+|                 prim_init.ram                    |     0.218 |
+|               ramloop[8].ram.r                   |    <0.001 |
+|                 prim_init.ram                    |    <0.001 |
+|               ramloop[9].ram.r                   |    <0.001 |
+|                 prim_init.ram                    |    <0.001 |
+|   mw_reg                                         |     0.365 |
+|   prog_cnt                                       |     0.003 |
+|     program_counter                              |     0.003 |
+|   sd                                             |     1.676 |
+|     seg_enc0                                     |     0.580 |
+|   wb_stage                                       |     3.632 |
 +--------------------------------------------------+-----------+
 
 

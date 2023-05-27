@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sat May 27 16:19:21 2023
+| Date         : Sat May 27 19:40:33 2023
 | Host         : LAPTOP-L3QUOT52 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file pipelinedcpu_methodology_drc_routed.rpt -pb pipelinedcpu_methodology_drc_routed.pb -rpx pipelinedcpu_methodology_drc_routed.rpx
 | Design       : pipelinedcpu
@@ -23,15 +23,31 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 1000
+             Violations found: 1003
 +-----------+----------+-----------------------------+------------+
 | Rule      | Severity | Description                 | Violations |
 +-----------+----------+-----------------------------+------------+
+| SYNTH-10  | Warning  | Wide multiplier             | 3          |
 | TIMING-17 | Warning  | Non-clocked sequential cell | 1000       |
 +-----------+----------+-----------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+SYNTH-10#1 Warning
+Wide multiplier  
+Detected multiplier at exe_stage/al_unit/r_muldiv0 of size 16x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#2 Warning
+Wide multiplier  
+Detected multiplier at exe_stage/al_unit/r_muldiv0__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#3 Warning
+Wide multiplier  
+Detected multiplier at exe_stage/al_unit/r_muldiv0__1 of size 18x16, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
 TIMING-17#1 Warning
 Non-clocked sequential cell  
 The clock pin clock_reg/C is not reached by a timing clock
