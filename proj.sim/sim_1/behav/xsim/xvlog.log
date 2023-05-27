@@ -1,59 +1,51 @@
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/ip/RAM/sim/RAM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module RAM
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/ip/ROM/sim/ROM.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module ROM
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/ip/cpuclk/cpuclk_clk_wiz.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cpuclk_clk_wiz
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/ip/cpuclk/cpuclk.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module cpuclk
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/ip/memclk/memclk_clk_wiz.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module memclk_clk_wiz
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/ip/memclk/memclk.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module memclk
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module MemOrIO
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/alu.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module alu
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/dffe32.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/dffe32.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module dffe32
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/mux2x32.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux2x32.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mux2x32
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/mux2x5.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux2x5.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mux2x5
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/mux4x32.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux4x32.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module mux4x32
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/pipedereg.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipedereg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pipedereg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/pipeemreg.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeemreg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pipeemreg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/pipeexe.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeexe.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pipeexe
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/pipeid.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeid.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pipeid
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/pipeidcu.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeidcu.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pipeidcu
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/pipeif.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeif.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pipeif
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/pipeimem.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeimem.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pipeimem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/pipeir.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeir.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pipeir
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/pipemem.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipemem.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pipemem
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/pipemwreg.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipemwreg.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pipemwreg
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/pipepc.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipepc.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pipepc
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/regfile.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/regfile.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module regfile
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/seg_display.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/seg_display.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module seg_enc
 INFO: [VRFC 10-311] analyzing module seg_display
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/shift.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/shift.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module shift
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pipelinedcpu
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sources_1/new/FSM2.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/FSM2.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module FSM2
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/workshops/sundry workshop/CO/project/CS214-Proj/proj.srcs/sim_1/new/cpu_test.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM/sim/RAM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RAM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/ROM/sim/ROM.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ROM
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sim_1/new/cpu_test.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module cpu_test

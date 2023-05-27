@@ -19,19 +19,22 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module pipemem(state, we, addr, datain, clk, memclk, io_r1, io_r2, io_w_led, io_w_seg1, io_w_seg2, io_w_seg3, dataout);
+module pipemem(state, we, addr, datain, clk, memclk, io_r1, io_r2, io_w__led, io_w_seg_1, io_w_seg_2, io_w_seg_3, dataout);
     input [7:0] state;
     input [31:0] addr, datain;
     input [2:0] io_r1;
     input [7:0] io_r2;
     input clk, we, memclk;
-    output io_w_led;
-    output [15:0] io_w_seg1;
-    output [7:0] io_w_seg2, io_w_seg3;
+    output io_w__led;
+    output [15:0] io_w_seg_1;
+    output [7:0] io_w_seg_2, io_w_seg_3;
     output [31:0] dataout;
     wire [31:0] memin, memout, memaddr;
-    wire write_enable = (we & ~clk) | ( (state < 4) & (state > 0) );
-    MemOrIO io_processor(state, write_enable, write_enable, addr, memaddr, memout, io_r1, io_r2, io_w_led, io_w_seg1, io_w_seg2, io_w_seg3, dataout, datain, memin);
+//    output [31:0] test_addr;
+//    assign test_addr=memaddr;
+    wire write_enable;
+    assign write_enable = (we && ~clk) || ( (state < 4) && (state > 0) );
+    MemOrIO io_processor(state, write_enable, write_enable, addr, memaddr, memout, io_r1, io_r2, io_w__led, io_w_seg_1, io_w_seg_2, io_w_seg_3, dataout, datain, memin);
     
     RAM ram(
         .clka(memclk),

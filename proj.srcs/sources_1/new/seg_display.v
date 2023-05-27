@@ -94,10 +94,10 @@ module seg_display(
             1: Y_reg<=out1[11:8];
             2: Y_reg<=out1[7:4];
             3: Y_reg<=out1[3:0];
-            4: Y_reg<=out3[7:4];
-            5: Y_reg<=out3[3:0];
-            6: Y_reg<=out2[7:4];
-            7: Y_reg<=out2[3:0];
+            4: Y_reg<=out2[7:4];
+            5: Y_reg<=out2[3:0];
+            6: Y_reg<=out3[7:4];
+            7: Y_reg<=out3[3:0];
             default Y_reg=4'b0000;
         endcase
     end

@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module MemOrIO(state,mRead,mWrite,addr_in,addr_out,m_rdata,io_rdata1,io_rdata2,io_wdata_led,io_wdata_seg_out1,io_wdata_seg_out2,io_wdata_seg_out3,r_wdata,r_rdata,write_data);
+module MemOrIO(state,mRead,mWrite,addr_in,addr_out,m_rdata,io_rdata1,io_rdata2,iwled,out1,out2,out3,r_wdata,r_rdata,write_data);
     input [7:0] state; // 0 for ready, 1 for read x, 2 for read a, 3 for read b, 4 for executing, 5 and larger for out
     input mRead; // read memory, from Controller
     input mWrite; // write memory, from Controller
@@ -29,24 +29,17 @@ module MemOrIO(state,mRead,mWrite,addr_in,addr_out,m_rdata,io_rdata1,io_rdata2,i
     input [31:0] m_rdata; // data read from Data-Memory
     input [2:0] io_rdata1; // data read from IO
     input [7:0] io_rdata2; 
-    output io_wdata_led;
-    output [15:0] io_wdata_seg_out1;
-    output [7:0] io_wdata_seg_out2;
-    output [7:0] io_wdata_seg_out3;
+    output reg iwled;
+    output reg[15:0] out1;
+    output reg[7:0] out2;
+    output reg[7:0] out3;
     output [31:0] r_wdata; // data to Decoder(register file)
     input [31:0] r_rdata; // data read from Decoder(register file)
     output [31:0] write_data;
     assign write_data=state<2?io_rdata1:(state<4?io_rdata2:r_rdata);
     assign r_wdata=m_rdata;
     assign addr_out=state>4?((state<<2)-8):(state<4?((state<<2)-4):addr_in);
-    reg iwled;
-    assign io_wdata_led=iwled;
-    reg [15:0] out1;
-    reg [7:0] out2,out3;
-    assign io_wdata_seg_out1=out1;
-    assign io_wdata_seg_out2=out2;
-    assign io_wdata_seg_out3=out3;
-    always@(*)
+    always@(state, m_rdata)
     begin
         case(state)
             8'b0000_0000: begin
@@ -98,10 +91,10 @@ module MemOrIO(state,mRead,mWrite,addr_in,addr_out,m_rdata,io_rdata1,io_rdata2,i
                 iwled<=iwled;
             end
             8'b0000_1000: begin
-               out1<=out1;
-               out2<=out2;
-               out3<=m_rdata[7:0];
-               iwled<=iwled;
+                out1<=out1;
+                out2<=out2;
+                out3<=m_rdata[7:0];
+                iwled<=iwled;
             end
             default: begin
                 out1<=out1;

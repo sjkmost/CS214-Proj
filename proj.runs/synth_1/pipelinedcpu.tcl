@@ -16,10 +16,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_param xicom.use_bs_reader 1
-set_param synth.incrementalSynthesisCache D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/.Xil/Vivado-19432-LAPTOP-L3QUOT52/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 create_project -in_memory -part xc7a100tfgg484-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -28,7 +24,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.cache/wt [current_project]
 set_property parent.project_path D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_output_repo d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.cache/ip [current_project]
@@ -59,21 +55,11 @@ read_verilog -library xil_defaultlib {
   D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v
   D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/FSM2.v
 }
-read_ip -quiet D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/memclk/memclk.xci
-set_property used_in_implementation false [get_files -all d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/memclk/memclk_board.xdc]
-set_property used_in_implementation false [get_files -all d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/memclk/memclk.xdc]
-set_property used_in_implementation false [get_files -all d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/memclk/memclk_ooc.xdc]
-
 read_ip -quiet D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM/RAM.xci
 set_property used_in_implementation false [get_files -all d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM/RAM_ooc.xdc]
 
 read_ip -quiet D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/ROM/ROM.xci
 set_property used_in_implementation false [get_files -all d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/ROM/ROM_ooc.xdc]
-
-read_ip -quiet D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/cpuclk/cpuclk.xci
-set_property used_in_implementation false [get_files -all d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/cpuclk/cpuclk_board.xdc]
-set_property used_in_implementation false [get_files -all d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/cpuclk/cpuclk.xdc]
-set_property used_in_implementation false [get_files -all d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/cpuclk/cpuclk_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the

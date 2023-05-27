@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1685106670">
+<GenRun Id="synth_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1685172302">
   <File Type="PA-TCL" Name="pipelinedcpu.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="pipelinedcpu_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="pipelinedcpu_reports.tcl"/>
@@ -177,7 +177,14 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/ip/memclk/memclk.xci">
+    <File Path="$PSRCDIR/sources_1/ip/RAM/RAM.xci">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/ROM/ROM.xci">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -207,7 +214,4 @@
       <Option Id="FlattenHierarchy">1</Option>
     </Step>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="RAM"/>
-  <BlockFileSet Type="BlockSrcs" Name="ROM"/>
-  <BlockFileSet Type="BlockSrcs" Name="cpuclk"/>
 </GenRun>
