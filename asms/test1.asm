@@ -8,9 +8,25 @@ out_seg_a: .word 0 # An integer denoting a
 out_seg_b: .word 0 # An integer denoting b
 .text
 start:
+sw $zero,out_seg_a($zero)
+sw $zero,out_seg_b($zero)
+sw $zero,out_seg_c($zero)
+sw $zero,out_led($zero)
 lw $s0,in_x($zero)
 lw $s1,in_sw_a($zero)
+andi $t0,$s1,128
+beq $t0,$zero,label_pos_1
+lui $t0,-1
+or $s1,$s1,$t0
+ori $s1,$s1,-256
+label_pos_1:
 lw $s2,in_sw_b($zero)
+andi $t0,$s2,128
+beq $t0,$zero,label_pos_2
+lui $t0,-1
+or $s2,$s2,$t0
+ori $s2,$s2,-256
+label_pos_2:
 beq $s0,$zero,if_0
 addi $s3,$s0,-1
 beq $s3,$zero,if_1
@@ -29,7 +45,6 @@ beq $s3,$zero,if_6
 j end
 if_0: # 3'b000
 sw $s1,out_seg_a($zero)
-sw $zero,out_seg_b($zero)
 ori $s4,$zero,1
 andi $s3,$s1,1 # bit0
 srl $s1,$s1,1
@@ -55,7 +70,6 @@ sw $s4,out_led($zero)
 j end
 if_1: #3'b001
 sw $s1,out_seg_a($zero)
-sw $zero,out_seg_b($zero)
 or $s4,$zero,$zero
 andi $s3,$s1,1 # bit0
 srl $s1,$s1,1

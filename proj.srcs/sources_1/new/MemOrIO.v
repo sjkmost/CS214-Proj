@@ -20,7 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module MemOrIO(state,mRead,mWrite,addr_in,addr_out,m_rdata,io_rdata1,io_rdata2,iwled,out1,out2,out3,r_wdata,r_rdata,write_data);
+module MemOrIO(memclk,state,mRead,mWrite,addr_in,addr_out,m_rdata,io_rdata1,io_rdata2,iwled,out1,out2,out3,r_wdata,r_rdata,write_data);
+    input memclk;
     input [7:0] state; // 0 for ready, 1 for read x, 2 for read a, 3 for read b, 4 for executing, 5 and larger for out
     input mRead; // read memory, from Controller
     input mWrite; // write memory, from Controller
@@ -39,7 +40,7 @@ module MemOrIO(state,mRead,mWrite,addr_in,addr_out,m_rdata,io_rdata1,io_rdata2,i
     assign write_data=state<2?io_rdata1:(state<4?io_rdata2:r_rdata);
     assign r_wdata=m_rdata;
     assign addr_out=state>4?((state<<2)-8):(state<4?((state<<2)-4):addr_in);
-    always@(state, m_rdata)
+    always@(posedge memclk)
     begin
         case(state)
             8'b0000_0000: begin

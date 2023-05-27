@@ -5,6 +5,3 @@
 
 # IP: ip/RAM/RAM.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==RAM || ORIG_REF_NAME==RAM} -quiet] -quiet
-
-# IP: ip/ROM/ROM.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==ROM || ORIG_REF_NAME==ROM} -quiet] -quiet
