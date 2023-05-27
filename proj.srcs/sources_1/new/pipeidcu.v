@@ -45,7 +45,7 @@ module pipeidcu(mwreg, mrn, ern, ewreg, em2reg, mm2reg, rsrtequ, func, op, rs, r
     and(i_sra, r_type, ~func[5], ~func[4], ~func[3], ~func[2],  func[1],  func[0]);
     and(i_jr , r_type, ~func[5], ~func[4],  func[3], ~func[2], ~func[1], ~func[0]);
     and(i_div, r_type, ~func[5], ~func[4], ~func[3],  func[2], ~func[1], ~func[0]);
-    and(i_mul,  ~op[5],   op[4],   op[3],   op[2],  ~op[1], ~op[0]);
+    and(i_mul, r_type, ~func[5], ~func[4], ~func[3],  func[2],  func[1],  func[0]);
     and(i_addi, ~op[5],  ~op[4],   op[3],  ~op[2],  ~op[1], ~op[0]);
     and(i_andi, ~op[5],  ~op[4],   op[3],   op[2],  ~op[1], ~op[0]);
     and(i_ori , ~op[5],  ~op[4],   op[3],   op[2],  ~op[1],  op[0]);
