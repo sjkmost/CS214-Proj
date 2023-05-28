@@ -18,34 +18,39 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,state);
-    input clk, reset, button;
+module pipelinedcpu(clock, memclock, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,state,out1,out2,out3, test_clk, test_pc, test_ins);
+    //nput clk;
+    input reset, button;
     input [2:0] io_r1;
     input [7:0] io_r2;
     output io_w_led;
     output [7:0] seg_en,seg_out;
+    output test_clk;
+    output [31:0] test_ins;
+    output [31:0] test_pc;
 //    output [31:0] test_a;
 //    output [31:0] test_ins;
 //    output [31:0] test_addr;
-    reg clock,memclock;
-    reg [31:0] cnt;
-    parameter period=100000;
-    always@(posedge clk) begin
-        if (cnt==(period>>1)-1) begin
-            clock=~clock;
-            cnt<=0;
-        end
-        else cnt<=cnt+1;
-    end
-    reg [31:0] cnt2;
-    parameter period2=20000;
-    always@(posedge clk) begin
-        if (cnt2==(period2>>1)-1) begin
-            memclock=~memclock;
-            cnt2<=0;
-        end
-        else cnt2<=cnt2+1;
-    end
+    input clock,memclock;
+    wire clk=memclock;
+//    reg [31:0] cnt;
+//    parameter period=100000;
+//    always@(posedge clk) begin
+//        if (cnt==(period>>1)-1) begin
+//            clock=~clock;
+//            cnt<=0;
+//        end
+//        else cnt<=cnt+1;
+//    end
+//    reg [31:0] cnt2;
+//    parameter period2=20000;
+//    always@(posedge clk) begin
+//        if (cnt2==(period2>>1)-1) begin
+//            memclock=~memclock;
+//            cnt2<=0;
+//        end
+//        else cnt2<=cnt2+1;
+//    end
     wire resetn;
     assign resetn=~reset;
     output [7:0] state;
@@ -64,10 +69,15 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
     wire [31:0] pc,ealu,malu,walu;
     wire [15:0] io_w_seg1;
     wire [7:0] io_w_seg2,io_w_seg3;
-    FSM2 fsm(reset, button, state);
+    output [15:0] out1;
+    assign out1=io_w_seg1;
+    output [7:0] out2,out3;
+    assign out2=io_w_seg2,out3=io_w_seg3;
+    FSM2 fsm(clk, reset, button, state, test_clk);
     pipepc prog_cnt (npc, wpcir, clock, resetn, pc);
     pipeif if_stage (memclock, pcsource, pc, bpc, da, jpc, npc, pc4, ins);
-//    assign test_ins=inst;
+    assign test_ins=ins;
+    assign test_pc=pc;
     pipeir inst_reg (pc4, ins, wpcir, clock, resetn, dpc4, inst);
     pipeid id_stage (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst,
                     wrn, wdi, ealu, malu, mmo, wwreg, clock, resetn,

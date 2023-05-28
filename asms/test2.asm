@@ -28,7 +28,19 @@ beq $s3,$zero,if_5
 addi $s3,$s3,-1
 beq $s3,$zero,if_6
 #3'b111
-sllv $s3,$s1,$s2
+andi $t0,$s1,128
+beq $t0,$zero,label_pos_1_1
+lui $t0,-1
+or $s1,$s1,$t0
+ori $s1,$s1,-256
+label_pos_1_1:
+andi $t0,$s2,128
+beq $t0,$zero,label_pos_2_1
+lui $t0,-1
+or $s2,$s2,$t0
+ori $s2,$s2,-256
+label_pos_2_1:
+sllv $s3,$s2,$s1
 srav $s4,$s2,$s3
 sub $s4,$s1,$s4
 sw $s3,out_seg($zero)
@@ -77,6 +89,12 @@ andi $s3,$s3,255
 xor $s4,$s4,$s6
 xori $s5,$s5,1
 and $s4,$s4,$s5
+andi $t0,$s3,128
+beq $t0,$zero,label_pos_1
+lui $t0,-1
+or $s3,$s3,$t0
+ori $s3,$s3,-256
+label_pos_1:
 sw $s3,out_seg($zero)
 sw $s4,out_led($zero)
 j end
@@ -92,6 +110,12 @@ xor $s5,$s4,$s5
 andi $s3,$s3,255
 xor $s4,$s4,$s6
 and $s4,$s4,$s5
+andi $t0,$s3,128
+beq $t0,$zero,label_pos_2
+lui $t0,-1
+or $s3,$s3,$t0
+ori $s3,$s3,-256
+label_pos_2:
 sw $s3,out_seg($zero)
 sw $s4,out_led($zero)
 j end
