@@ -21,11 +21,12 @@
 //done
 module pipeidcu(mwreg, mrn, ern, ewreg, em2reg, mm2reg, rsrtequ, func, op, rs, rt,
                 wreg, m2reg, wmem, aluc, regrt, aluimm, fwda, fwdb, nostall, sext,
-                pcsource, shift, jal, state);
+                pcsource, shift, jal, state, prebrance);
     input mwreg, ewreg, em2reg, mm2reg, rsrtequ;
     input [4:0] mrn, ern, rs, rt;
     input [5:0] func, op;
     input [7:0] state;
+    input prebrance;
     output wreg, m2reg, wmem, regrt, aluimm, sext, shift, jal;
     output [3:0] aluc;
     output [1:0] pcsource;
@@ -93,7 +94,7 @@ module pipeidcu(mwreg, mrn, ern, ewreg, em2reg, mm2reg, rsrtequ, func, op, rs, r
 
     assign wreg    = (i_add | i_sub | i_and | i_or  | i_xor | i_sll | i_mul | i_div |
                       i_srl | i_sra | i_addi| i_andi| i_ori | i_xori|
-                      i_lw  | i_lui | i_jal | i_slti) & nostall;
+                      i_lw  | i_lui | i_jal | i_slti) & nostall & ~prebrance;
     assign regrt   =  i_addi| i_andi| i_ori | i_xori| i_lw  | i_lui | i_slti;
     assign jal     =  i_jal;
     assign m2reg   =  i_lw;
@@ -106,7 +107,7 @@ module pipeidcu(mwreg, mrn, ern, ewreg, em2reg, mm2reg, rsrtequ, func, op, rs, r
                       i_bne | i_lui | i_slti;
     assign aluc[0] =  i_and | i_or  | i_sll | i_srl | i_sra | i_andi|
                       i_ori | i_slti;
-    assign wmem    =  i_sw & nostall;
+    assign wmem    =  i_sw & nostall & ~prebrance;
     assign pcsource[1] = i_jr | i_j | i_jal;
     assign pcsource[0] = i_beq & rsrtequ | i_bne & ~rsrtequ | i_j | i_jal;
 

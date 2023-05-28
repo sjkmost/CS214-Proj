@@ -22,9 +22,10 @@
 module pipeid (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst, wrn,
                 wdi, ealu, malu, mmo, wwreg, clk, clrn, bpc, jpc, pcsource,
                 nostall, wreg, m2reg, wmem, aluc, aluimm, a, b, imm, rn,
-                shift, jal, state);
+                shift, jal, state, brance, prebrance);
     input [31:0] dpc4, inst, wdi, ealu, malu, mmo;
     input [4:0] ern, mrn, wrn;
+    input prebrance;
     input mwreg, ewreg, em2reg, mm2reg, wwreg;
     input clk, clrn;
     input [7:0] state;
@@ -33,6 +34,7 @@ module pipeid (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst, wrn,
     output [3:0] aluc;
     output [1:0] pcsource;
     output nostall, wreg, m2reg, wmem, aluimm, shift, jal;
+    output brance;
     wire [5:0] op, func;
     wire [4:0] rs, rt, rd;
     wire [31:0] qa, qb, br_offset;
@@ -47,7 +49,7 @@ module pipeid (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst, wrn,
     assign jpc = {dpc4[31:28], inst[25:0], 2'b00};
     pipeidcu cu(mwreg, mrn, ern, ewreg, em2reg, mm2reg, rsrtequ, func,
                 op, rs, rt, wreg, m2reg, wmem, aluc, regrt, aluimm,
-                fwda, fwdb, nostall, sext, pcsource, shift, jal, state);
+                fwda, fwdb, nostall, sext, pcsource, shift, jal, state, prebrance);
     regfile rf(rs, rt, wdi, wrn, wwreg, ~clk, clrn, qa, qb);
     mux2x5 des_reg_no(rd, rt, regrt, rn);
     mux4x32 alu_a (qa, ealu, malu, mmo, fwda, a);
@@ -58,5 +60,5 @@ module pipeid (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst, wrn,
     assign imm = {ext16, inst[15:0]};
     assign br_offset = {imm[29:0], 2'b00};
     assign bpc = dpc4 + br_offset;
-
+    assign brance = (pcsource != 2'b00);
 endmodule

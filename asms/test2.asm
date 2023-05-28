@@ -129,6 +129,18 @@ sw $s3,out_seg($zero)
 sw $s4,out_led($zero)
 j end
 if_6: # 3'b110
+andi $t0,$s1,128
+beq $t0,$zero,label_pos_1_2
+lui $t0,-1
+or $s1,$s1,$t0
+ori $s1,$s1,-256
+label_pos_1_2:
+andi $t0,$s2,128
+beq $t0,$zero,label_pos_2_2
+lui $t0,-1
+or $s2,$s2,$t0
+ori $s2,$s2,-256
+label_pos_2_2:
 srav $s3,$s1,$s2
 sw $s3,out_seg($zero)
 j end
@@ -139,12 +151,12 @@ sw $a0,0($sp)
 addi $s3,$s3,2
 slti $t0,$a0,1
 beq $t0,$zero,L0
-add $a0,$a0,$zero
+#add $a0,$a0,$zero
 or $v0,$zero,$zero
 addi $sp,$sp,8
 addi $s3,$s3,2
 jr $ra
-add $a0,$a0,$zero
+#add $a0,$a0,$zero
 L0:
 addi $a0,$a0,-1
 jal sum_0
@@ -155,7 +167,7 @@ lw $ra,4($sp)
 addi $sp,$sp,8
 add $v0,$a0,$v0
 jr $ra
-add $a0,$a0,$zero
+#add $a0,$a0,$zero
 sum_1: # 3'b010
 addi $sp,$sp,-8
 sw $ra,4($sp)
@@ -164,11 +176,11 @@ sw $a0,stack_info($s3)
 addi $s3,$s3,4
 slti $t0,$a0,1
 beq $t0,$zero,L1
-add $a0,$a0,$zero
+#add $a0,$a0,$zero
 or $v0,$zero,$zero
 addi $sp,$sp,8
 jr $ra
-add $a0,$a0,$zero
+#add $a0,$a0,$zero
 L1:
 addi $a0,$a0,-1
 jal sum_1
@@ -178,20 +190,20 @@ lw $ra,4($sp)
 addi $sp,$sp,8
 add $v0,$a0,$v0
 jr $ra
-add $a0,$a0,$zero
+#add $a0,$a0,$zero
 sum_2: # 3'b011
 addi $sp,$sp,-8
 sw $ra,4($sp)
 sw $a0,0($sp)
 slti $t0,$a0,1
 beq $t0,$zero,L2
-add $a0,$a0,$zero
+#add $a0,$a0,$zero
 or $v0,$zero,$zero
 addi $sp,$sp,8
 sw $a0,stack_info($s3)
 addi $s3,$s3,4
 jr $ra
-add $a0,$a0,$zero
+#add $a0,$a0,$zero
 L2:
 addi $a0,$a0,-1
 jal sum_2
@@ -203,6 +215,6 @@ lw $ra,4($sp)
 addi $sp,$sp,8
 add $v0,$a0,$v0
 jr $ra
-add $a0,$a0,$zero
+#add $a0,$a0,$zero
 end:
 j end

@@ -43,7 +43,7 @@ module FSM2(clk, rst, button, state);
         end
     end
     reg [31:0] cnt;
-    parameter period2=20;
+    parameter period2=60;
     reg button_en;
     always @(posedge clk_10Hz or negedge rst_n) begin
         if (!rst_n) begin

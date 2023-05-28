@@ -19,11 +19,14 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 //done
-module pipeir(pc4, ins, wir, clk, clrn, dpc4, inst);
+module pipeir(pc4, ins, wir, clk, clrn, dpc4, inst, brance, prebrance);
     input [31:0] pc4, ins;
     input wir, clk, clrn;
+    input brance;
     output [31:0] dpc4, inst;
+    output prebrance;
     dffe32 pc_plus4 (pc4, clk, clrn, wir, dpc4);
     dffe32 instruction (ins,clk, clrn, wir, inst);
+    dffe32 brance_prebrance(brance, clk, clrn, wir, prebrance);
 
 endmodule

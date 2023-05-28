@@ -100,7 +100,7 @@ module MemOrIO(memclk,state,mRead,mWrite,addr_in,addr_out,m_rdata,io_rdata1,io_r
             default: begin
                 out1<=out1;
                 out2<=out2;
-                out3<=out3;
+                out3<=m_rdata[7:0];
                 iwled<=iwled;
             end
         endcase

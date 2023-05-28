@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sun May 28 20:05:39 2023
-# Process ID: 10052
+# Start of session at: Sun May 28 21:19:29 2023
+# Process ID: 10064
 # Current directory: D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1
 # Command line: vivado.exe -log pipelinedcpu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pipelinedcpu.tcl
 # Log file: D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/pipelinedcpu.vds
@@ -15,16 +15,16 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23404 
+INFO: Helper process launched with PID 16352 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 342.402 ; gain = 99.617
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 342.262 ; gain = 99.559
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'pipelinedcpu' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v:21]
 	Parameter period bound to: 100000 - type: integer 
 	Parameter period2 bound to: 20000 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'FSM2' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/FSM2.v:23]
 	Parameter period bound to: 10000000 - type: integer 
-	Parameter period2 bound to: 20 - type: integer 
+	Parameter period2 bound to: 60 - type: integer 
 WARNING: [Synth 8-5788] Register cnt_reg in module FSM2 is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/FSM2.v:52]
 INFO: [Synth 8-256] done synthesizing module 'FSM2' (1#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/FSM2.v:23]
 INFO: [Synth 8-638] synthesizing module 'pipepc' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipepc.v:22]
@@ -35,11 +35,13 @@ INFO: [Synth 8-638] synthesizing module 'pipeif' [D:/lhy/semester2-2/computer_or
 INFO: [Synth 8-638] synthesizing module 'mux4x32' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux4x32.v:23]
 INFO: [Synth 8-256] done synthesizing module 'mux4x32' (4#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux4x32.v:23]
 INFO: [Synth 8-638] synthesizing module 'pipeimem' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeimem.v:22]
-INFO: [Synth 8-638] synthesizing module 'ROM' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10052-LAPTOP-L3QUOT52/realtime/ROM_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'ROM' (5#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10052-LAPTOP-L3QUOT52/realtime/ROM_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'ROM' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10064-LAPTOP-L3QUOT52/realtime/ROM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'ROM' (5#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10064-LAPTOP-L3QUOT52/realtime/ROM_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'pipeimem' (6#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeimem.v:22]
 INFO: [Synth 8-256] done synthesizing module 'pipeif' (7#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeif.v:22]
 INFO: [Synth 8-638] synthesizing module 'pipeir' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeir.v:22]
+WARNING: [Synth 8-689] width (1) of port connection 'd' does not match port width (32) of module 'dffe32' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeir.v:30]
+WARNING: [Synth 8-689] width (1) of port connection 'q' does not match port width (32) of module 'dffe32' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeir.v:30]
 INFO: [Synth 8-256] done synthesizing module 'pipeir' (8#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeir.v:22]
 INFO: [Synth 8-638] synthesizing module 'pipeid' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeid.v:22]
 INFO: [Synth 8-638] synthesizing module 'pipeidcu' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeidcu.v:22]
@@ -64,8 +66,8 @@ INFO: [Synth 8-256] done synthesizing module 'pipeemreg' (18#1) [D:/lhy/semester
 INFO: [Synth 8-638] synthesizing module 'pipemem' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipemem.v:22]
 INFO: [Synth 8-638] synthesizing module 'MemOrIO' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v:23]
 INFO: [Synth 8-256] done synthesizing module 'MemOrIO' (19#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v:23]
-INFO: [Synth 8-638] synthesizing module 'RAM' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10052-LAPTOP-L3QUOT52/realtime/RAM_stub.v:6]
-INFO: [Synth 8-256] done synthesizing module 'RAM' (20#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10052-LAPTOP-L3QUOT52/realtime/RAM_stub.v:6]
+INFO: [Synth 8-638] synthesizing module 'RAM' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10064-LAPTOP-L3QUOT52/realtime/RAM_stub.v:6]
+INFO: [Synth 8-256] done synthesizing module 'RAM' (20#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10064-LAPTOP-L3QUOT52/realtime/RAM_stub.v:6]
 INFO: [Synth 8-256] done synthesizing module 'pipemem' (21#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipemem.v:22]
 INFO: [Synth 8-638] synthesizing module 'pipemwreg' [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipemwreg.v:22]
 INFO: [Synth 8-256] done synthesizing module 'pipemwreg' (22#1) [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipemwreg.v:22]
@@ -99,7 +101,7 @@ WARNING: [Synth 8-3331] design pipeimem has unconnected port a[16]
 WARNING: [Synth 8-3331] design pipeimem has unconnected port a[1]
 WARNING: [Synth 8-3331] design pipeimem has unconnected port a[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 394.824 ; gain = 152.039
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 394.434 ; gain = 151.730
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -109,17 +111,17 @@ Report Check Netlist:
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 394.824 ; gain = 152.039
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 394.434 ; gain = 151.730
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a100tfgg484-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10052-LAPTOP-L3QUOT52/dcp2/RAM_in_context.xdc] for cell 'mem_stage/ram'
-Finished Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10052-LAPTOP-L3QUOT52/dcp2/RAM_in_context.xdc] for cell 'mem_stage/ram'
-Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10052-LAPTOP-L3QUOT52/dcp3/ROM_in_context.xdc] for cell 'if_stage/ist_mem/instmem'
-Finished Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10052-LAPTOP-L3QUOT52/dcp3/ROM_in_context.xdc] for cell 'if_stage/ist_mem/instmem'
+Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10064-LAPTOP-L3QUOT52/dcp2/RAM_in_context.xdc] for cell 'mem_stage/ram'
+Finished Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10064-LAPTOP-L3QUOT52/dcp2/RAM_in_context.xdc] for cell 'mem_stage/ram'
+Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10064-LAPTOP-L3QUOT52/dcp3/ROM_in_context.xdc] for cell 'if_stage/ist_mem/instmem'
+Finished Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/.Xil/Vivado-10064-LAPTOP-L3QUOT52/dcp3/ROM_in_context.xdc] for cell 'if_stage/ist_mem/instmem'
 Parsing XDC File [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/constrs_1/new/src_xdc.xdc]
 WARNING: [Vivado 12-507] No nets matched 'reset_IBUF'. [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/constrs_1/new/src_xdc.xdc:86]
 WARNING: [Vivado 12-507] No nets matched 'button_IBUF'. [D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/constrs_1/new/src_xdc.xdc:87]
@@ -134,16 +136,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 747.262 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 747.828 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 747.262 ; gain = 504.477
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 747.828 ; gain = 505.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tfgg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 747.262 ; gain = 504.477
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 747.828 ; gain = 505.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -151,7 +153,7 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for if_stage/ist_mem/instmem. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for mem_stage/ram. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 747.262 ; gain = 504.477
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:15 . Memory (MB): peak = 747.828 ; gain = 505.125
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "clk_10Hz" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "cnt2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
@@ -201,7 +203,7 @@ INFO: [Synth 8-5545] ROM "cnt" won't be mapped to RAM because address size (32) 
 INFO: [Synth 8-5545] ROM "memclock" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "cnt2" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 747.262 ; gain = 504.477
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:16 . Memory (MB): peak = 747.828 ; gain = 505.125
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -214,14 +216,14 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 12    
+	   2 Input     32 Bit       Adders := 11    
 	   3 Input     32 Bit       Adders := 1     
 	   2 Input      8 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---XORs : 
 	   2 Input     32 Bit         XORs := 2     
 +---Registers : 
-	               32 Bit    Registers := 47    
+	               32 Bit    Registers := 48    
 	               16 Bit    Registers := 1     
 	                8 Bit    Registers := 3     
 	                5 Bit    Registers := 3     
@@ -333,10 +335,6 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     32 Bit        Muxes := 9     
 	   2 Input      2 Bit        Muxes := 1     
-Module pipeexe 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     32 Bit       Adders := 1     
 Module pipeemreg 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -454,8 +452,39 @@ INFO: [Synth 8-3886] merging instance 'de_reg/eimm_reg[27]' (FDC) to 'de_reg/eim
 INFO: [Synth 8-3886] merging instance 'de_reg/eimm_reg[28]' (FDC) to 'de_reg/eimm_reg[29]'
 INFO: [Synth 8-3886] merging instance 'de_reg/eimm_reg[29]' (FDC) to 'de_reg/eimm_reg[30]'
 INFO: [Synth 8-3886] merging instance 'de_reg/eimm_reg[30]' (FDC) to 'de_reg/eimm_reg[31]'
+WARNING: [Synth 8-3332] Sequential element (q_reg[31]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[30]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[29]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[28]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[27]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[26]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[25]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[24]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[23]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[22]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[21]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[20]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[19]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[18]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[17]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[16]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[15]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[14]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[13]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[12]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[11]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[10]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[9]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[8]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[7]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[6]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[5]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[4]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[3]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[2]) is unused and will be removed from module dffe32.
+WARNING: [Synth 8-3332] Sequential element (q_reg[1]) is unused and will be removed from module dffe32.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 747.262 ; gain = 504.477
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 747.828 ; gain = 505.125
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -485,13 +514,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 804.215 ; gain = 561.430
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:40 . Memory (MB): peak = 805.062 ; gain = 562.359
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:43 . Memory (MB): peak = 812.332 ; gain = 569.547
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 813.035 ; gain = 570.332
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -503,7 +532,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:34 ; elapsed = 00:00:45 . Memory (MB): peak = 843.926 ; gain = 601.141
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:43 . Memory (MB): peak = 844.301 ; gain = 601.598
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -521,7 +550,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 843.926 ; gain = 601.141
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 844.301 ; gain = 601.598
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -534,7 +563,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 843.926 ; gain = 601.141
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 844.301 ; gain = 601.598
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -546,7 +575,7 @@ Report RTL Partitions:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 843.926 ; gain = 601.141
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 844.301 ; gain = 601.598
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -567,17 +596,17 @@ Report Cell Usage:
 |1     |RAM     |     1|
 |2     |ROM     |     1|
 |3     |BUFG    |     2|
-|4     |CARRY4  |  1264|
+|4     |CARRY4  |  1256|
 |5     |DSP48E1 |     3|
 |6     |LUT1    |   399|
-|7     |LUT2    |   227|
-|8     |LUT3    |  4262|
-|9     |LUT4    |   123|
-|10    |LUT5    |   227|
-|11    |LUT6    |   932|
+|7     |LUT2    |   223|
+|8     |LUT3    |  4259|
+|9     |LUT4    |   129|
+|10    |LUT5    |   225|
+|11    |LUT6    |   939|
 |12    |MUXF7   |   149|
 |13    |MUXF8   |    64|
-|14    |FDCE    |  1400|
+|14    |FDCE    |  1401|
 |15    |FDPE    |     1|
 |16    |FDRE    |   167|
 |17    |IBUF    |    14|
@@ -585,49 +614,50 @@ Report Cell Usage:
 +------+--------+------+
 
 Report Instance Areas: 
-+------+--------------------+------------+------+
-|      |Instance            |Module      |Cells |
-+------+--------------------+------------+------+
-|1     |top                 |            |  9323|
-|2     |  fsm               |FSM2        |   156|
-|3     |  prog_cnt          |pipepc      |    33|
-|4     |    program_counter |dffe32__1   |    33|
-|5     |  if_stage          |pipeif      |    73|
-|6     |    next_pc         |mux4x32__1  |    32|
-|7     |    ist_mem         |pipeimem    |    32|
-|8     |  inst_reg          |pipeir      |    66|
-|9     |    pc_plus4        |dffe32__2   |    33|
-|10    |    instruction     |dffe32      |    33|
-|11    |  id_stage          |pipeid      |  2063|
-|12    |    cu              |pipeidcu    |    62|
-|13    |    rf              |regfile     |  1873|
-|14    |    des_reg_no      |mux2x5      |     5|
-|15    |    alu_a           |mux4x32__2  |    32|
-|16    |    alu_b           |mux4x32__3  |    32|
-|17    |  de_reg            |pipedereg   |   129|
-|18    |  exe_stage         |pipeexe     |  6256|
-|19    |    alu_ina         |mux2x32__1  |    32|
-|20    |    alu_inb         |mux2x32__2  |    32|
-|21    |    save_pc8        |mux2x32__3  |    32|
-|22    |    al_unit         |alu         |  6146|
-|23    |      shifter       |shift       |   202|
-|24    |      selector      |mux4x32     |    32|
-|25    |  em_reg            |pipeemreg   |    73|
-|26    |  mem_stage         |pipemem     |   140|
-|27    |    io_processor    |MemOrIO     |   106|
-|28    |  mw_reg            |pipemwreg   |    72|
-|29    |  wb_stage          |mux2x32     |    32|
-|30    |  sd                |seg_display |    85|
-|31    |    seg_enc0        |seg_enc     |     7|
-+------+--------------------+------------+------+
++------+---------------------+------------+------+
+|      |Instance             |Module      |Cells |
++------+---------------------+------------+------+
+|1     |top                  |            |  9320|
+|2     |  fsm                |FSM2        |   156|
+|3     |  prog_cnt           |pipepc      |    33|
+|4     |    program_counter  |dffe32__1   |    33|
+|5     |  if_stage           |pipeif      |    73|
+|6     |    next_pc          |mux4x32__1  |    32|
+|7     |    ist_mem          |pipeimem    |    32|
+|8     |  inst_reg           |pipeir      |    68|
+|9     |    pc_plus4         |dffe32__2   |    33|
+|10    |    instruction      |dffe32__3   |    33|
+|11    |    brance_prebrance |dffe32      |     2|
+|12    |  id_stage           |pipeid      |  2077|
+|13    |    cu               |pipeidcu    |    75|
+|14    |    rf               |regfile     |  1873|
+|15    |    des_reg_no       |mux2x5      |     5|
+|16    |    alu_a            |mux4x32__2  |    32|
+|17    |    alu_b            |mux4x32__3  |    32|
+|18    |  de_reg             |pipedereg   |   129|
+|19    |  exe_stage          |pipeexe     |  6247|
+|20    |    alu_ina          |mux2x32__1  |    32|
+|21    |    alu_inb          |mux2x32__2  |    32|
+|22    |    save_pc8         |mux2x32__3  |    32|
+|23    |    al_unit          |alu         |  6146|
+|24    |      shifter        |shift       |   202|
+|25    |      selector       |mux4x32     |    32|
+|26    |  em_reg             |pipeemreg   |    73|
+|27    |  mem_stage          |pipemem     |   130|
+|28    |    io_processor     |MemOrIO     |    96|
+|29    |  mw_reg             |pipemwreg   |    72|
+|30    |  wb_stage           |mux2x32     |    32|
+|31    |  sd                 |seg_display |    85|
+|32    |    seg_enc0         |seg_enc     |     7|
++------+---------------------+------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:46 . Memory (MB): peak = 843.926 ; gain = 601.141
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 844.301 ; gain = 601.598
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 22 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:41 . Memory (MB): peak = 843.926 ; gain = 248.703
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 843.926 ; gain = 601.141
+Synthesis finished with 0 errors, 0 critical warnings and 53 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:24 ; elapsed = 00:00:39 . Memory (MB): peak = 844.301 ; gain = 248.203
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:44 . Memory (MB): peak = 844.301 ; gain = 601.598
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 1494 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 1486 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -635,10 +665,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-137 Infos, 46 Warnings, 0 Critical Warnings and 0 Errors encountered.
+137 Infos, 79 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:50 . Memory (MB): peak = 843.926 ; gain = 612.656
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:48 . Memory (MB): peak = 844.301 ; gain = 613.102
 INFO: [Common 17-1381] The checkpoint 'D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/pipelinedcpu.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file pipelinedcpu_utilization_synth.rpt -pb pipelinedcpu_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.056 . Memory (MB): peak = 843.926 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Sun May 28 20:06:34 2023...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 844.301 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Sun May 28 21:20:22 2023...

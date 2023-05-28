@@ -73,6 +73,7 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
 //    assign test_ealu = ealu;
     wire [15:0] io_w_seg1;
     wire [7:0] io_w_seg2,io_w_seg3;
+    wire brance, prebrance;
 //    wire [15:0] out1;
 //    assign out1=io_w_seg1;
 //    wire [7:0] out2,out3;
@@ -82,11 +83,11 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
     pipeif if_stage (memclock, pcsource, pc, bpc, da, jpc, npc, pc4, ins);
 //    assign test_ins=ins;
 //    assign test_pc=pc;
-    pipeir inst_reg (pc4, ins, wpcir, clock, resetn, dpc4, inst);
+    pipeir inst_reg (pc4, ins, wpcir, clock, resetn, dpc4, inst, brance, prebrance);
     pipeid id_stage (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst,
                     wrn, wdi, ealu, malu, mmo, wwreg, clock, resetn,
                     bpc, jpc, pcsource, wpcir, dwreg, dm2reg, dwmem,
-                    daluc, daluimm, da, db, dimm, drn, dshift, djal, state);
+                    daluc, daluimm, da, db, dimm, drn, dshift, djal, state, brance, prebrance);
     pipedereg de_reg(dwreg, dm2reg, dwmem, daluc, daluimm, da, db, dimm,
                     drn, dshift, djal, dpc4, clock, resetn,
                     ewreg, em2reg, ewmem, ealuc, ealuimm, ea, eb, eimm,
