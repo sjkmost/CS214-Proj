@@ -22,44 +22,48 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.cache/wt [current_project]
-set_property parent.project_path D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.xpr [current_project]
+set_property webtalk.parent_dir D:/Class/CS214/CS214-Proj/proj.cache/wt [current_project]
+set_property parent.project_path D:/Class/CS214/CS214-Proj/proj.xpr [current_project]
 set_property XPM_LIBRARIES XPM_MEMORY [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.cache/ip [current_project]
+set_property ip_repo_paths d:/Class/CS214/CS214-Proj/SEU_CSE_507_user_uart_bmpg_1.3 [current_project]
+set_property ip_output_repo d:/Class/CS214/CS214-Proj/proj.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-add_files D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM/dmem32.coe
-add_files D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/ROM/prgmip32.coe
+add_files D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/ip/RAM/dmem32.coe
+add_files D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/ip/ROM/prgmip32.coe
+add_files d:/Class/CS214/CS214-Proj/proj.srcs/sources_1/ip/RAM_inst/dmem32.coe
 read_verilog -library xil_defaultlib {
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/alu.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/dffe32.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux2x32.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux2x5.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/mux4x32.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipedereg.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeemreg.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeexe.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeid.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeidcu.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeif.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeimem.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipeir.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipemem.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipemwreg.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipepc.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/regfile.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/seg_display.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/shift.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v
-  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/new/FSM2.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/MemOrIO.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/alu.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/dffe32.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/mux2x32.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/mux2x5.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/mux4x32.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/pipedereg.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/pipeemreg.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/pipeexe.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/pipeid.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/pipeidcu.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/pipeif.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/pipeimem.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/pipeir.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/pipemem.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/pipemwreg.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/pipepc.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/regfile.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/seg_display.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/shift.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/pipelinedcpu.v
+  D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/new/FSM2.v
 }
-read_ip -quiet D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM/RAM.xci
-set_property used_in_implementation false [get_files -all d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM/RAM_ooc.xdc]
+read_ip -quiet d:/Class/CS214/CS214-Proj/proj.srcs/sources_1/ip/uart_bmpg_0/uart_bmpg_0.xci
 
-read_ip -quiet D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/ROM/ROM.xci
-set_property used_in_implementation false [get_files -all d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/ROM/ROM_ooc.xdc]
+read_ip -quiet d:/Class/CS214/CS214-Proj/proj.srcs/sources_1/ip/RAM_inst/RAM_inst.xci
+set_property used_in_implementation false [get_files -all d:/Class/CS214/CS214-Proj/proj.srcs/sources_1/ip/RAM_inst/RAM_inst_ooc.xdc]
+
+read_ip -quiet D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/ip/RAM/RAM.xci
+set_property used_in_implementation false [get_files -all d:/Class/CS214/CS214-Proj/proj.srcs/sources_1/ip/RAM/RAM_ooc.xdc]
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -69,11 +73,9 @@ set_property used_in_implementation false [get_files -all d:/lhy/semester2-2/com
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/constrs_1/new/src_xdc.xdc
-set_property used_in_implementation false [get_files D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/constrs_1/new/src_xdc.xdc]
+read_xdc D:/Class/CS214/CS214-Proj/proj.srcs/constrs_1/new/src_xdc.xdc
+set_property used_in_implementation false [get_files D:/Class/CS214/CS214-Proj/proj.srcs/constrs_1/new/src_xdc.xdc]
 
-read_xdc dont_touch.xdc
-set_property used_in_implementation false [get_files dont_touch.xdc]
 
 synth_design -top pipelinedcpu -part xc7a100tfgg484-1 -flatten_hierarchy none
 

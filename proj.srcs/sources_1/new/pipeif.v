@@ -19,13 +19,16 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 //done
-module pipeif (memclk, pcsource, pc, bpc, rpc, jpc, npc, pc4, ins);
+module pipeif (memclk, pcsource, pc, bpc, rpc, jpc, npc, pc4, ins, upg_rst, upg_clk, upg_wen, upg_adr, upg_dat, upg_done);
     input memclk;
     input [31:0] pc, bpc, rpc, jpc;
     input [1:0] pcsource;
     output [31:0] npc, pc4, ins;
+    input upg_rst, upg_clk, upg_wen, upg_done;
+    input [13:0] upg_adr;
+    input [31:0] upg_dat;
     mux4x32 next_pc (pc4, bpc, rpc, jpc, pcsource, npc);
     assign pc4 = pc + 32'h4;
-    pipeimem ist_mem(memclk, pc, ins);
+    pipeimem ist_mem(memclk, pc, ins, upg_rst, upg_clk, upg_wen, upg_adr, upg_dat, upg_done);
 
 endmodule

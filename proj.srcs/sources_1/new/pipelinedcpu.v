@@ -18,23 +18,26 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,state);
+module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,state,start_pg,rx,tx);
     input clk;
     input reset, button;
     input [2:0] io_r1;
     input [7:0] io_r2;
     output io_w_led;
     output [7:0] seg_en,seg_out;
+    input start_pg;
+    input rx;
+    output tx;
 //    output test_clk;
 //    output [31:0] test_ins;
 //    output [31:0] test_pc;
 //    output [31:0] test_a;
 //    output [31:0] test_ins;
 //    output [31:0] test_addr;
-    reg clock,memclock;
+    reg clock,memclock,uart_clk;
 //    wire clk=memclock;
     reg [31:0] cnt;
-    parameter period=100000;
+    parameter period=100;
     always@(posedge clk) begin
         if (cnt==(period>>1)-1) begin
             clock=~clock;
@@ -43,7 +46,7 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
         else cnt<=cnt+1;
     end
     reg [31:0] cnt2;
-    parameter period2=20000;
+    parameter period2=20;
     always@(posedge clk) begin
         if (cnt2==(period2>>1)-1) begin
             memclock=~memclock;
@@ -51,8 +54,17 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
         end
         else cnt2<=cnt2+1;
     end
+    reg [31:0] cnt3;
+    parameter period3=10;
+    always@(posedge clk) begin
+        if (cnt3==(period3>>1)-1) begin
+            uart_clk=~uart_clk;
+            cnt3<=0;
+        end
+        else cnt3<=cnt3+1;
+    end
     wire resetn;
-    assign resetn=~reset;
+//    assign resetn=~reset;
     output [7:0] state;
 //    output [7:0] test_state;
 //    assign test_state=state;
@@ -78,9 +90,33 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
 //    assign out1=io_w_seg1;
 //    wire [7:0] out2,out3;
 //    assign out2=io_w_seg2,out3=io_w_seg3;
+    wire upg_clk_o;
+    wire upg_wen_o;
+    wire upg_done_o;
+    wire [14:0] upg_adr_o;
+    wire [31:0] upg_dat_o;
+    reg upg_rst;
+    always @(posedge clk) begin
+        if (start_pg)
+            upg_rst = 0;
+        if (reset)
+            upg_rst = 1;
+    end
+    assign resetn = ~reset & upg_rst;
+    uart_bmpg_0 uart(
+        .upg_clk_i(uart_clk), 
+        .upg_rst_i(upg_rst), 
+        .upg_rx_i(rx), 
+        .upg_clk_o(upg_clk_o), 
+        .upg_wen_o(upg_wen_o), 
+        .upg_adr_o(upg_adr_o), 
+        .upg_dat_o(upg_dat_o), 
+        .upg_done_o(upg_done_o), 
+        .upg_tx_o(tx));
     FSM2 fsm(clk, reset, button, state);
     pipepc prog_cnt (npc, wpcir, clock, resetn, pc);
-    pipeif if_stage (memclock, pcsource, pc, bpc, da, jpc, npc, pc4, ins);
+    pipeif if_stage (memclock, pcsource, pc, bpc, da, jpc, npc, pc4, ins, 
+                     upg_rst, upg_clk_o, upg_wen_o & ~upg_adr_o[14], upg_adr_o[13:0], upg_dat_o, upg_done_o);
 //    assign test_ins=ins;
 //    assign test_pc=pc;
     pipeir inst_reg (pc4, ins, wpcir, clock, resetn, dpc4, inst, brance, prebrance);
@@ -96,7 +132,8 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
                     ejal, ern, ealu);
     pipeemreg em_reg(ewreg, em2reg, ewmem, ealu, eb, ern, clock, resetn,
                     mwreg, mm2reg, mwmem, malu, mb, mrn);
-    pipemem mem_stage(state, mwmem, malu, mb, clock, memclock, io_r1, io_r2, io_w_led, io_w_seg1, io_w_seg2, io_w_seg3, mmo);
+    pipemem mem_stage(state, mwmem, malu, mb, clock, memclock, io_r1, io_r2, io_w_led, io_w_seg1, io_w_seg2, io_w_seg3, mmo, 
+                    upg_rst, upg_clk_o, upg_wen_o & upg_adr_o[14], upg_adr_o[13:0], upg_dat_o, upg_done_o);
     pipemwreg mw_reg(mwreg, mm2reg, mmo, malu, mrn, clock, resetn,
                     wwreg, wm2reg, wmo, walu, wrn);
     mux2x32 wb_stage(walu, wmo, wm2reg, wdi);

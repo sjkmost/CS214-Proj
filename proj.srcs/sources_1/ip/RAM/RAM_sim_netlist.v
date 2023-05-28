@@ -1,10 +1,9 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-// Date        : Sat May 27 19:26:05 2023
-// Host        : LAPTOP-L3QUOT52 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim -rename_top RAM -prefix
-//               RAM_ RAM_sim_netlist.v
+// Date        : Sun May 28 22:22:40 2023
+// Host        : RUOZAITIAN-NB0 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim D:/Class/CS214/CS214-Proj/proj.srcs/sources_1/ip/RAM/RAM_sim_netlist.v
 // Design      : RAM
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -192,6 +191,7 @@ module RAM
         .web(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "bindec" *) 
 module RAM_bindec
    (ena_array,
     addra);
@@ -215,6 +215,7 @@ module RAM_bindec
         .O(ena_array[1]));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_generic_cstr" *) 
 module RAM_blk_mem_gen_generic_cstr
    (douta,
     addra,
@@ -491,6 +492,7 @@ module RAM_blk_mem_gen_generic_cstr
         .wea(wea));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_mux" *) 
 module RAM_blk_mem_gen_mux
    (douta,
     addra,
@@ -864,6 +866,7 @@ module RAM_blk_mem_gen_mux
         .R(1'b0));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_width" *) 
 module RAM_blk_mem_gen_prim_width
    (douta,
     clka,
@@ -1364,6 +1367,7 @@ module RAM_blk_mem_gen_prim_width__parameterized9
         .wea(wea));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_prim_wrapper_init" *) 
 module RAM_blk_mem_gen_prim_wrapper_init
    (douta,
     clka,
@@ -4970,6 +4974,7 @@ module RAM_blk_mem_gen_prim_wrapper_init__parameterized9
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_top" *) 
 module RAM_blk_mem_gen_top
    (douta,
     addra,
@@ -5020,7 +5025,7 @@ endmodule
 (* C_USE_URAM = "0" *) (* C_WEA_WIDTH = "1" *) (* C_WEB_WIDTH = "1" *) 
 (* C_WRITE_DEPTH_A = "16384" *) (* C_WRITE_DEPTH_B = "16384" *) (* C_WRITE_MODE_A = "WRITE_FIRST" *) 
 (* C_WRITE_MODE_B = "WRITE_FIRST" *) (* C_WRITE_WIDTH_A = "32" *) (* C_WRITE_WIDTH_B = "32" *) 
-(* C_XDEVICEFAMILY = "artix7" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* C_XDEVICEFAMILY = "artix7" *) (* ORIG_REF_NAME = "blk_mem_gen_v8_4_1" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module RAM_blk_mem_gen_v8_4_1
    (clka,
     rsta,
@@ -5282,6 +5287,7 @@ module RAM_blk_mem_gen_v8_4_1
         .wea(wea));
 endmodule
 
+(* ORIG_REF_NAME = "blk_mem_gen_v8_4_1_synth" *) 
 module RAM_blk_mem_gen_v8_4_1_synth
    (douta,
     addra,

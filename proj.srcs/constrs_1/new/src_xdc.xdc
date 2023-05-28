@@ -83,5 +83,12 @@ set_property PACKAGE_PIN M20 [get_ports {state[2]}]
 set_property PACKAGE_PIN N20 [get_ports {state[1]}]
 set_property PACKAGE_PIN N19 [get_ports {state[0]}]
 
+set_property IOSTANDARD LVCMOS33 [get_ports {start_pg}]
+set_property PACKAGE_PIN AA6 [get_ports {start_pg}]
+set_property IOSTANDARD LVCMOS33 [get_ports {rx}]
+set_property PACKAGE_PIN Y19 [get_ports {rx}]
+set_property IOSTANDARD LVCMOS33 [get_ports {tx}]
+set_property PACKAGE_PIN V18 [get_ports {tx}]
+
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {reset_IBUF}]
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets {button_IBUF}]

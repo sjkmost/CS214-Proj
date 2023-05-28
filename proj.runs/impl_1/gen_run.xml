@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1685280901">
+<GenRun Id="impl_1" LaunchPart="xc7a100tfgg484-1" LaunchTime="1685283817">
   <File Type="PWROPT-DCP" Name="pipelinedcpu_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="pipelinedcpu_power_routed.rpt"/>
   <File Type="PA-TCL" Name="pipelinedcpu.tcl"/>
@@ -219,13 +219,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/ip/RAM/RAM.xci">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/ip/RAM/dmem32.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -233,6 +226,12 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/ip/ROM/prgmip32.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/RAM_inst/dmem32.coe">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -267,5 +266,7 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="ROM"/>
+  <BlockFileSet Type="BlockSrcs" Name="uart_bmpg_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="RAM_inst"/>
+  <BlockFileSet Type="BlockSrcs" Name="RAM"/>
 </GenRun>
