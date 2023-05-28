@@ -24,7 +24,8 @@
 // 1 0 0 0 MUL
 // 1 1 0 0 DIV
 // X 0 0 1 AND
-// X 1 0 1 OR
+// 0 1 0 1 OR
+// 1 1 0 1 NOR
 // 0 0 1 0 XOR
 // 0 1 1 0 LUI
 // 1 0 1 0 SLT
@@ -45,7 +46,7 @@ module alu(a, b, aluc, r, z);
     wire [31:0] r_arith = aluc[3] ? r_muldiv : r_addsub;
     wire [31:0] r_and = a & b;
     wire [31:0] r_or = a | b;
-    wire [31:0] r_andor = aluc[2] ? r_or : r_and;
+    wire [31:0] r_andor = aluc[2] ? aluc[3] ? ~r_or : r_or : r_and;
     wire [31:0] r_xor = a ^ b;
     wire [31:0] r_lui = {b[15:0], 16'b0};
     wire [31:0] r_xorlui = aluc[2] ? r_lui : r_xor;
