@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
-| Date         : Sun May 28 21:20:22 2023
+| Date         : Sun May 28 21:35:54 2023
 | Host         : LAPTOP-L3QUOT52 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file pipelinedcpu_utilization_synth.rpt -pb pipelinedcpu_utilization_synth.pb
 | Design       : pipelinedcpu
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             | 5889 |     0 |     63400 |  9.29 |
-|   LUT as Logic          | 5889 |     0 |     63400 |  9.29 |
+| Slice LUTs*             | 5887 |     0 |     63400 |  9.29 |
+|   LUT as Logic          | 5887 |     0 |     63400 |  9.29 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
 | Slice Registers         | 1569 |     0 |    126800 |  1.24 |
 |   Register as Flip Flop | 1569 |     0 |    126800 |  1.24 |
@@ -153,13 +153,13 @@ Table of Contents
 | LUT3     | 4259 |                 LUT |
 | FDCE     | 1401 |        Flop & Latch |
 | CARRY4   | 1256 |          CarryLogic |
-| LUT6     |  939 |                 LUT |
+| LUT6     |  938 |                 LUT |
 | LUT1     |  399 |                 LUT |
-| LUT5     |  225 |                 LUT |
+| LUT5     |  223 |                 LUT |
 | LUT2     |  223 |                 LUT |
 | FDRE     |  167 |        Flop & Latch |
 | MUXF7    |  149 |               MuxFx |
-| LUT4     |  129 |                 LUT |
+| LUT4     |  128 |                 LUT |
 | MUXF8    |   64 |               MuxFx |
 | OBUF     |   25 |                  IO |
 | IBUF     |   14 |                  IO |

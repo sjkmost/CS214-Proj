@@ -53,11 +53,11 @@ module pipeidcu(mwreg, mrn, ern, ewreg, em2reg, mm2reg, rsrtequ, func, op, rs, r
     and(i_xori, ~op[5],  ~op[4],   op[3],   op[2],   op[1], ~op[0]);
     and(i_lw  ,  op[5],  ~op[4],  ~op[3],  ~op[2],   op[1],  op[0]);
     and(i_sw  ,  op[5],  ~op[4],   op[3],  ~op[2],   op[1],  op[0]);
-    and(i_beq , ~op[5],  ~op[4],  ~op[3],   op[2],  ~op[1], ~op[0]);
-    and(i_bne , ~op[5],  ~op[4],  ~op[3],   op[2],  ~op[1],  op[0]);
+    and(i_beq , ~op[5],  ~op[4],  ~op[3],   op[2],  ~op[1], ~op[0], ~prebrance);
+    and(i_bne , ~op[5],  ~op[4],  ~op[3],   op[2],  ~op[1],  op[0], ~prebrance);
     and(i_lui , ~op[5],  ~op[4],   op[3],   op[2],   op[1],  op[0]);
-    and(i_j   , ~op[5],  ~op[4],  ~op[3],  ~op[2],   op[1], ~op[0]);
-    and(i_jal , ~op[5],  ~op[4],  ~op[3],  ~op[2],   op[1],  op[0]);
+    and(i_j   , ~op[5],  ~op[4],  ~op[3],  ~op[2],   op[1], ~op[0], ~prebrance);
+    and(i_jal , ~op[5],  ~op[4],  ~op[3],  ~op[2],   op[1],  op[0], ~prebrance);
     and(i_slti, ~op[5],  ~op[4],   op[3],  ~op[2],   op[1], ~op[0]);
     wire i_rs = i_add | i_sub | i_and | i_or | i_xor | i_jr  | i_mul | i_div | i_addi |
                 i_andi| i_ori | i_xori| i_lw | i_sw  | i_beq | i_bne | i_slti;
