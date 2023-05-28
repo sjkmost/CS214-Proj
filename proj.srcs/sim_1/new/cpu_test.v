@@ -34,7 +34,9 @@ module cpu_test();
     wire [7:0] out2,out3;
     wire [7:0] state;
     wire [31:0] pc,ins;
-    pipelinedcpu cpu0(clk,mclk,reset,button,io_r1,io_r2,io_w_led,seg_en,seg_out,state,out1,out2,out3,clks,pc,ins);
+    wire [31:0] alu;
+    wire [3:0] ealuc;
+    pipelinedcpu cpu0(clk,mclk,reset,button,io_r1,io_r2,io_w_led,seg_en,seg_out,state,out1,out2,out3,clks,pc,ins, alu, ealuc);
     always #5 clk=~clk;
     always #1 mclk=~mclk;
     initial begin

@@ -18,7 +18,7 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
-module pipelinedcpu(clock, memclock, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,state,out1,out2,out3, test_clk, test_pc, test_ins);
+module pipelinedcpu(clock, memclock, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,state,out1,out2,out3, test_clk, test_pc, test_ins, test_ealu, test_ealuc);
     //nput clk;
     input reset, button;
     input [2:0] io_r1;
@@ -60,6 +60,8 @@ module pipelinedcpu(clock, memclock, reset, button, io_r1, io_r2, io_w_led,seg_e
     wire [31:0] epc4, mb, mmo, wmo, wdi;
     wire [4:0] drn, ern0, ern, mrn, wrn;
     wire [3:0] daluc, ealuc;
+    output [3:0] test_ealuc;
+    assign test_ealuc = ealuc;
     wire [1:0] pcsource;
     wire wpcir;
     wire dwreg, dm2reg, dwmem, daluimm, dshift, djal;
@@ -67,6 +69,8 @@ module pipelinedcpu(clock, memclock, reset, button, io_r1, io_r2, io_w_led,seg_e
     wire mwreg, mm2reg, mwmem;
     wire wwreg, wm2reg;
     wire [31:0] pc,ealu,malu,walu;
+    output [31:0] test_ealu;
+    assign test_ealu = ealu;
     wire [15:0] io_w_seg1;
     wire [7:0] io_w_seg2,io_w_seg3;
     output [15:0] out1;

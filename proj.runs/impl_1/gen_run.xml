@@ -6,29 +6,18 @@
   <File Type="ROUTE-PWR-SUM" Name="pipelinedcpu_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="pipelinedcpu_reports.tcl"/>
   <File Type="BG-DRC" Name="pipelinedcpu.drc"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="pipelinedcpu_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="pipelinedcpu_timing_summary_init.rpt"/>
-  <File Type="OPT-HWDEF" Name="pipelinedcpu.hwdef"/>
   <File Type="OPT-DCP" Name="pipelinedcpu_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="pipelinedcpu.hwdef"/>
   <File Type="OPT-DRC" Name="pipelinedcpu_drc_opted.rpt"/>
-  <File Type="OPT-TIMING" Name="pipelinedcpu_timing_summary_opted.rpt"/>
-  <File Type="PWROPT-DRC" Name="pipelinedcpu_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="pipelinedcpu_timing_summary_pwropted.rpt"/>
   <File Type="PLACE-DCP" Name="pipelinedcpu_placed.dcp"/>
   <File Type="PLACE-IO" Name="pipelinedcpu_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="pipelinedcpu_clock_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL" Name="pipelinedcpu_utilization_placed.rpt"/>
   <File Type="PLACE-UTIL-PB" Name="pipelinedcpu_utilization_placed.pb"/>
   <File Type="PLACE-CTRL" Name="pipelinedcpu_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="pipelinedcpu_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="pipelinedcpu_incremental_reuse_pre_placed.rpt"/>
-  <File Type="PLACE-TIMING" Name="pipelinedcpu_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="pipelinedcpu_postplace_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="pipelinedcpu_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="pipelinedcpu_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="pipelinedcpu_drc_physopted.rpt"/>
   <File Type="BG-BIT" Name="pipelinedcpu.bit"/>
-  <File Type="PHYSOPT-TIMING" Name="pipelinedcpu_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="pipelinedcpu_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="pipelinedcpu_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="pipelinedcpu_routed_bb.dcp"/>
@@ -48,18 +37,13 @@
   <File Type="ROUTE-TIMINGSUMMARY" Name="pipelinedcpu_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="pipelinedcpu_timing_summary_routed.pb"/>
   <File Type="ROUTE-TIMING-RPX" Name="pipelinedcpu_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="pipelinedcpu_incremental_reuse_routed.rpt"/>
   <File Type="RDI-RDI" Name="pipelinedcpu.vdi"/>
   <File Type="ROUTE-CLK" Name="pipelinedcpu_clock_utilization_routed.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="pipelinedcpu_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="pipelinedcpu_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="pipelinedcpu_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="pipelinedcpu_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="pipelinedcpu_timing_summary_postroute_physopted.rpx"/>
   <File Type="BITSTR-NKY" Name="pipelinedcpu.nky"/>
   <File Type="BITSTR-BMM" Name="pipelinedcpu_bd.bmm"/>
   <File Type="BITSTR-MMI" Name="pipelinedcpu.mmi"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="pipelinedcpu.ltx"/>
   <File Type="BITSTR-SYSDEF" Name="pipelinedcpu.sysdef"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
