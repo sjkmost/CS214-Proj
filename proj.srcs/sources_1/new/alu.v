@@ -25,10 +25,11 @@
 // 1 1 0 0 DIV
 // X 0 0 1 AND
 // X 1 0 1 OR
-// X 0 1 0 XOR
-// X 1 1 0 LUI
+// 0 0 1 0 XOR
+// 0 1 1 0 LUI
+// 1 0 1 0 SLT
+// 1 1 1 0 SLTU
 // 0 0 1 1 SLL
-// 1 0 1 1 SLT
 // 0 1 1 1 SRL
 // 1 1 1 1 SRA
 //module alu(a, b, aluc, r, z, v);
@@ -48,11 +49,13 @@ module alu(a, b, aluc, r, z);
     wire [31:0] r_xor = a ^ b;
     wire [31:0] r_lui = {b[15:0], 16'b0};
     wire [31:0] r_xorlui = aluc[2] ? r_lui : r_xor;
+    wire [31:0] r_slt = a[31] ^ b[31] ? a[31] : a < b ? 1 : 0;
+    wire [31:0] r_sltu = a < b ? 1 : 0;
+    wire [31:0] r_slta = aluc[2] ? r_sltu : r_slt;
+    wire [31:0] r_xorluislt = aluc[3] ? r_slta : r_xorlui;
     wire [31:0] r_sh;
     shift shifter(b, a[4:0], aluc[2], aluc[3], r_sh);
-    wire [31:0] r_slt = (a < b) ? 1 : 0;
-    wire [31:0] r_shslt = (aluc[3] & ~aluc[2]) ? r_slt : r_sh;
-    mux4x32 selector(r_arith, r_andor, r_xorlui, r_shslt, aluc[1:0], r);
+    mux4x32 selector(r_arith, r_andor, r_xorluislt, r_sh, aluc[1:0], r);
     assign z = !(!r);
 //    assign v = !aluc[1:0] && 
 //               ((aluc[2] && ((a[31] && !b[31] && !r[31]) || (!a[31] && b[31] && r[31]))) ||
