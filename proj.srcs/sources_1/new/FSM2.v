@@ -20,14 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module FSM2(clk, rst, button, state, clk_10Hz);
+module FSM2(clk, rst, button, state);
     input clk,rst,button;
     output reg[7:0] state;
-    output reg clk_10Hz;
+    reg clk_10Hz;
     wire rst_n;
     assign rst_n=~rst;
     reg [31:0] cnt2;
-    parameter period=2;
+    parameter period=10000000;
     always@(posedge clk or negedge rst_n) begin
         if (!rst_n) begin
             clk_10Hz<=0;
@@ -76,7 +76,7 @@ module FSM2(clk, rst, button, state, clk_10Hz);
             cnt<=cnt;
         end
         else begin
-            if (cnt==(period>>1)-1) begin
+            if (cnt==(period2>>1)-1) begin
                 state<=state+1;
                 button_en=1;
                 cnt<=0;

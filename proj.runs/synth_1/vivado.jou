@@ -2,8 +2,8 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sun May 28 15:27:45 2023
-# Process ID: 17288
+# Start of session at: Sun May 28 20:05:39 2023
+# Process ID: 10052
 # Current directory: D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1
 # Command line: vivado.exe -log pipelinedcpu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source pipelinedcpu.tcl
 # Log file: D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/synth_1/pipelinedcpu.vds
