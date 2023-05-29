@@ -20,14 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 //done
 module pipeemreg (ewreg, em2reg, ewmem, ealu, eb, ern, clk, clrn,
-                    mwreg, mm2reg, mwmem, malu, mb, mrn);
+                    mwreg, mm2reg, mwmem, malu, mb, mrn);// pipe EXE MEM reg
     input [31:0] ealu, eb;
     input [4:0] ern;
-    input ewreg, em2reg, ewmem;
+    input ewreg, em2reg, ewmem; //from EXE stage
     input clk, clrn;
     output [31:0] malu, mb;
     output [4:0] mrn;
-    output mwreg, mm2reg, mwmem;
+    output mwreg, mm2reg, mwmem; //to MEM stage
     reg [31:0] malu, mb;
     reg [4:0] mrn;
     reg mwreg, mm2reg, mwmem;

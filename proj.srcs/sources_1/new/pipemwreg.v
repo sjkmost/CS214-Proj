@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 //done
 module pipemwreg (mwreg, mm2reg, mmo, malu, mrn, clk, clrn,
-                wwreg, wm2reg, wmo, walu, wrn);
+                wwreg, wm2reg, wmo, walu, wrn); //EXE MEM reg
     input [31:0] mmo, malu;
     input [4:0] mrn;
     input mwreg, mm2reg;

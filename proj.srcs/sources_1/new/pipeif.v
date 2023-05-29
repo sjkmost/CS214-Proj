@@ -23,7 +23,7 @@ module pipeif (memclk, pcsource, pc, bpc, rpc, jpc, npc, pc4, ins, upg_rst, upg_
     input memclk;
     input [31:0] pc, bpc, rpc, jpc;
     input [1:0] pcsource;
-    output [31:0] npc, pc4, ins;
+    output [31:0] npc, pc4, ins; //pc4 : pc + 4
     input upg_rst, upg_clk, upg_wen, upg_done;
     input [13:0] upg_adr;
     input [31:0] upg_dat;

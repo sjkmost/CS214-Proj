@@ -25,12 +25,12 @@ module pipeidcu(mwreg, mrn, ern, ewreg, em2reg, mm2reg, rsrtequ, func, op, rs, r
     input mwreg, ewreg, em2reg, mm2reg, rsrtequ;
     input [4:0] mrn, ern, rs, rt;
     input [5:0] func, op;
-    input [7:0] state;
+    input [7:0] state; //the current state sign // state == 4 means CPU runs
     input prebrance;
     output wreg, m2reg, wmem, regrt, aluimm, sext, shift, jal;
     output [3:0] aluc;
     output [1:0] pcsource;
-    output [1:0] fwda, fwdb;
+    output [1:0] fwda, fwdb; //the forwarding selection
     output nostall;
     reg [1:0] fwda, fwdb;
     wire r_type, i_add, i_sub, i_and, i_or, i_nor, i_xor, i_sll, i_srl, i_sra, i_jr, i_div, i_mul, i_slt, i_sltu;
@@ -66,7 +66,7 @@ module pipeidcu(mwreg, mrn, ern, ewreg, em2reg, mm2reg, rsrtequ, func, op, rs, r
                 i_andi| i_ori | i_xori| i_lw | i_sw  | i_beq | i_bne | i_slti;
     wire i_rt = i_add | i_sub | i_and | i_or | i_nor | i_xor | i_mul | i_div | i_slt | i_sltu | i_sll  | i_srl  |
                 i_sra | i_sw  | i_beq | i_bne;
-    assign nostall = (~(ewreg & em2reg & (ern != 0) & (i_rs & (ern == rs) | i_rt & (ern == rt) ) ) ) & (state == 4);
+    assign nostall = (~(ewreg & em2reg & (ern != 0) & (i_rs & (ern == rs) | i_rt & (ern == rt) ) ) ) & (state == 4); // state == 4 means CPU runs
     
     always @(ewreg or mwreg or ern or mrn or em2reg or mm2reg or rs or rt) begin
         fwda = 2'b00; // default: no hazards

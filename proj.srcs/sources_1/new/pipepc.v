@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 //done
-module pipepc(npc, wpc, clk, clrn, pc);
+module pipepc(npc, wpc, clk, clrn, pc); //just PC reg
     input [31:0] npc;
     input wpc, clk, clrn;
     output[31:0] pc;

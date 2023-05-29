@@ -19,7 +19,7 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 //done
-module pipeexe (ealuc, ealuimm, ea, eb, eimm, eshift, ern0, epc4, ejal, ern, ealu);
+module pipeexe (ealuc, ealuimm, ea, eb, eimm, eshift, ern0, epc4, ejal, ern, ealu); //EXE stage
     input [31:0] ea, eb, eimm, epc4;
     input [4:0] ern0;
     input [3:0] ealuc;
@@ -29,11 +29,11 @@ module pipeexe (ealuc, ealuimm, ea, eb, eimm, eshift, ern0, epc4, ejal, ern, eal
     wire [31:0] alua, alub, sa, ealu0, epc8;
     wire z;
     assign sa = {eimm[5:0], eimm[31:6]};
-    assign epc8 = epc4;
+    assign epc8 = epc4; //the better solution for branch hazard.
     mux2x32 alu_ina (ea, sa, eshift, alua);
     mux2x32 alu_inb (eb, eimm, ealuimm, alub);
     mux2x32 save_pc8 (ealu0, epc8, ejal, ealu);
-    assign ern = ern0 | {5{ejal}};
+    assign ern = ern0 | {5{ejal}};  //IF jal then set this to $ra
     alu al_unit (alua, alub, ealuc, ealu0, z);
     
 endmodule

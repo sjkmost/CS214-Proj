@@ -58,12 +58,12 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
     end
     wire resetn;
     output [7:0] state;
-    wire [31:0] bpc, jpc, npc, pc4, ins, dpc4, inst, da, db, dimm, ea, eb, eimm;
+    wire [31:0] bpc, jpc, npc, pc4, ins, dpc4, inst, da, db, dimm, ea, eb, eimm; //eimm dimm 'e' means in EXE stage 'd' ID stage
     wire [31:0] epc4, mb, mmo, wmo, wdi;
     wire [4:0] drn, ern0, ern, mrn, wrn;
     wire [3:0] daluc, ealuc;
     wire [1:0] pcsource;
-    wire wpcir;
+    wire wpcir; //control pc ir reg write_enable
     wire dwreg, dm2reg, dwmem, daluimm, dshift, djal;
     wire ewreg, em2reg, ewmem, ealuimm, eshift, ejal;
     wire mwreg, mm2reg, mwmem;
@@ -71,7 +71,7 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
     wire [31:0] pc,ealu,malu,walu;
     wire [15:0] io_w_seg1;
     wire [7:0] io_w_seg2,io_w_seg3;
-    wire brance, prebrance;
+    wire brance, prebrance; //new solution for branch hazard
     wire upg_clk_o;
     wire upg_wen_o;
     wire upg_done_o;

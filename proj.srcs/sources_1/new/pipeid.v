@@ -22,19 +22,19 @@
 module pipeid (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst, wrn,
                 wdi, ealu, malu, mmo, wwreg, clk, clrn, bpc, jpc, pcsource,
                 nostall, wreg, m2reg, wmem, aluc, aluimm, a, b, imm, rn,
-                shift, jal, state, brance, prebrance);
+                shift, jal, state, brance, prebrance); //ID stage
     input [31:0] dpc4, inst, wdi, ealu, malu, mmo;
     input [4:0] ern, mrn, wrn;
-    input prebrance;
+    input prebrance; //better solution for branch hazard, showing that last instruction branched
     input mwreg, ewreg, em2reg, mm2reg, wwreg;
     input clk, clrn;
     input [7:0] state;
     output [31:0] bpc, jpc, a, b, imm;
     output [4:0] rn;
     output [3:0] aluc;
-    output [1:0] pcsource;
+    output [1:0] pcsource; //the npc selection
     output nostall, wreg, m2reg, wmem, aluimm, shift, jal;
-    output brance;
+    output brance; //better solution for branch hazard, showing that this instruction branch
     wire [5:0] op, func;
     wire [4:0] rs, rt, rd;
     wire [31:0] qa, qb, br_offset;
@@ -57,8 +57,8 @@ module pipeid (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst, wrn,
     assign rsrtequ = ~| (a^b);
     assign e = sext & inst[15];
     assign ext16 = {16{e}};
-    assign imm = {ext16, inst[15:0]};
+    assign imm = {ext16, inst[15:0]}; //sign extend
     assign br_offset = {imm[29:0], 2'b00};
     assign bpc = dpc4 + br_offset;
-    assign brance = (pcsource != 2'b00);
+    assign brance = (pcsource != 2'b00); //show that there is branch
 endmodule

@@ -23,14 +23,14 @@ module pipedereg(dwreg, dm2reg, dwmem, daluc, daluimm, da, db, dimm, drn,
                 dshift, djal, dpc4, clk, clrn, ewreg, em2reg, ewmem,
                 ealuc, ealuimm, ea, eb, eimm, ern, eshift, ejal, epc4);
     input [31:0] da, db, dimm, dpc4;
-    input [4:0] drn;
-    input [3:0] daluc;
-    input dwreg, dm2reg, dwmem, daluimm, dshift, djal;
+    input [4:0] drn; //ID register number
+    input [3:0] daluc; //ID alu control
+    input dwreg, dm2reg, dwmem, daluimm, dshift, djal; //the info from ID stage
     input clk, clrn;
     output [31:0] ea, eb, eimm, epc4;
     output [4:0] ern;
     output [3:0] ealuc;
-    output ewreg, em2reg, ewmem, ealuimm, eshift, ejal;
+    output ewreg, em2reg, ewmem, ealuimm, eshift, ejal;//the info to EXE stage
     reg [31:0] ea, eb, eimm, epc4;
     reg [4:0] ern;
     reg [3:0] ealuc;
