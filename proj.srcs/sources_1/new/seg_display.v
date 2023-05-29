@@ -64,7 +64,7 @@ module seg_display(
     assign seg_en=wr_en?bit_sel_reg:8'b1111_1111;
     always@(posedge clk) begin
         if (cnt==(period>>1)-1) begin
-            clkout=~clkout;
+            clkout<=~clkout;
             cnt<=0;
         end
         else cnt<=cnt+1;
@@ -98,7 +98,7 @@ module seg_display(
             5: Y_reg<=out2[3:0];
             6: Y_reg<=out3[7:4];
             7: Y_reg<=out3[3:0];
-            default Y_reg=4'b0000;
+            default Y_reg<=4'b0000;
         endcase
     end
 endmodule

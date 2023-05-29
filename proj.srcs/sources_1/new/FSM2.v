@@ -46,44 +46,44 @@ module FSM2(clk, rst, button, state);
     parameter period2=60;
     reg button_en;
     always @(posedge clk_10Hz or negedge rst_n) begin
-        if (!rst_n) begin
-            state<=8'b0000_0000; // ready
-            button_en=1;
+        if (!rst_n) begin // Reset
+            state<=8'b0000_0000;
+            button_en<=1;
             cnt<=cnt;
         end
-        else if (state<5||state==8) begin
+        else if (state<5||state==8) begin // When button is pushed, change the state.
             if (button) begin
                 if (button_en) begin
-                    state<=state+1; // change state
-                    button_en=0;
+                    state<=state+1;
+                    button_en<=0;
                     cnt<=cnt;
                 end
                 else begin
                     state<=state;
-                    button_en=0;
+                    button_en<=0;
                     cnt<=cnt;
                 end
             end
             else begin
                 state<=state;
-                button_en=1;
+                button_en<=1;
                 cnt<=cnt;
             end
         end
-        else if (state<8) begin
+        else if (state<8) begin // Every 0.1s, change the state
             state<=state+1;
-            button_en=1;
+            button_en<=1;
             cnt<=cnt;
         end
-        else begin
+        else begin // Every 3s, change the state.
             if (cnt==(period2>>1)-1) begin
                 state<=state+1;
-                button_en=1;
+                button_en<=1;
                 cnt<=0;
             end
             else begin
                 state<=state;
-                button_en=1;
+                button_en<=1;
                 cnt<=cnt+1;
             end
         end

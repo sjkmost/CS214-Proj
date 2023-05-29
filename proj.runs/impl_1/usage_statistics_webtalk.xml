@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Mon May 29 10:43:27 2023'>
+<webTalkData  fileName='usage_statistics_webtalk.xml'  majorVersion='1' minorVersion='0' timeStamp='Mon May 29 11:00:15 2023'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="2086221" description="" />
-  <keyValuePair key="date_generated" value="Mon May 29 10:43:27 2023" description="" />
+  <keyValuePair key="date_generated" value="Mon May 29 11:00:15 2023" description="" />
   <keyValuePair key="os_platform" value="WIN64" description="" />
   <keyValuePair key="product_version" value="Vivado v2017.4 (64-bit)" description="" />
   <keyValuePair key="project_id" value="2ad26fb1860d4997ac6fed37f78d08be" description="" />
-  <keyValuePair key="project_iteration" value="10" description="" />
+  <keyValuePair key="project_iteration" value="11" description="" />
   <keyValuePair key="random_id" value="af0ef1560d985dc3ac550183d2dec785" description="" />
   <keyValuePair key="registration_id" value="af0ef1560d985dc3ac550183d2dec785" description="" />
   <keyValuePair key="route_design" value="TRUE" description="" />
@@ -726,10 +726,10 @@
    <keyValuePair key="-verilog_define" value="default::[not_specified]" description="" />
   </section>
   <section name="usage" level="2" order="2" description="">
-   <keyValuePair key="elapsed" value="00:00:45s" description="" />
+   <keyValuePair key="elapsed" value="00:00:46s" description="" />
    <keyValuePair key="hls_ip" value="0" description="" />
-   <keyValuePair key="memory_gain" value="619.844MB" description="" />
-   <keyValuePair key="memory_peak" value="849.293MB" description="" />
+   <keyValuePair key="memory_gain" value="622.844MB" description="" />
+   <keyValuePair key="memory_peak" value="852.523MB" description="" />
   </section>
  </section>
  <section name="unisim_transformation" level="1" order="11" description="">
@@ -785,16 +785,17 @@
  <section name="vivado_usage" level="1" order="12" description="">
   <section name="gui_handlers" level="2" order="1" description="">
    <keyValuePair key="basedialog_cancel" value="2" description="" />
-   <keyValuePair key="basedialog_ok" value="38" description="" />
-   <keyValuePair key="basedialog_yes" value="11" description="" />
-   <keyValuePair key="filesetpanel_file_set_panel_tree" value="85" description="" />
-   <keyValuePair key="flownavigatortreepanel_flow_navigator_tree" value="18" description="" />
+   <keyValuePair key="basedialog_ok" value="40" description="" />
+   <keyValuePair key="basedialog_yes" value="13" description="" />
+   <keyValuePair key="filesetpanel_file_set_panel_tree" value="97" description="" />
+   <keyValuePair key="flownavigatortreepanel_flow_navigator_tree" value="20" description="" />
    <keyValuePair key="hacgccoefilewidget_browse" value="8" description="" />
-   <keyValuePair key="pacommandnames_auto_connect_target" value="8" description="" />
-   <keyValuePair key="pacommandnames_open_hardware_manager" value="6" description="" />
-   <keyValuePair key="programdebugtab_open_target" value="8" description="" />
-   <keyValuePair key="programdebugtab_program_device" value="9" description="" />
-   <keyValuePair key="programfpgadialog_program" value="9" description="" />
+   <keyValuePair key="pacommandnames_auto_connect_target" value="9" description="" />
+   <keyValuePair key="pacommandnames_open_hardware_manager" value="7" description="" />
+   <keyValuePair key="programdebugtab_open_target" value="10" description="" />
+   <keyValuePair key="programdebugtab_program_device" value="11" description="" />
+   <keyValuePair key="programfpgadialog_program" value="11" description="" />
+   <keyValuePair key="progressdialog_cancel" value="1" description="" />
    <keyValuePair key="rdicommands_delete" value="1" description="" />
    <keyValuePair key="simpleoutputproductdialog_generate_output_products_immediately" value="8" description="" />
    <keyValuePair key="statemonitor_reset_step" value="1" description="" />
@@ -802,16 +803,16 @@
    <keyValuePair key="taskbanner_close" value="6" description="" />
   </section>
   <section name="java_command_handlers" level="2" order="2" description="">
-   <keyValuePair key="autoconnecttarget" value="8" description="" />
+   <keyValuePair key="autoconnecttarget" value="9" description="" />
    <keyValuePair key="editdelete" value="1" description="" />
-   <keyValuePair key="launchprogramfpga" value="9" description="" />
-   <keyValuePair key="openhardwaremanager" value="8" description="" />
+   <keyValuePair key="launchprogramfpga" value="11" description="" />
+   <keyValuePair key="openhardwaremanager" value="9" description="" />
    <keyValuePair key="recustomizecore" value="11" description="" />
-   <keyValuePair key="runbitgen" value="12" description="" />
+   <keyValuePair key="runbitgen" value="13" description="" />
    <keyValuePair key="showview" value="1" description="" />
   </section>
   <section name="other_data" level="2" order="3" description="">
-   <keyValuePair key="guimode" value="6" description="" />
+   <keyValuePair key="guimode" value="9" description="" />
   </section>
   <section name="project_data" level="2" order="4" description="">
    <keyValuePair key="constraintsetcount" value="1" description="" />

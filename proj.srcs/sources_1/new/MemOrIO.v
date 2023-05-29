@@ -37,10 +37,13 @@ module MemOrIO(memclk,state,mRead,mWrite,addr_in,addr_out,m_rdata,io_rdata1,io_r
     output [31:0] r_wdata; // data to Decoder(register file)
     input [31:0] r_rdata; // data read from Decoder(register file)
     output [31:0] write_data;
-    assign write_data=state<2?io_rdata1:(state<4?io_rdata2:r_rdata);
+    assign write_data=state<2?io_rdata1:(state<4?io_rdata2:r_rdata); // When I state, write the data in the I device to memory,
+                                                                    // otherwise write the ALU result or register.
     assign r_wdata=m_rdata;
-    assign addr_out=state>4?((state<<2)-8):(state<4?((state<<2)-4):addr_in);
-    always@(posedge memclk)
+    assign addr_out=state>4?((state<<2)-8):(state<4?((state<<2)-4):addr_in); // When I state, addr is 0x00000000,0x00000004,0x00000008;
+                                                                            // When CPU state, addr is the addr calculated by ALU;
+                                                                            // When O state, addr is 0x0000000C,0x00000010,0x00000014,...
+    always@(posedge memclk) // Read from or write to IO device according to the state.
     begin
         case(state)
             8'b0000_0000: begin
