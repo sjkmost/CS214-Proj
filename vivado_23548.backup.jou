@@ -1,0 +1,42 @@
+#-----------------------------------------------------------
+# Vivado v2017.4 (64-bit)
+# SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
+# IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
+# Start of session at: Mon May 29 09:14:16 2023
+# Process ID: 23548
+# Current directory: D:/lhy/semester2-2/computer_organization/lab/CS214-Proj
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15896 D:\lhy\semester2-2\computer_organization\lab\CS214-Proj\proj.xpr
+# Log file: D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/vivado.log
+# Journal file: D:/lhy/semester2-2/computer_organization/lab/CS214-Proj\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.xpr
+set_property -dict [list CONFIG.Coe_File {d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM_inst/prgmip32_t2.coe}] [get_ips RAM_inst]
+generate_target all [get_files  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM_inst/RAM_inst.xci]
+catch { config_ip_cache -export [get_ips -all RAM_inst] }
+export_ip_user_files -of_objects [get_files D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM_inst/RAM_inst.xci] -no_script -sync -force -quiet
+reset_run RAM_inst_synth_1
+launch_runs -jobs 4 RAM_inst_synth_1
+export_simulation -of_objects [get_files D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM_inst/RAM_inst.xci] -directory D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.ip_user_files/sim_scripts -ip_user_files_dir D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.ip_user_files -ipstatic_source_dir D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.cache/compile_simlib/modelsim} {questa=D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.cache/compile_simlib/questa} {riviera=D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.cache/compile_simlib/riviera} {activehdl=D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.Coe_File {d:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM/dmem32_t2.coe}] [get_ips RAM]
+generate_target all [get_files  D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM/RAM.xci]
+catch { config_ip_cache -export [get_ips -all RAM] }
+export_ip_user_files -of_objects [get_files D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM/RAM.xci] -no_script -sync -force -quiet
+reset_run RAM_synth_1
+launch_runs -jobs 4 RAM_synth_1
+export_simulation -of_objects [get_files D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.srcs/sources_1/ip/RAM/RAM.xci] -directory D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.ip_user_files/sim_scripts -ip_user_files_dir D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.ip_user_files -ipstatic_source_dir D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.cache/compile_simlib/modelsim} {questa=D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.cache/compile_simlib/questa} {riviera=D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.cache/compile_simlib/riviera} {activehdl=D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/impl_1/pipelinedcpu.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/impl_1/pipelinedcpu.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+close_hw

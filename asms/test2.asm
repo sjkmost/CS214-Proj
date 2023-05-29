@@ -8,6 +8,12 @@ out_seg_2: .word 0 # remainder
 stack_info: .space 256 # each byte is an element
 .text
 start:
+ori $s0,$zero,0
+ori $s1,$zero,20
+lbll:
+sw $zero,stack_info($s0)
+addi $s0,$s0,4
+bne $s0,$s1,lbll
 sw $zero,out_led($zero)
 sw $zero,out_seg($zero)
 sw $zero,out_seg_2($zero)
@@ -215,6 +221,6 @@ lw $ra,4($sp)
 addi $sp,$sp,8
 add $v0,$a0,$v0
 jr $ra
-#add $a0,$a0,$zero
+add $a0,$a0,$zero
 end:
 j end

@@ -2,11 +2,11 @@
 # Vivado v2017.4 (64-bit)
 # SW Build 2086221 on Fri Dec 15 20:55:39 MST 2017
 # IP Build 2085800 on Fri Dec 15 22:25:07 MST 2017
-# Start of session at: Sun May 28 22:21:08 2023
-# Process ID: 22760
-# Current directory: D:/Class/CS214/CS214-Proj/proj.runs/RAM_synth_1
+# Start of session at: Mon May 29 09:18:33 2023
+# Process ID: 2636
+# Current directory: D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/RAM_synth_1
 # Command line: vivado.exe -log RAM.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source RAM.tcl
-# Log file: D:/Class/CS214/CS214-Proj/proj.runs/RAM_synth_1/RAM.vds
-# Journal file: D:/Class/CS214/CS214-Proj/proj.runs/RAM_synth_1\vivado.jou
+# Log file: D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/RAM_synth_1/RAM.vds
+# Journal file: D:/lhy/semester2-2/computer_organization/lab/CS214-Proj/proj.runs/RAM_synth_1\vivado.jou
 #-----------------------------------------------------------
 source RAM.tcl -notrace

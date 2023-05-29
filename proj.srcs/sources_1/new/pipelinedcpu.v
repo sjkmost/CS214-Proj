@@ -37,7 +37,7 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
     reg clock,memclock,uart_clk;
 //    wire clk=memclock;
     reg [31:0] cnt;
-    parameter period=100;
+    parameter period=10000;
     always@(posedge clk) begin
         if (cnt==(period>>1)-1) begin
             clock=~clock;
@@ -46,7 +46,7 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
         else cnt<=cnt+1;
     end
     reg [31:0] cnt2;
-    parameter period2=20;
+    parameter period2=5;
     always@(posedge clk) begin
         if (cnt2==(period2>>1)-1) begin
             memclock=~memclock;
@@ -96,11 +96,12 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
     wire [14:0] upg_adr_o;
     wire [31:0] upg_dat_o;
     reg upg_rst;
-    always @(posedge clk) begin
-        if (start_pg)
-            upg_rst = 0;
-        if (reset)
-            upg_rst = 1;
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            upg_rst <= 1;
+        end else begin
+            upg_rst <= ~start_pg;
+        end
     end
     assign resetn = ~reset & upg_rst;
     uart_bmpg_0 uart(

@@ -51,7 +51,7 @@ module FSM2(clk, rst, button, state);
             button_en=1;
             cnt<=cnt;
         end
-        else if (state<5||state==7) begin
+        else if (state<5||state==8) begin
             if (button) begin
                 if (button_en) begin
                     state<=state+1; // change state
@@ -70,7 +70,7 @@ module FSM2(clk, rst, button, state);
                 cnt<=cnt;
             end
         end
-        else if (state<7) begin
+        else if (state<8) begin
             state<=state+1;
             button_en=1;
             cnt<=cnt;
