@@ -34,13 +34,11 @@ module pipemem(state, we, addr, datain, clk, memclk, io_r1, io_r2, io_w__led, io
     input [13:0] upg_adr;
     input [31:0] upg_dat;
     wire [31:0] memin, memout, memaddr;
-//    output [31:0] test_addr;
-//    assign test_addr=memaddr;
     wire write_enable;
     assign write_enable = (we && ~clk) || ( (state < 4) && (state > 0) );
     MemOrIO io_processor(memclk,state, write_enable, write_enable, addr, memaddr, memout, io_r1, io_r2, io_w__led, io_w_seg_1, io_w_seg_2, io_w_seg_3, dataout, datain, memin);
     
-    wire kick = upg_rst | (~upg_rst & upg_done);
+    wire kick = upg_rst | (~upg_rst & upg_done); // if in UART communication mode
     
     RAM ram(
         .clka(kick ? memclk : upg_clk),

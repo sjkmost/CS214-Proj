@@ -57,7 +57,7 @@ module alu(a, b, aluc, r, z);
     wire [31:0] r_sh;
     shift shifter(b, a[4:0], aluc[2], aluc[3], r_sh);
     mux4x32 selector(r_arith, r_andor, r_xorluislt, r_sh, aluc[1:0], r);
-    assign z = !(!r);
+    assign z = !(!r); // if result is 0
 //    assign v = !aluc[1:0] && 
 //               ((aluc[2] && ((a[31] && !b[31] && !r[31]) || (!a[31] && b[31] && r[31]))) ||
 //               ((!aluc[2] && ((a[31] && b[31] && !r[31]) || (!a[31] && !b[31] && r[31])))));

@@ -27,7 +27,7 @@ module pipeimem(clk, a, inst, upg_rst, upg_clk, upg_wen, upg_adr, upg_dat, upg_d
     input [13:0] upg_adr;
     input [31:0] upg_dat;
     
-    wire kick = upg_rst | (~upg_rst & upg_done);
+    wire kick = upg_rst | (~upg_rst & upg_done); // if in UART communication mode
     
     RAM_inst inst_mem(
         .clka(kick ? clk : upg_clk), 

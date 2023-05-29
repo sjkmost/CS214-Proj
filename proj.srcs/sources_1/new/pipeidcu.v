@@ -97,10 +97,10 @@ module pipeidcu(mwreg, mrn, ern, ewreg, em2reg, mm2reg, rsrtequ, func, op, rs, r
 
     assign wreg    = (i_add | i_sub | i_and | i_or  | i_nor | i_xor | i_sll | i_mul | i_div |
                       i_slt | i_sltu| i_srl | i_sra | i_addi| i_andi| i_ori | i_xori|
-                      i_lw  | i_lui | i_jal | i_slti) & nostall & ~prebrance;
-    assign regrt   =  i_addi| i_andi| i_ori | i_xori| i_lw  | i_lui | i_slti;
+                      i_lw  | i_lui | i_jal | i_slti) & nostall & ~prebrance; // if write register
+    assign regrt   =  i_addi| i_andi| i_ori | i_xori| i_lw  | i_lui | i_slti; // if rt is target register
     assign jal     =  i_jal;
-    assign m2reg   =  i_lw;
+    assign m2reg   =  i_lw; // if choose register data
     assign shift   =  i_sll | i_srl | i_sra;
     assign aluimm  =  i_addi| i_andi| i_ori | i_xori| i_lw  | i_lui | i_sw  | i_slti;
     assign sext    =  i_addi| i_lw  | i_sw  | i_beq | i_bne | i_slti;

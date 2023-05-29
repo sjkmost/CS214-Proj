@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module mux2x5(a0, a1, s, y);
+module mux2x5(a0, a1, s, y); // 5-bit 2-multiplexer
     input [4:0] a0, a1;
     input s;
     output [4:0] y;

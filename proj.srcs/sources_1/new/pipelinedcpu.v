@@ -28,16 +28,9 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
     input start_pg;
     input rx;
     output tx;
-//    output test_clk;
-//    output [31:0] test_ins;
-//    output [31:0] test_pc;
-//    output [31:0] test_a;
-//    output [31:0] test_ins;
-//    output [31:0] test_addr;
     reg clock,memclock,uart_clk;
-//    wire clk=memclock;
     reg [31:0] cnt;
-    parameter period=10000;
+    parameter period=10000; // 100Hz
     always@(posedge clk) begin
         if (cnt==(period>>1)-1) begin
             clock=~clock;
@@ -46,7 +39,7 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
         else cnt<=cnt+1;
     end
     reg [31:0] cnt2;
-    parameter period2=5;
+    parameter period2=5; // 20MHz
     always@(posedge clk) begin
         if (cnt2==(period2>>1)-1) begin
             memclock=~memclock;
@@ -55,7 +48,7 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
         else cnt2<=cnt2+1;
     end
     reg [31:0] cnt3;
-    parameter period3=10;
+    parameter period3=10; // 10MHz
     always@(posedge clk) begin
         if (cnt3==(period3>>1)-1) begin
             uart_clk=~uart_clk;
@@ -64,16 +57,11 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
         else cnt3<=cnt3+1;
     end
     wire resetn;
-//    assign resetn=~reset;
     output [7:0] state;
-//    output [7:0] test_state;
-//    assign test_state=state;
     wire [31:0] bpc, jpc, npc, pc4, ins, dpc4, inst, da, db, dimm, ea, eb, eimm;
     wire [31:0] epc4, mb, mmo, wmo, wdi;
     wire [4:0] drn, ern0, ern, mrn, wrn;
     wire [3:0] daluc, ealuc;
-//    output [3:0] test_ealuc;
-//    assign test_ealuc = ealuc;
     wire [1:0] pcsource;
     wire wpcir;
     wire dwreg, dm2reg, dwmem, daluimm, dshift, djal;
@@ -81,15 +69,9 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
     wire mwreg, mm2reg, mwmem;
     wire wwreg, wm2reg;
     wire [31:0] pc,ealu,malu,walu;
-//    output [31:0] test_ealu;
-//    assign test_ealu = ealu;
     wire [15:0] io_w_seg1;
     wire [7:0] io_w_seg2,io_w_seg3;
     wire brance, prebrance;
-//    wire [15:0] out1;
-//    assign out1=io_w_seg1;
-//    wire [7:0] out2,out3;
-//    assign out2=io_w_seg2,out3=io_w_seg3;
     wire upg_clk_o;
     wire upg_wen_o;
     wire upg_done_o;
@@ -103,7 +85,7 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
             upg_rst <= ~start_pg;
         end
     end
-    assign resetn = ~reset & upg_rst;
+    assign resetn = ~reset & upg_rst; // resetn for cpu modules
     uart_bmpg_0 uart(
         .upg_clk_i(uart_clk), 
         .upg_rst_i(upg_rst), 
@@ -118,8 +100,6 @@ module pipelinedcpu(clk, reset, button, io_r1, io_r2, io_w_led,seg_en,seg_out,st
     pipepc prog_cnt (npc, wpcir, clock, resetn, pc);
     pipeif if_stage (memclock, pcsource, pc, bpc, da, jpc, npc, pc4, ins, 
                      upg_rst, upg_clk_o, upg_wen_o & ~upg_adr_o[14], upg_adr_o[13:0], upg_dat_o, upg_done_o);
-//    assign test_ins=ins;
-//    assign test_pc=pc;
     pipeir inst_reg (pc4, ins, wpcir, clock, resetn, dpc4, inst, brance, prebrance);
     pipeid id_stage (mwreg, mrn, ern, ewreg, em2reg, mm2reg, dpc4, inst,
                     wrn, wdi, ealu, malu, mmo, wwreg, clock, resetn,

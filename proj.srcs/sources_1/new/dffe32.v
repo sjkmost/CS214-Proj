@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module dffe32(d, clk, clrn, e, q);
+module dffe32(d, clk, clrn, e, q); // a 32-bit register
     input [31:0] d;
     input clk, clrn, e;
     output reg [31:0] q;
